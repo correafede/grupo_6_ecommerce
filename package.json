@@ -1,0 +1,23 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "**El sitio:**\r Nuestro sitio brindará la posibilidad de adquirir distintos tipos de cervezas, tanto de origen nacional como importadas. Contará con validación de edad para el ingreso.\r Estará enfocada en consumidores adultos jóvenes, mayores de 18 años, proponiendo una página con temática moderna, fácil de usar y visualmente agradable.\r La oferta será a través de un sitio tipo Marketplace.\r Nuestro grupo:\r Federico; tiene 28 años y es de Mendoza. Estudia diseño gráfico y está aprendiendo a programar. Le gusta tocar la guitarra en su tiempo libre y tiene una gata llamada Kali.\r Ana Paula; tiene 18 años y es de la Ciudad de Córdoba. Le gusta ver series y salir a comer.\r Mauricio; vive en Mendoza. Tiene 24 años y es estudiante de diseño gráfico. Le gusta mucho jugar al tenis.\r Marcos; vive en Tierra del fuego, tiene 32 años y trabaja en una central termoeléctrica. Estudia programación, le gusta tocar la batería y hacer Snowboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/correafede/ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/correafede/ecommerce/issues"
+  },
+  "homepage": "https://github.com/correafede/ecommerce#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
