@@ -18,3 +18,6 @@ https://sixpack.com.ar/
 Elegido por su diseño;
 https://www.mercadolibre.com.ar/
 Por ser el Marketplace por excelencia y porque propone un diseño simple, limpio e intuitivo;
+
+**Enlace del workspace:**
+https://trello.com/invite/b/zEWZhTj3/63d72c4c0ee072a0ac69926f131c94c6/proyectointegradorgrupo6
