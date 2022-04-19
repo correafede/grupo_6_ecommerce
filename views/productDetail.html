@@ -12,22 +12,23 @@
     <script src="https://kit.fontawesome.com/3280e6a789.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
     <div class="father">
         <div class="header">
             <div class="menu">
                 <div class="logo">
-                    <a><img src="img/logo.webp" href="/index.html" alt="Logo de MercadoLiebre" class="logo"></img></a>
+                    <a href="/views/index.html"><img src="img/logo.webp" alt="Logo de MercadoLiebre" class="logo"></img></a>
                 </div>
-                    <div class="dropdown">
-                        <div class="importadas"></div>
-                        <div class="nacionales"></div>
-                        <div class="ofertas"></div>
-                    </div>
-                    <div class="usermenu">
-                        <div class="search">
-                            <form action="#">
+                <div class="dropdown">
+                    <div class="importadas"></div>
+                    <div class="nacionales"></div>
+                    <div class="ofertas"></div>
+                </div>
+                <div class="usermenu">
+                    <div class="search">
+                        <form action="#">
                                 <input type="text" placeholder="Buscar productos, marcas" name="search"><button><i class="fa fa-search" style="font-size: 20 px;"></i></button>  
-                           </form>
+                            </form>
                         </div>
                         <div class="faq"><i class="fa-solid fa-circle-question"></i><span class="off">FAQ</span></div>
                         <div class="user"><i class="fa-solid fa-user"></i><span class="off">Perfil</span></div>
@@ -38,51 +39,72 @@
                 </div>
             </div>
         </div>
+        <div class="banner">
+            <img src="img/banner.jpg" alt="Banner">
+        </div>
+    </header>
 <main>
     <div class="cuerpo-descripcion">
-        <div class="imagen-producto"><img src="img/AndesOrigenIpaAndina.webp"></div>  
+        <div class="imagen-producto"><img src="img/andes-origen-ipa-andina.webp"></div>  
         <div class="caja-descripcion">
-        <div class="texto-descripcion">
-            <div class="titulo-del-producto">
-                Andes Andina IPA Andina Edición limitada    
-            </div>
-    <div class="precio-anterior">$130</div>
-    <div class="precio-actual">$120.5 <div><button type="button" class="agregar-al-carrito">Agregar al carrito</button></div></div>
-    <div class="disponibles">Disponibles: 100</div>
-    <div class="descripcion-del-producto">
-        <h2>Información del producto</h2>
-        <p>
-            La Andes IPA Andina es una cerveza estilo IPA, valga la redundancia, de la escuela Inglesa. Como seguramente usted sabe, este estilo de cerveza se caracteriza por el amargor que le otorga su alto contenido de lúpulo.
-            Lo que seguramente no sabe es que la IPA Andina contiene uva mendocina. Este ingrediente es clave para que en el paladar perciba una especie de dulzor, que a su vez hace el amargor más amigable. Esta edición limitada es ideal para acompañar platos picantones, como unas papas bravas o algún dip a base de curry.
-        </p> 
-        </div>
+            <div class="texto-descripcion">
+                <div class="titulo-del-producto">
+                    Andes Andina IPA Andina Edición limitada    
+                </div>
+                <div class="precio-anterior">$130</div>
+                <div class="precio-actual">$120.5<div class="descuento">14% Off</div></div><div><button type="button" class="agregar-al-carrito">Agregar al carrito</button></div>
+                <div class="disponibles">Disponibles: 100</div>
+                <div class="descripcion-del-producto">
+                    <h2>Información del producto</h2>
+                    <p>
+                        La Andes IPA Andina es una cerveza estilo IPA, valga la redundancia, de la escuela Inglesa. Como seguramente usted sabe, este estilo de cerveza se caracteriza por el amargor que le otorga su alto contenido de lúpulo.
+                        Lo que seguramente no sabe es que la IPA Andina contiene uva mendocina. Este ingrediente es clave para que en el paladar perciba una especie de dulzor, que a su vez hace el amargor más amigable. Esta edición limitada es ideal para acompañar platos picantones, como unas papas bravas o algún dip a base de curry.
+                    </p> 
+                </div>
     </div>
     </div>
 </div>
 </main>
-<!--<footer> 
-    <ul id="lista-footer">
-        <br> 
-    <div class=icono-footer>
-        <i class="fas fa-credit-card"></i>
+<footer class="footer">
+    <div class="newsletter-box">
+        <div><p>Unite a nuestro newsletter</p></div>
+        <div>
+            <form action="#">
+                <input type="text" placeholder="user@domain.com" name="search"> 
+            </form>
+        </div>
     </div>
-        <li class="texto-footer"><strong>Pagá con tarjeta o en efectivo</strong></li> 
-        <p>Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. Y siempre es seguro!</p>
-        <br>
-    <div class="icono-footer">
-        <i class="fas fa-gift"></i>
-    </div>
-        <li class="texto-footer"><strong>Envío gratis desde $2500</strong></li>
-        <p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos</p>
-        <br>
-    <div class="icono-footer">
-        <i class="fas fa-user-shield"></i>
-    </div>
-        <li class="texto-footer"><strong>Seguridad, de principio a fin</strong></li>
-        <p>No te gusta? Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer porque estás siempre protegid@ </p>
-        <br>
-        <li><strong>Copyrigth © 1999-2000 MercadoLiebre S.R.L.</strong></li>
-    </ul>
-</footer>-->
+    <nav class="footer-menu">
+        <div class="faq-menu">
+            <h3>PREGUNTAS FRECUENTES</h3>
+            <a href="/faq.html">COMO COMPRAR</a>
+            <a href="/faq.html">TIEMPOS Y COSTOS DE ENVÍO</a>
+            <a href="/faq.html">FORMAS DE PAGO</a>
+            <a href="/faq.html">CONTACTANOS</a>
+            <a href="/faq.html">BOTÓN DE ARREPENTIMIENTO</a>
+        </div>
+        <div class="aboutus-menu">
+            <h3>NOSOTROS</h3>
+            <a href="/aboutus.html">NUESTRA HISTORIA</a>
+            <a href="/aboutus.html">COMENTARIOS DE CLIENTES</a>
+            <a href="/aboutus.html">PRENSA</a>
+            <a href="/aboutus.html">TERMINOS Y CONDICIONES</a>
+            <a href="/aboutus.html">OLITICA DE PRIVACIDAD</a>
+        </div>
+        <div class="empresas-menu">
+            <h3>EMPRESAS</h3>
+            <a href="/company.html">NUESTRA HISTORIA</a>
+            <a href="/company.html">REGALOS<br>EMPRESARIALES</a>
+        </div>
+        <div class="social">
+            <div><h3>Seguinos</h3></div>
+            <div class="container">
+                <div><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i><span class="off">Facebook</span></a></div>
+                <div><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i><span class="off">Twitter</span></a></div>
+                <div><a href="#"><i class="fa-brands fa-whatsapp"></i><span class="off">Whatsapp</span></a></div>
+            </div> 
+        </div>
+    </nav>
+</footer>
 </body>
 </html>
