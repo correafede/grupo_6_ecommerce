@@ -184,12 +184,15 @@
             background: #2e2e2e;
             display: flex;
             flex-flow: column nowrap;
+            height: auto;
+            align-items: center;
         }
             .newsletter-box{
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: center;
-                padding: 15px 0px;
+                padding: 5px;
+                margin: 5px;
             }
                 .newsletter-box div p{
                     font-size: 22px;
@@ -197,11 +200,12 @@
                 }
                 
             .footer-menu{
-                padding: 10px;
                 margin: 10px;
                 display: flex;
                 flex-flow: row nowrap;
                 color: #fff;
+                width: 100%;
+                align-content: flex-start;
             }
                 .part1,
                 .part2,
@@ -215,7 +219,7 @@
                     .container{
                         display: flex;
                         flex-flow: row nowrap;
-                        padding: 0px 10px;
+                        padding: 0px
                     }
                 .h3{
                     flex: 1 1 100%;
@@ -225,12 +229,18 @@
                     .empresas-menu{
                         display: flex;
                         flex-flow: column nowrap;
+                        padding: 5px;
+                        width: 100%;
                     }
                         .faq-menu a,
                         .aboutus-menu a,
                         .empresas-menu a,
                         .social div a{
                             color: #fff;
+                            padding-right: 10px;
+                        }
+                        .social div i{
+                            padding-right: 5px;
                         }
 
   
