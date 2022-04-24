@@ -2,17 +2,18 @@
     font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
-}
-body{
-    padding: 0px;
-    background-color: #f0f0f0;
+    padding: 0;
+    margin: 0;
 }
     .father{
+        font-family: 'Roboto';
+        font-size: 12px;
         display: flex;
-        flex-flow: column nowrap;
-        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ebebeb;
     }
-        .header{
+        header{
             background-color: #efefef;
             display: flex;
             flex-flow: column nowrap;
@@ -28,13 +29,12 @@ body{
                 .logo{
                     display: flex;
                     flex: 1 1 auto;
-                    height: 120px;
                     margin-bottom: 10px;
                     margin-left: 5px;
                 }
                     .logo img{
-                        justify-self: center;
-                        align-self: center;
+                        width: 100%;
+                        padding: 20px;
                     }
 
                 .dropdown{
@@ -103,11 +103,8 @@ body{
             .banner{
                 background-size: cover;
                 height: 360px;
+                width: 100%;
             }
-                .banner img{
-                    width: 100%;
-                    height: 100%;
-                }
         .section{
             display: flex;
             margin: 15px 0px 15px 0px;
@@ -248,7 +245,7 @@ body{
 }
 
 @media all and (min-width: 600px){
-    .header{
+    header{
         max-height: 310px;
     }
     .article{
