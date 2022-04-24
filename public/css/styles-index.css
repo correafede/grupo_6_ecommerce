@@ -284,15 +284,12 @@
     }
 
 }
-
 @media all and (min-width: 900){
     .off{
         font-size: 16 px;
     }
    
 }
-
-
 @media all and (min-width: 1279px){
     .article{
         flex: 1 1 23%;
