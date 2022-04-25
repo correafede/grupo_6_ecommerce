@@ -40,8 +40,6 @@ body{
             padding-left: 70px;
             }
         .dropdown{
-            padding: 10px;
-            margin: 10px;
             display: none;
         }
             .importadas{
@@ -71,7 +69,6 @@ body{
                 padding: 8px;
                 display: none;
             }
-
             .faq{
                 padding: 8px;
                 display: none;
@@ -92,9 +89,13 @@ body{
                     font-size: 2.4em;
                 }
     .banner{
-        background-size: cover;
-        width: auto;
+        display: block;
+        height: 120px;
     }
+        .banner img{
+            height: 120px;
+            width: 90vw;
+        }
     .section{
         display: flex;
         margin: 15px 0px 15px 0px;
@@ -235,18 +236,19 @@ body{
                         padding-right: 5px;
                     }
 
-  
-
-
 /* # Tablet */
 @media (min-width: 768px){
     .burger-menu{
         display: none;
     }
     .logo a img{
+        padding-left: 30px;
     }
     .dropdown{
         display: flex;
+        flex-flow: row nowrap;
+        justify-items:center;
+        align-items:center;
     }
         .importadas{
             padding: 10px;     
@@ -258,7 +260,9 @@ body{
             padding: 11.5px; 
         }
     .search{
-        display: block;
+        display: flex;
+        width: 100%;
+        position: relative;
     }
     .search-icon{
         display: none;
@@ -266,6 +270,13 @@ body{
     .faq{
         display: block;
     }
+    .banner{
+        height: 200px;
+    }
+        .banner img{
+            height: 200px;
+            width: 90vw;
+        }
 }
 
 
@@ -277,6 +288,13 @@ body{
         padding: 4px;
         font-size: 1em;
     }
+    .banner{
+        height: 250px;
+    }
+        .banner img{
+            height: 250px;
+            width: 100vw;
+        }
 }
 
 
