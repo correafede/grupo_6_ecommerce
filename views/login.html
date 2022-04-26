@@ -17,7 +17,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <div class="logo">
-            <a><img src="img/logo.webp" href="/index.html" alt="Logo de MercadoLiebre" class="logo"></img></a>
+           <a href="/index"><img src="img/logo.webp" alt="Logo de MercadoLiebre" class="logo"></img></a>
         </div>
         <div class="dropdown">
             <div class="importadas">
@@ -42,37 +42,40 @@
             <div class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a></div>
         </div>  
     </header>
-    <div class="banner">
+    <!-- <div class="banner">
         <img src="img/banner.png" alt="Banner">
-    </div>
+    </div> -->
     <main>
-        <div class="connect">
-            <i class="fa-brands fa-facebook-square"></i>
-            <span>Inicia sesión con Facebook </span>
+        <form action="usuarios.html" method="post">
+            <div class="login">
+            <div class="connect">
+                <i class="fa-brands fa-facebook-square"></i><span>Inicia sesion con Facebook</span>
+        </div>
+        <div class="division">
         </div>
         <div>
-            <input type="e-mail" name="E-mail" value="E-mail"></input>
+            <input type="e-mail" placeholder="E-mail" name="E-mail" ></input>
         </div>
         <div>
-            <input type="password" name="Password" id="Contraseña" value="Contraseña">
+            <input type="password" placeholder="Contraseña" name="Password" >
         </div>
         <div>
-        <p>¿Olvidaste tu contraseña?</p>
+        <p class="recover-password">¿Olvidaste tu contraseña?</p>
         </div>
-        <div>
+        <div class="remember-user">
+            <label>
             <input type="checkbox" name="Recordar mi usuario" >
+            Recordar mi usuario
+            </label>
         </div>
-        <div>
-        <a href="/index.html"><input type="submit" value="Login"></input></a> 
+        <div class="button">
+        <a href="/index"><input type="submit" value="Login"></input></a> 
         </div>
-        <div>
-            <p>¿Todavia no sos usuario? Registrate <a href="/register">acá</p></a>
+        <div class="check-in">
+            <p>¿Todavia no sos cliente? Registrate <a href="/register">acá</p></a>
         </div>
-
-
-
-    
-
+       </div>
+        </form>
     </main>
     <footer class="footer">
         <div class="newsletter-box">

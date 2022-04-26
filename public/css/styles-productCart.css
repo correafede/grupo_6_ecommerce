@@ -185,16 +185,16 @@ hr{
     bottom: 10px;
     right: 10px;
     padding: 5px 15px;
-    background-color: tomato;
+    background-color: red;
     color: white;
     cursor: pointer;
     border-radius: 3px;
 }
 .product-remove:hover{
     background-color: white;
-    color: tomato;
+    color: red;
     font-weight: 400;
-    border: 1px solid tomato;
+    border: 1px solid red;
 }
 .product-quantity > input{
     width: 40px;
@@ -228,7 +228,7 @@ hr{
     text-decoration: none;
 }
 .cart-total a:hover{
-    background-color: red;
+    background-color: lightseagreen;
 }
 /* css footer */
 .footer{
