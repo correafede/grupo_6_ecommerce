@@ -14,37 +14,57 @@
 <body>
     <div><a href="/productdetail"><button class="boton-prueba"><i class="fa fa-search" style="font-size: 20 px;"></i></button></div></a>
     <header>
-    <div class="father">
-        <div class="header">
-            <div class="menu">
-                <div class="logo">
-                    <a href="/"><img src="img/logo.webp" alt="Logo de MercadoLiebre" class="logo"></img></a>
-                </div>
-                <div class="dropdown">
-                    <div class="importadas"></div>
-                    <div class="nacionales"></div>
-                    <div class="ofertas"></div>
-                </div>
-                <div class="usermenu">
-                    <div class="search">
-                        <form action="#">
-                                <input type="text" placeholder="Buscar productos, marcas" name="search"><button><i class="fa fa-search" style="font-size: 20 px;"></i></button>  
-                            </form>
-                        </div>
-                        <div class="header-iconos"><div class="faq"><i class="fa-solid fa-circle-question"></i><span class="off">FAQ</span></div>
-                        <div class="user"><a href="#"><i class="fa-solid fa-user"></i><span class="off">Perfil</span></a></div>
-                        <div class="cart">
-                        <a href="#"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a>
-                        </div>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+                <a><img src="img/logo.webp" href="/index.html" alt="Logo de MercadoLiebre" class="logo"></img></a>
+            </div>
+            <div class="dropdown">
+                <div class="drop-importadas">
+                    <button class="dropbtn">Importadas</button>
+                    <div class="dropdown-content">
+                      <a href="\productDetail">Cerveza 1</a>
+                      <a href="\productDetail">Cerveza 2</a>
+                      <a href="\productDetail">Cerveza 3</a>
                     </div>
+                  </div> 
+                  <div class="drop-nacionales">
+                    <button class="dropbtn">Nacionales</button>
+                    <div class="dropdown-content">
+                      <a href="\productDetail">Cerveza 1</a>
+                      <a href="\productDetail">Cerveza 2</a>
+                      <a href="\productDetail">Cerveza 3</a>
                     </div>
+                </div>  
+                <div class="ofertas">
+                    <a href="/ofertas.html">Ofertas</a> 
                 </div>
             </div>
-        </div>
-        <div class="banner">
-            <img src="img/banner.png" alt="Banner">
-        </div>
+            <div class="user-menu">
+                <div class="search">
+                    <form action="#" method="GET">
+                        <input type="search" placeholder="Buscar productos" name="search">
+                            <button type="submit" class="cursor-boton">
+                                <i class="fa fa-search" style="font-size: 20 px;"></i>
+                            </button>  
+                    </form>
+                </div>
+                <div class="faq">
+                    <a href="#"><i class="fa-solid fa-circle-question"></i><span class="off">FAQ</span></a>
+                </div>
+                <div class="search-icon"><i class="fa fa-search"></i></div>
+                <div class="user">
+                    <a href="/login"><i class="fa-solid fa-user"></i><span class="off">Perfil</span></a> 
+                </div>
+                <div class="cart">
+                    <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a>
+                </div>
+            </div> 
     </header>
+    <div class="banner">
+        <img src="img/banner.png" alt="Banner">
+    </div>
 <main>
     <div class="barra-navegacion">
         <ol class="flex flex-wrap gap-xxs">
