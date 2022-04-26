@@ -150,6 +150,36 @@ width: auto;
                     padding-right: 5px;
                 }
 
+main,
+.register,
+input,
+.division
+{
+    font-size: 20px;
+    font-family:'Roboto';
+    margin: 10px;
+    align-items: center;
+}
+.connect{
+    background-color: rgb(29, 29, 170);
+    color: #FFF;
+    padding: 5px;
+ 
+}
+.division{
+    border-bottom: solid 3px black;
+    width: 100%;
+}
+.button input{
+    background-color: purple;
+    color: #FFF;
+    
+}
+
+
+
+
+
 
 
 
