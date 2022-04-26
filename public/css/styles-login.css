@@ -155,52 +155,115 @@ width: auto;
 
 /* # Tablet */
 @media (min-width: 768px){
-.burger-menu{
-    display: none;
-}
-.logo a img{
-}
-.dropdown{
-    display: flex;
-}
-    .importadas{
-        padding: 10px;     
+    .burger-menu{
+        display: none;
     }
-    .nacionales{
-        padding: 10px; 
+    .logo a img{
+        padding-left: 30px;
     }
-    .ofertas{     
-        padding: 11.5px; 
+    .dropdown{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items:center;
+        align-items:center;
     }
-.search{
-    display: block;
-}
-.search-icon{
-    display: none;
-}
-.faq{
-    display: block;
-}
+        .importadas{
+            padding: 4px;     
+        }
+        .nacionales{
+            padding: 4px; 
+        }
+        .ofertas{     
+            padding: 4px; 
+        }
+    .search{
+        display: flex;
+        width: 80%;
+        position: relative;
+    }
+    .search-icon{
+        display: none;
+    }
+                .cart i,
+                .faq i,
+                .user i{
+                    font-size: 2em;
+                    color: black;
+                }
+    .faq{
+        display: block;
+    }
+    .banner{
+        height: 200px;
+    }
+        .banner img{
+            height: 200px;
+            width: 90vw;
+        }
+    .articles article{
+        width: 45%;
+        transition: all 400ms ease;
+    }
+        .beer1 .product-img img,
+        .beer6 .product-img img,
+        .beer8 .product-img img,
+        .beer9 .product-img img{
+            margin-top: -45px;
+        }
 }
 
-.connect{
-    background-color: #0022AA;
-    color: #FFFF;
-    padding: 5px;
-}
 
-main{
-    font-size: 20px;
-}
 
-p{
-    font-size: 12px;
-}
 
 /* # Desktop */
 @media (min-width: 992px){
-.off{
-    padding: 4px;
-    font-size: 1em;
-}
+    .off{
+        padding: 4px;
+        font-size: 16px;
+        color: black;
+    }
+    .off2{
+        padding: 4px;
+        font-size: 16px;
+        color: white;
+    }
+    .banner{
+        height: 250px;
+    }
+        .banner img{
+            height: 250px;
+            width: 100vw;
+        }
+    .section{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .articles article{
+        width: 20%;
+    }
+    .aside{
+        display: none;
+        flex: 1 2 auto;
+        width: 250px;
+    }
+    .beer2 .product-img img,
+    .beer3 .product-img img,
+    .beer4 .product-img img,
+    .beer5 .product-img img,
+    .beer7 .product-img img,
+    .beer10 .product-img img,
+    .beer11 .product-img img,
+    .beer12 .product-img img{
+        margin-left: -55px;
+    }
+            .beer1 .product-img img,
+            .beer6 .product-img img,
+            .beer8 .product-img img,
+            .beer9 .product-img img{
+                margin-top: -55px;
+            }
+    footer .footer-menu{
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
