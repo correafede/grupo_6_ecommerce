@@ -99,7 +99,7 @@ body{
                 height: 360px;
             }
                 .banner img{
-                    width: 100%;
+                    width: 100vw;
                     height: 100%;
                 }
         .section{
@@ -201,6 +201,7 @@ body{
                 
             .footer-menu{
                 margin: 10px;
+                padding-left: 5px;
                 display: flex;
                 flex-flow: column nowrap;
                 color: #fff;
@@ -314,6 +315,7 @@ h2{
     flex-wrap: wrap;
     padding: 5px;
     width: 100%;
+    align-content: center;
 }
 .cuerpo-descripcion{
     display: flex;
@@ -374,6 +376,39 @@ footer .newsletter-box p{
     color: #ccc5b9;
     margin-bottom: 5px;
 }
+.header-iconos{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: flex-end;
+}
+.boton-prueba{
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    bottom: 30px;
+    right: 30px;
+    background: black;
+    color: rgb(105, 101, 101);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0,3);
+    z-index: 100;
+}
+.gap-xxs{
+    list-style: none;
+    padding: 5px;
+    display: flex;
+}
+.barra-van{
+    margin-right: 5px;
+    font-style: none;
+    color: #504c4c;
+
+}
+
 @media all and (min-width:480px){
     .articles{
         flex-flow: row wrap;
@@ -386,14 +421,11 @@ footer .newsletter-box p{
     width: 100%;
     margin-bottom: 10px;
 }
-.footer-menu{
-    flex-flow: row nowrap;
-}
 .search{
     width: 100%;
 }
 .search input{
-    width: 75%;
+    width: 65%;
     margin-left: 10px;
 }
 .faq{
@@ -440,6 +472,9 @@ footer .newsletter-box p{
 .usermenu{
     width: 100%;
 }
+.footer-menu{
+    flex-flow: row nowrap;
+}
 }
 @media all and (min-width: 768px){
     .aside{
@@ -455,7 +490,7 @@ footer .newsletter-box p{
         align-content:center ;
         flex: 4 1 auto;
         margin: 0px;
-        width: 40%;
+        width: 50%;
         order: 3;
     }
     .faq{
@@ -475,7 +510,7 @@ footer .newsletter-box p{
         margin: 0%;
         padding: 0%;
         justify-content: center;
-        width: 40%;
+        width: 35%;
     }
     .logo{
         flex: 1 2 auto;
@@ -489,7 +524,7 @@ footer .newsletter-box p{
         height: 360px;   
     }
 .imagen-producto img{
-    width: 49%;
+    width: auto;
     max-height: 392px;
 }
 .cuerpo-descripcion{
@@ -535,7 +570,6 @@ footer .newsletter-box p{
         align-self: center;
     }
     .imagen-producto img {
-        width: auto;
         max-height: 370px;
     }  
 .usermenu{

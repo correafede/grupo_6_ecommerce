@@ -20,26 +20,45 @@
             <a><img src="img/logo.webp" href="/index.html" alt="Logo de MercadoLiebre" class="logo"></img></a>
         </div>
         <div class="dropdown">
-            <div class="importadas">
-                <button>Importadas</button>
-            </div>
-            <div class="nacionales">
-                <button>Nacionales</button>
-            </div>
+            <div class="drop-importadas">
+                <button class="dropbtn">Importadas</button>
+                <div class="dropdown-content">
+                  <a href="\productDetail">Cerveza 1</a>
+                  <a href="\productDetail">Cerveza 2</a>
+                  <a href="\productDetail">Cerveza 3</a>
+                </div>
+              </div> 
+              <div class="drop-nacionales">
+                <button class="dropbtn">Nacionales</button>
+                <div class="dropdown-content">
+                  <a href="\productDetail">Cerveza 1</a>
+                  <a href="\productDetail">Cerveza 2</a>
+                  <a href="\productDetail">Cerveza 3</a>
+                </div>
+              </div> 
             <div class="ofertas">
                 <a href="/ofertas.html">Ofertas</a> 
             </div>
         </div>
         <div class="user-menu">
             <div class="search">
-                <form action="#">
-                    <input type="text" placeholder="Buscar productos" name="search"><button><i class="fa fa-search" style="font-size: 20 px;"></i></button>  
+                <form action="#" method="GET">
+                    <input type="search" placeholder="Buscar productos" name="search">
+                        <button type="submit" class="cursor-boton">
+                            <i class="fa fa-search" style="font-size: 20 px;"></i>
+                        </button>  
                 </form>
             </div>
-            <div class="faq"><i class="fa-solid fa-circle-question"></i><span class="off">FAQ</span></div>
+            <div class="faq">
+                <a href="#"><i class="fa-solid fa-circle-question"></i><span class="off">FAQ</span></a>
+            </div>
             <div class="search-icon"><i class="fa fa-search"></i></div>
-            <div class="user"><a href="/login.html"><i class="fa-solid fa-user"></i><span class="off">Perfil</span></a></div>
-            <div class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a></div>
+            <div class="user">
+                <a href="#"><i class="fa-solid fa-user"></i><span class="off">Perfil</span></a> 
+            </div>
+            <div class="cart">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a>
+            </div>
         </div>  
     </header>
     <div class="banner">
@@ -49,7 +68,7 @@
         <section class="section">
             <div class="aside"></div>
             <div class="articles">
-                <article class="article 1">
+                <article class="article beer1">
                     <div class="product-img">
                         <a href="/productDetail"><img src="img/andes-origen-ipa-andina.webp" alt="Andes Origen IPA Andina" ></a>
                     </div>
@@ -60,7 +79,7 @@
                         <p class="info">IPA / 4.5% alc</p>
                     </div>
                 </article>
-                <article class="article 2">
+                <article class="article beer2">
                     <div class="product-img">
                         <img src="img/bier-haus-chalaland-ipa.webp" alt="Cerveza BierHaus Chalaland IPA">
                     </div>
@@ -71,7 +90,7 @@
                         <p class="info"> AMERICAN IPA / IPA / 5.3% alc</p>
                     </div>
                 </article>
-                <article class="article 3">
+                <article class="article beer3">
                     <div class="product-img">
                         <img src="img/bier-haus-superstar-ipa.webp" alt="BierHaus Superstar IPA">
                     </div>
@@ -82,7 +101,7 @@
                         <p class="info"> IPA / DORADO / 5.7% alc</p>
                     </div>
                 </article>
-                <article class="article 4">
+                <article class="article beer4">
                     <div class="product-img">
                         <img src="img/blest-ipa.webp" alt="Blest IPA">
                     </div>
@@ -93,7 +112,7 @@
                         <p class="info"> IPA / 6.5% alc</p>
                     </div>
                 </article>
-                <article class="article 5">
+                <article class="article beer5">
                     <div class="product-img">
                         <img src="img/dos-dingos-aussie-ipa.webp" alt="Dos Dingos Aussie IPA">
                     </div>
@@ -104,7 +123,7 @@
                         <p class="info"> IPA / DORADO</p>
                     </div>
                 </article>
-                <article class="article 6">
+                <article class="article beer6">
                     <div class="product-img">
                         <img src="img/dos-dingos-super-refreshing-ipa.webp" alt="Dos Dingos Super Refreshing IPA">
                     </div>
@@ -115,7 +134,7 @@
                         <p class="info"> IPA / DORADO / 7% alc</p>
                     </div>
                 </article>
-                <article class="article 7">
+                <article class="article beer7">
                     <div class="product-img">
                         <img src="img/jarva-5-johnnies-ipa.webp" alt="Jarva 5 Johnnies IPA">
                     </div>
@@ -126,7 +145,7 @@
                         <p class="info"> IPA / 4.6% alc</p>
                     </div>
                 </article>
-                <article class="article 8">
+                <article class="article beer8">
                     <div class="product-img">
                         <img src="img/me-echo-la-burra-ipa.webp" alt="Me Echó La Burra IPA">
                     </div>
@@ -138,7 +157,7 @@
                     </div>
                     
                 </article>
-                <article class="article 9">
+                <article class="article beer9">
                     <div class="product-img">
                         <img src="img/mesta-beepure-session-ipa.webp" alt="Cerveza Mesta Beepure Session IPA">
                     </div>
@@ -150,7 +169,7 @@
                     </div>
                     
                 </article>
-                <article class="article 10">
+                <article class="article beer10">
                     <div class="product-img">
                         <img src="img/ocaso-ipa.webp" alt="Cerveza Ocaso IPA">
                     </div>
@@ -162,7 +181,7 @@
                     </div>
                     
                 </article>
-                <article class="article 11">
+                <article class="article beer11">
                     <div class="product-img">
                         <img src="img/ocaso-ipa-sin-alcohol.webp" alt="Cerveza Ocaso IPA Sin Alcohol Lata">
                     </div>
@@ -174,7 +193,7 @@
                     </div>
                     
                 </article>
-                <article class="article 12">
+                <article class="article beer12">
                     <div class="product-img">
                         <img src="img/cerveza-patagonia-247- session-ipa.webp" alt="Cerveza Patagonia 24.7. Session IPA con Sauco Lata">
                     </div>
@@ -223,9 +242,9 @@
             <div class="social">
                 <div><h3>Seguinos</h3></div>
                 <div class="container">
-                    <div><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i><span class="off">Facebook</span></a></div>
-                    <div><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i><span class="off">Twitter</span></a></div>
-                    <div><a href="#"><i class="fa-brands fa-whatsapp"></i><span class="off">Whatsapp</span></a></div>
+                    <div><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i><span class="off2">Facebook</span></a></div>
+                    <div><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i><span class="off2">Twitter</span></a></div>
+                    <div><a href="#"><i class="fa-brands fa-whatsapp"></i><span class="off2">Whatsapp</span></a></div>
                 </div> 
             </div>
         </nav>
