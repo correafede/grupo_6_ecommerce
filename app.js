@@ -10,11 +10,11 @@ app.get('/', (req,res) =>{
     res.sendFile(__dirname + '/views/index.html');
 })
 
-app.get('/login.html', (req,res) =>{
+app.get('/login', (req,res) =>{
     res.sendFile(__dirname + '/views/login.html');
 })
 
-app.get('/register.html', (req,res) =>{
+app.get('/register', (req,res) =>{
     res.sendFile(__dirname + '/views/register.html');
 })
 
