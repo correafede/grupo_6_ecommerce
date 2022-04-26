@@ -150,6 +150,7 @@ width: auto;
                     padding-right: 5px;
                 }
 
+
 main, 
 input, 
 div.login input,
@@ -158,25 +159,45 @@ div.login input,
     font-family: 'Roboto';
     margin: 10px;
     
-}                
+}  
+            
 .connect{
     background-color: rgb(29, 29, 170);
     color: #FFF;
     padding: 5px;
-    width: 80%;
+    
+}
+
+span{
+    font-size: 15px;
 }
 .division{
     border-bottom: solid 3px black;
-    width: 100%;
+    width: 300px;
+
+}
+.remember-user{
+    font-size: 15px;
 }
 .recover-password{
+    font-size: 15px;
     color: blue;
+}
+.check-in{
+    font-size: 17px;
 }
 .button input{
     background-color: rgb(100, 211, 100);
     color: #FFF;
-    
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
 }
+.login{
+    text-align: center;
+
+}
+
 
 
 

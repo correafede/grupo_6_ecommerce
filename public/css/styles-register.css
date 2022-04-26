@@ -166,13 +166,25 @@ input,
     padding: 5px;
  
 }
+span{
+    font-size: 15px;
+}
 .division{
     border-bottom: solid 3px black;
-    width: 100%;
+    width: 400px;
+}
+label{
+    font-size: 17px;
 }
 .button input{
     background-color: purple;
     color: #FFF;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+.register{
+    text-align: center;
     
 }
 
