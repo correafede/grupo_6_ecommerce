@@ -150,6 +150,41 @@ width: auto;
                     padding-right: 5px;
                 }
 
+main, 
+input, 
+div.login input,
+.division{
+    font-size: 20px;
+    font-family: 'Roboto';
+    margin: 10px;
+    
+}                
+.connect{
+    background-color: rgb(29, 29, 170);
+    color: #FFF;
+    padding: 5px;
+    width: 80%;
+}
+.division{
+    border-bottom: solid 3px black;
+    width: 100%;
+}
+.recover-password{
+    color: blue;
+}
+.button input{
+    background-color: rgb(100, 211, 100);
+    color: #FFF;
+    
+}
+
+
+
+
+
+
+
+
 
 
 
