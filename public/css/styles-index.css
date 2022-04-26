@@ -109,6 +109,9 @@ body{
                 padding: 8px;
                 display: none;
             }
+                .search input{
+                    width: 120px;
+                }
             .faq{
                 padding: 8px;
                 display: none;
@@ -277,9 +280,6 @@ body{
             width: 100%;
             align-content: flex-start;
         }
-            .part1,
-            .part2,
-            .part3,
             .social{
                 color: #fff;
                 display: flex;
@@ -337,10 +337,10 @@ body{
         justify-items:center;
         align-items:center;
     }
-        .importadas{
+        .drop-importadas{
             padding: 4px;     
         }
-        .nacionales{
+        .drop-nacionales{
             padding: 4px; 
         }
         .ofertas{     
@@ -401,20 +401,31 @@ body{
         font-size: 16px;
         color: black;
     }
+    .faq .fa-circle-question,
+    .cart .fa-cart-shopping,
+    .user .fa-user{
+    font-size: 1rem;
+    color: black;
+}
+    
         .cart,
         .faq,
         .user{
             display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            font-size: 1em;
+
         }
-                .cart i,
-                .faq i,
-                .user i{
-                    font-size: 1em;
-                    color: black;
-                }
-                .faq .fa-circle-question{
-                    font-size: 1.2rem;
-                }
+        .user-menu a{
+            font-size: -1em;
+        }
+        .search input{
+            width: 150px;
+        }
+                
+                
                 /* css header */
     .banner{
         height: 250px;
