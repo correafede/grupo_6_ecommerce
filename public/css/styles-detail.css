@@ -12,11 +12,15 @@ body{
         flex-flow: column nowrap;
         padding: 0px;
     }
-        .header{
-            background-color: #efefef;
-            display: flex;
-            flex-flow: column nowrap;
-        }
+    header{
+        background-color: #ebebeb;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-content: center;
+        height: auto;
+    }
             .menu{
                 display: flex;
                 flex-flow: column nowrap;
@@ -25,18 +29,6 @@ body{
                 flex: 1 1 auto;
                 margin-top: 10px
             }
-                .logo{
-                    display: flex;
-                    flex: 1 1 auto;
-                    height: 120px;
-                    margin-bottom: 10px;
-                    margin-left: 5px;
-                }
-                    .logo img{
-                        justify-self: center;
-                        align-self: center;
-                    }
-
                     .dropdown{
                         padding: 10px;
                         margin: 10px;
@@ -64,9 +56,8 @@ body{
                             padding: 10px;
                             margin: 10px;
                             background: #5B7DB1;
-                            width: 120px;
                         }
-                    .usermenu{
+                    .user-menu{
                         margin: 10px;
                         align-self: center;
                         display: flex;
@@ -80,27 +71,17 @@ body{
                             flex: 1 1 auto;
                             }
                         .faq{
-                            padding: 10px;
-                            margin: 10px;
                             flex: 1 1 auto;
                         }
                         .user{
-                            padding: 10px;
-                            margin: 10px;
                             flex: 1 1 auto;
                         }
                         .cart{
-                            padding: 10px;
-                            margin: 10px;
                             flex: 1 1 auto;
                         }
-            .banner{
-                background-size: cover;
-                height: 360px;
-            }
                 .banner img{
                     width: 100vw;
-                    height: 100%;
+                    height: auto;
                 }
         .section{
             display: flex;
@@ -137,16 +118,7 @@ body{
                         border-bottom: none;
                         height: auto;
                         padding: 0;
-                        position: relative;
                     }
-                        .productimg img{
-                            display: block;
-                            width: auto;
-                            height: 100%;
-                            max-height: 300px;
-                            box-sizing: border-box;
-                            padding: 0;
-                        }
                     .description{
                         flex: 1 3 auto;
                         font-weight: 500;
@@ -342,9 +314,6 @@ font-size: 0.8rem;
 .caja-descripcion{
     width: 100%;
 }
-.search{
-    width: 100%;
-}
 .search input{
     width: 75%;
     margin-left: 10px;
@@ -362,7 +331,7 @@ font-size: 0.8rem;
     padding: 0%;
     flex: none;
 }
-.usermenu{
+.user-menu{
     width: 100%;
 }
 .newsletter-box {
@@ -408,25 +377,116 @@ footer .newsletter-box p{
     color: #504c4c;
 
 }
+.burger-menu {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+    .burger-menu i {
+        color: black;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 2em;
+    }
+.dropdown{
+    display: none;
+}
+    .dropbtn {
+        background-color: #ebebeb;
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+    .drop-nacionales,
+    .drop-importadas {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .drop-nacionales:hover .dropdown-content,
+        .drop-importadas:hover .dropdown-content {
+            display: block;
+        }
+        .drop-nacionales:hover .dropbtn,
+        .drop-importadas:hover .dropbtn {
+            background-color: #696969;
+        } 
+
+    .ofertas{     
+        background-color: #ebebeb;
+        color: black;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+    }
+        .ofertas a{
+            color:black;
+        }
+.user-menu{
+    padding: 10px;
+    margin: 10px;
+    align-self: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+}
+    .off{
+        font-size: 0px;
+    }
+    .faq{
+        padding: 8px;
+        display: none;
+    }
+    .search-icon{
+        padding: 8px;
+        font-size: 2.5em;
+    }
+    .user{
+        padding: 8px;
+    }
+    .cart{
+        padding: 8px;
+    }
+        .cart i,
+        .faq i,
+        .user i{
+            color: black;
+        }
+.faq .fa-circle-question,
+    .cart .fa-cart-shopping,
+    .user .fa-user{
+    font-size: 1rem;
+}
 
 @media all and (min-width:480px){
     .articles{
         flex-flow: row wrap;
     }
     .banner{
-        max-height: 200px;
         display: block;
     }
-.usermenu{
+.user-menu{
     width: 100%;
     margin-bottom: 10px;
-}
-.search{
-    width: 100%;
-}
-.search input{
-    width: 65%;
-    margin-left: 10px;
 }
 .faq{
     padding: 0%;
@@ -456,12 +516,13 @@ footer .newsletter-box p{
     .article{
         flex: 1 1 30%;
     }
-    .dropdown{
+.dropdown{
+    display: flex;
         flex-flow: row nowrap;
-        margin-bottom: 10px;
-        padding: 0%;
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
+        max-width: 40%;
+        align-items: center;
     }
     .search{
         flex: 7 1 auto;
@@ -469,7 +530,7 @@ footer .newsletter-box p{
         margin: 10px;
     }
     
-.usermenu{
+.user-menu{
     width: 100%;
 }
 .footer-menu{
@@ -485,13 +546,13 @@ footer .newsletter-box p{
         flex: 1 1 auto;
 
     }
-    .usermenu{
+    .user-menu{
         display: flex;
         align-content:center ;
         flex: 4 1 auto;
-        margin: 0px;
         width: 50%;
-        order: 3;
+        order: 2;
+
     }
     .faq{
         padding: 0%;
@@ -506,22 +567,22 @@ footer .newsletter-box p{
         padding: 0%;
         flex: none;
     }
-    .dropdown{
+    /* .dropdown{
         margin: 0%;
         padding: 0%;
         justify-content: center;
-        width: 35%;
-    }
-    .logo{
-        flex: 1 2 auto;
-        width: 15%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items:center;
+        align-items:center;
+        } */
     }
     .logo img{
         width: auto;
     }
     .banner{
         background-size: cover;
-        height: 360px;   
+        height: auto;   
     }
 .imagen-producto img{
     width: auto;
@@ -537,10 +598,36 @@ footer .newsletter-box p{
     padding: 10px;
     max-width: 100%;
 }
-@media all and (min-width: 900){
-.search{
-    width: 80%;
+.burger-menu{
+    display: none;
 }
+.logo a img{
+    padding-left: 30px;
+    height: 100px;
+    width: auto;
+    padding-top: 10px;
+}
+    .importadas{
+        padding: 4px;     
+    }
+    .nacionales{
+        padding: 4px; 
+    }
+    .ofertas{     
+        padding: 4px; 
+    }
+.search-icon{
+    display: none;
+}
+.faq{
+    display: block;
+}
+    .banner img{
+        height: auto;
+        width: 100vw;
+    }
+}
+@media all and (min-width: 992){
 .faq{
     margin: 0px;
 }
@@ -558,6 +645,22 @@ footer .newsletter-box p{
 .caja-descripcion{
     width: 49%;
 }
+.off{
+    padding: 4px;
+    font-size: 16px;
+    color: black;
+}
+.off2{
+    padding: 4px;
+    font-size: 16px;
+    color: white;
+}
+.banner{
+    height: auto;
+}
+.user-menu{
+    order: 3;
+}
 }
 @media all and (min-width: 1279px){
     .article{
@@ -572,12 +675,7 @@ footer .newsletter-box p{
     .imagen-producto img {
         max-height: 370px;
     }  
-.usermenu{
+.user-menu{
     width: 30%;
-}
-.dropdown{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
 }
 }
