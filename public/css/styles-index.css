@@ -412,6 +412,9 @@ body{
                     font-size: 1em;
                     color: black;
                 }
+                .faq .fa-circle-question{
+                    font-size: 1.2rem;
+                }
                 /* css header */
     .banner{
         height: 250px;
