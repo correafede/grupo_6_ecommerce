@@ -80,7 +80,8 @@ body{
         .cart i,
         .faq i,
         .user i{
-            font-size: 2.4em;
+            font-size: 2em;
+            color: black;
         }
 .banner{
 background-size: cover;
@@ -173,7 +174,7 @@ span{
     border-bottom: solid 3px black;
     width: 400px;
 }
-label{
+label, p{
     font-size: 17px;
 }
 .button input{
@@ -229,8 +230,8 @@ label{
                 .cart i,
                 .faq i,
                 .user i{
-                    font-size: 2em;
-                    color: black;
+                    font-size: 2.em;
+                    
                 }
     .faq{
         display: block;
