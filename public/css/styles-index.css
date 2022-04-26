@@ -42,14 +42,51 @@ body{
         .dropdown{
             display: none;
         }
-            .importadas{
-                
+            .dropbtn {
+                background-color: #ebebeb;
+                color: black;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
             }
-            .nacionales{
-                
+            .drop-nacionales,
+            .drop-importadas {
+                position: relative;
+                display: inline-block;
             }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+    
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+                .drop-nacionales:hover .dropdown-content,
+                .drop-importadas:hover .dropdown-content {
+                    display: block;
+                }
+                .drop-nacionales:hover .dropbtn,
+                .drop-importadas:hover .dropbtn {
+                    background-color: #696969;
+                } 
+
             .ofertas{     
-                 
+                background-color: #ebebeb;
+                color: black;
+                padding: 10px;
+                font-size: 16px;
+                border: none;
             }
                 .ofertas a{
                     color:black;
@@ -87,6 +124,7 @@ body{
                 .faq i,
                 .user i{
                     font-size: 2.4em;
+                    color: black;
                 }
     .banner{
         display: block;
@@ -103,15 +141,14 @@ body{
     }
         .aside{
             background-color: #efefef;
-            flex: 3 1 auto;
             display: none;
         }
         .articles{
             background-color: #efefef;
             display: flex;
-            flex: 5 1 auto;
-            flex-flow:column nowrap;
+            flex-flow:row wrap;
             justify-content: center;
+            transition: all 400ms ease;
         }
             .article{
                 min-width: 250px;
@@ -123,10 +160,10 @@ body{
                 height: 500px;
                 border-radius: 4px;
                 box-shadow: 0 3px 6px #0000000f;
-                
             }
                 .product-img{
                     border-bottom: none;
+                    padding-top: 15px;
                     height: auto;
                     margin: auto;
                     flex: 2 1 100%;
@@ -134,17 +171,24 @@ body{
                     .product-img img{
                         display: block;
                         width: auto;
-                        height: 100%;
-                        max-height: 300px;
-                        box-sizing: border-box;
+                        height: auto;
+                        max-height: 350px;
                         padding: 0;
                     }
+                        .beer1 .product-img img,
+                        .beer6 .product-img img,
+                        .beer8 .product-img img,
+                        .beer9 .product-img img{
+                            margin-top: -25px;
+                            max-height: 450px;
+                        }
                 .description{
                     flex: 1 1 auto;
                     font-weight: 500;
                     display: block;
                     font-size: .77rem;
                     margin-top: 0;
+                    padding-bottom: 30px;
                     color: #221e20cc;
                     text-transform: uppercase;
                 }
@@ -179,7 +223,9 @@ body{
         height: auto;
         width: 100vw;
         align-items: center;
-    }
+        text-align: center;
+        padding: 20px;
+        }
         .newsletter-box{
             display: flex;
             flex-flow: column nowrap;
@@ -189,10 +235,13 @@ body{
         }
             .newsletter-box div p{
                 font-size: 22px;
-                font-weight: 600;
+                font-weight: 200;
+                color: white;
+                padding-bottom: 15px;
             }
             
         .footer-menu{
+            padding-top: 10px;
             margin: 10px;
             display: flex;
             flex-flow: row nowrap;
@@ -231,6 +280,7 @@ body{
                     .social div a{
                         color: #fff;
                         padding-right: 10px;
+                        padding-top: 7px;
                     }
                     .social div i{
                         padding-right: 5px;
@@ -251,22 +301,28 @@ body{
         align-items:center;
     }
         .importadas{
-            padding: 10px;     
+            padding: 4px;     
         }
         .nacionales{
-            padding: 10px; 
+            padding: 4px; 
         }
         .ofertas{     
-            padding: 11.5px; 
+            padding: 4px; 
         }
     .search{
         display: flex;
-        width: 100%;
+        width: 80%;
         position: relative;
     }
     .search-icon{
         display: none;
     }
+                .cart i,
+                .faq i,
+                .user i{
+                    font-size: 2em;
+                    color: black;
+                }
     .faq{
         display: block;
     }
@@ -277,6 +333,16 @@ body{
             height: 200px;
             width: 90vw;
         }
+    .articles article{
+        width: 45%;
+        transition: all 400ms ease;
+    }
+        .beer1 .product-img img,
+        .beer6 .product-img img,
+        .beer8 .product-img img,
+        .beer9 .product-img img{
+            margin-top: -45px;
+        }
 }
 
 
@@ -286,7 +352,13 @@ body{
 @media (min-width: 992px){
     .off{
         padding: 4px;
-        font-size: 1em;
+        font-size: 16px;
+        color: black;
+    }
+    .off2{
+        padding: 4px;
+        font-size: 16px;
+        color: white;
     }
     .banner{
         height: 250px;
@@ -295,80 +367,36 @@ body{
             height: 250px;
             width: 100vw;
         }
-}
-
-
-
-
-
-
-/* @media all and (min-width:480px){
-    .burger-menu{
-
-    }
-    .dropdown{
-        visibility: hidden;
-    }
-    .articles{
-        flex-flow: row wrap;
-    }
-
-}
-
-@media all and (min-width: 600px){
-    header{
-        max-height: 310px;
-    }
-    .article{
-        flex: 1 1 30%;
-    }
-    .dropdown{
+    .section{
+        display: flex;
         flex-flow: row nowrap;
     }
-    .off{
-        font-size: 16px
+    .articles article{
+        width: 20%;
     }
-    
-}
-@media all and (min-width: 768px){
     .aside{
-        display: flex;
-    }
-    .menu{
-        flex-flow: row nowrap;
-        flex: 1 1 auto;
-    }
-    .user-menu{
-        display: flex;
-        align-content:center ;
-        flex: 4 1 auto;
-    }
-    .logo{
+        display: none;
         flex: 1 2 auto;
+        width: 250px;
     }
-    .banner{
-        background-size: cover;
-        height: 360px;   
+    .beer2 .product-img img,
+    .beer3 .product-img img,
+    .beer4 .product-img img,
+    .beer5 .product-img img,
+    .beer7 .product-img img,
+    .beer10 .product-img img,
+    .beer11 .product-img img,
+    .beer12 .product-img img{
+        margin-left: -55px;
     }
-    .off{
-        font-size: 0px;
+            .beer1 .product-img img,
+            .beer6 .product-img img,
+            .beer8 .product-img img,
+            .beer9 .product-img img{
+                margin-top: -55px;
+            }
+    footer .footer-menu{
+        display: flex;
+        justify-content: space-evenly;
     }
-
 }
-@media all and (min-width: 900){
-    .off{
-        font-size: 16 px;
-    }
-   
-}
-@media all and (min-width: 1279px){
-    .article{
-        flex: 1 1 23%;
-    }
-    .banner{
-        background-size: cover;
-        height: 360px;
-        width: 90%;
-        align-self: center;
-    }
-} */
