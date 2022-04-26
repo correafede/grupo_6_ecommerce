@@ -12,6 +12,8 @@ body{
     align-items: center;
     background-color: #ebebeb;
 }
+
+    /* css header */
     header{
         background-color: #ebebeb;
         width: 100%;
@@ -78,7 +80,7 @@ body{
                 }
                 .drop-nacionales:hover .dropbtn,
                 .drop-importadas:hover .dropbtn {
-                    background-color: #696969;
+                    background-color: #696969c4;
                 } 
 
             .ofertas{     
@@ -127,13 +129,32 @@ body{
                     font-size: 2.4em;
                     color: black;
                 }
+
+                /* css header */
+
     .banner{
         display: block;
         height: 120px;
+        
     }
         .banner img{
             height: 120px;
             width: 90vw;
+        }
+    .barra-navegacion{
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+        .lista-producto{
+            list-style: none;
+            padding: 5px;
+            display: flex;
+        }
+        .item-home,
+        .barra-van{
+            margin-right: 5px;
+            font-size: 1rem;
+            color: #504c4c;
         }
     .section{
         display: flex;
@@ -168,7 +189,8 @@ body{
                     height: auto;
                     justify-items: center;
                     align-items: center;
-                    margin: auto;
+                    margin-left: auto;
+                     margin-right: auto;
                     flex: 2 1 100%;
                 }
                     .product-img img{
@@ -221,6 +243,7 @@ body{
                         margin-bottom: 5px;
                         line-height: .9rem;
                         }
+    /* css footer */
     .footer{
         background: #2e2e2e;
         display: flex;
@@ -291,6 +314,7 @@ body{
                         font-size: 20px;
                         padding: 8px;
                     }
+                    /* css footer */
 .error404{
     font-size: 5em;
     text-align: center;
@@ -300,6 +324,7 @@ body{
     
 /* # Tablet */
 @media (min-width: 768px){
+    /* css header */
     .burger-menu{
         display: none;
     }
@@ -345,6 +370,12 @@ body{
             height: 200px;
             width: 90vw;
         }
+        /* css header */
+
+    .item-home,
+    .barra-van{
+        font-size: 1.3rem;
+    }
     .articles article{
         width: 45%;
         transition: all 400ms ease;
@@ -354,6 +385,8 @@ body{
         .beer8 .product-img img,
         .beer9 .product-img img{
             margin-top: -45px;
+            margin-left: auto;
+            margin-right: auto;
         }
 }
 
@@ -362,20 +395,16 @@ body{
 
 /* # Desktop */
 @media (min-width: 992px){
+    /* css header */
     .off{
         padding: 4px;
         font-size: 16px;
         color: black;
     }
-    .off2{
-        padding: 4px;
-        font-size: 16px;
-        color: white;
-    }
         .cart,
         .faq,
         .user{
-            flex: 1 1 auto;
+            display: block;
         }
                 .cart i,
                 .faq i,
@@ -383,7 +412,7 @@ body{
                     font-size: 1em;
                     color: black;
                 }
-
+                /* css header */
     .banner{
         height: 250px;
     }
@@ -391,27 +420,21 @@ body{
             height: 250px;
             width: 100vw;
         }
+    .item-home,
+    .barra-van{
+        font-size: 1.7rem;
+    }
     .section{
         display: flex;
         flex-flow: row nowrap;
     }
     .articles article{
-        width: 20%;
+        width: 24%;
     }
     .aside{
         display: none;
         flex: 1 2 auto;
         width: 250px;
-    }
-    .beer2 .product-img img,
-    .beer3 .product-img img,
-    .beer4 .product-img img,
-    .beer5 .product-img img,
-    .beer7 .product-img img,
-    .beer10 .product-img img,
-    .beer11 .product-img img,
-    .beer12 .product-img img{
-        margin-left: -55px;
     }
             .beer1 .product-img img,
             .beer6 .product-img img,
@@ -419,8 +442,15 @@ body{
             .beer9 .product-img img{
                 margin-top: -55px;
             }
+    /* css footer */
     footer .footer-menu{
         display: flex;
         justify-content: space-evenly;
     }
+    .off2{
+        padding: 4px;
+        font-size: 16px;
+        color: white;
+    }
+    /* css footer */
 }
