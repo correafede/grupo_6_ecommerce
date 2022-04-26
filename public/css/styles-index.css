@@ -4,16 +4,20 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+/*body{
     font-family: 'Roboto';
     font-size: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #ebebeb;
+<<<<<<< HEAD
+}*/
+=======
 }
 
     /* css header */
+>>>>>>> 5faad73fc4bbc7bf659384e8f6a03bea5e5b4c28
     header{
         background-color: #ebebeb;
         width: 100%;
