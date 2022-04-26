@@ -13,6 +13,12 @@ body{
     background-color: #ebebeb;
 }
 
+main{
+    width: 90vw;
+    background: white;
+    padding: 30px;
+}
+
 /* css header */
 header{
     background-color: #ebebeb;
@@ -142,7 +148,7 @@ hr{
 
 }
 
-.container{
+.container1{
 
 	max-width: 1200px;
 
@@ -150,7 +156,7 @@ hr{
 
 }
 
-.container > h1{
+.container1 > h1{
 
 	padding: 20px 0;
 
@@ -535,7 +541,7 @@ hr{
 
 @media screen and (max-width: 1220px){
 
-	.container{
+	.container1{
 
 		max-width: 95%;
 
