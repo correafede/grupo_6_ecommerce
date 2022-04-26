@@ -90,6 +90,7 @@ body{
             }
                 .ofertas a{
                     color:black;
+                    padding: 16px;
                 }
         .user-menu{
             padding: 10px;
@@ -165,6 +166,8 @@ body{
                     border-bottom: none;
                     padding-top: 15px;
                     height: auto;
+                    justify-items: center;
+                    align-items: center;
                     margin: auto;
                     flex: 2 1 100%;
                 }
@@ -179,7 +182,7 @@ body{
                         .beer6 .product-img img,
                         .beer8 .product-img img,
                         .beer9 .product-img img{
-                            margin-top: -25px;
+                            margin-top: -35px;
                             max-height: 450px;
                         }
                 .description{
@@ -198,6 +201,8 @@ body{
                         text-decoration:line-through;
                     }
                     .price{
+                        font-size: larger;
+                        padding: 5px 0px;
                         text-decoration: none;
                         font-weight: 400;
                     }
@@ -271,7 +276,7 @@ body{
                 .empresas-menu{
                     display: flex;
                     flex-flow: column nowrap;
-                    padding: 5px;
+                    padding: 7px;
                     width: 100%;
                 }
                     .faq-menu a,
@@ -283,9 +288,16 @@ body{
                         padding-top: 7px;
                     }
                     .social div i{
-                        padding-right: 5px;
+                        font-size: 20px;
+                        padding: 8px;
                     }
+.error404{
+    font-size: 5em;
+    text-align: center;
+    margin: 50px;
+}
 
+    
 /* # Tablet */
 @media (min-width: 768px){
     .burger-menu{
@@ -360,6 +372,18 @@ body{
         font-size: 16px;
         color: white;
     }
+        .cart,
+        .faq,
+        .user{
+            flex: 1 1 auto;
+        }
+                .cart i,
+                .faq i,
+                .user i{
+                    font-size: 1em;
+                    color: black;
+                }
+
     .banner{
         height: 250px;
     }
