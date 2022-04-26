@@ -1,0 +1,206 @@
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto';
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ebebeb;
+}
+    header{
+        background-color: #ebebeb;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: center;
+        height: 120px;
+    }
+        .burger-menu {
+            text-align: center;
+            margin-top: 25px;
+            margin-left: 10px;
+            font-size: 20px;
+        }
+            .burger-menu i {
+                color: black;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 2em;
+            }
+        .logo a img{
+            height: 100px;
+            width: auto;
+            padding-top: 10px;
+            padding-left: 70px;
+            }
+        .dropdown{
+            padding: 10px;
+            margin: 10px;
+            display: none;
+        }
+        .ofertas a{
+            color:black;
+        }
+.user-menu{
+    padding: 10px;
+    margin: 10px;
+    align-self: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+}
+    .off{
+        font-size: 0px;
+    }
+    .search{
+        padding: 8px;
+        display: none;
+    }
+
+    .faq{
+        padding: 8px;
+        display: none;
+    }
+    .search-icon{
+        padding: 8px;
+        font-size: 2.5em;
+    }
+    .user{
+        padding: 8px;
+    }
+    .cart{
+        padding: 8px;
+    }
+        .cart i,
+        .faq i,
+        .user i{
+            font-size: 2.4em;
+        }
+.banner{
+background-size: cover;
+width: auto;
+}
+.footer{
+    background: #2e2e2e;
+    display: flex;
+    flex-flow: column nowrap;
+    height: auto;
+    width: 100vw;
+    align-items: center;
+}
+    .newsletter-box{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+    }
+        .newsletter-box div p{
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+    .footer-menu{
+        margin: 10px;
+        display: flex;
+        flex-flow: row nowrap;
+        color: #fff;
+        width: 100%;
+        align-content: flex-start;
+    }
+        .part1,
+        .part2,
+        .part3,
+        .social{
+            color: #fff;
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1 1 auto;
+        }
+            .container{
+                display: flex;
+                flex-flow: row nowrap;
+                padding: 0px
+            }
+        .h3{
+            flex: 1 1 100%;
+        }
+            .faq-menu,
+            .aboutus-menu,
+            .empresas-menu{
+                display: flex;
+                flex-flow: column nowrap;
+                padding: 5px;
+                width: 100%;
+            }
+                .faq-menu a,
+                .aboutus-menu a,
+                .empresas-menu a,
+                .social div a{
+                    color: #fff;
+                    padding-right: 10px;
+                }
+                .social div i{
+                    padding-right: 5px;
+                }
+
+
+
+
+/* # Tablet */
+@media (min-width: 768px){
+.burger-menu{
+    display: none;
+}
+.logo a img{
+}
+.dropdown{
+    display: flex;
+}
+    .importadas{
+        padding: 10px;     
+    }
+    .nacionales{
+        padding: 10px; 
+    }
+    .ofertas{     
+        padding: 11.5px; 
+    }
+.search{
+    display: block;
+}
+.search-icon{
+    display: none;
+}
+.faq{
+    display: block;
+}
+}
+
+.connect{
+    background-color: #0022AA;
+    color: #FFFF;
+    padding: 5px;
+}
+
+main{
+    font-size: 20px;
+}
+
+p{
+    font-size: 12px;
+}
+
+/* # Desktop */
+@media (min-width: 992px){
+.off{
+    padding: 4px;
+    font-size: 1em;
+}
+}
