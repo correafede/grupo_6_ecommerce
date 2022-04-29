@@ -236,23 +236,7 @@ label, p{
     .faq{
         display: block;
     }
-    .banner{
-        height: 200px;
-    }
-        .banner img{
-            height: 200px;
-            width: 90vw;
-        }
-    .articles article{
-        width: 45%;
-        transition: all 400ms ease;
-    }
-        .beer1 .product-img img,
-        .beer6 .product-img img,
-        .beer8 .product-img img,
-        .beer9 .product-img img{
-            margin-top: -45px;
-        }
+    
 }
 
 

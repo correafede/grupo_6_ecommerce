@@ -249,23 +249,7 @@ span{
     .faq{
         display: block;
     }
-    .banner{
-        height: 200px;
-    }
-        .banner img{
-            height: 200px;
-            width: 90vw;
-        }
-    .articles article{
-        width: 45%;
-        transition: all 400ms ease;
-    }
-        .beer1 .product-img img,
-        .beer6 .product-img img,
-        .beer8 .product-img img,
-        .beer9 .product-img img{
-            margin-top: -45px;
-        }
+    
 }
 
 
@@ -302,22 +286,7 @@ span{
         flex: 1 2 auto;
         width: 250px;
     }
-    .beer2 .product-img img,
-    .beer3 .product-img img,
-    .beer4 .product-img img,
-    .beer5 .product-img img,
-    .beer7 .product-img img,
-    .beer10 .product-img img,
-    .beer11 .product-img img,
-    .beer12 .product-img img{
-        margin-left: -55px;
-    }
-            .beer1 .product-img img,
-            .beer6 .product-img img,
-            .beer8 .product-img img,
-            .beer9 .product-img img{
-                margin-top: -55px;
-            }
+    
     footer .footer-menu{
         display: flex;
         justify-content: space-evenly;
