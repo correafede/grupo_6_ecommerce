@@ -1,5 +1,5 @@
 *{
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -18,7 +18,7 @@ body{
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        align-content: center;
+        align-items: center;
         height: auto;
     }
             .menu{
@@ -30,8 +30,6 @@ body{
                 margin-top: 10px
             }
                     .dropdown{
-                        padding: 10px;
-                        margin: 10px;
                         display: flex;
                         flex-flow: column nowrap;
                         align-self: center;
@@ -39,6 +37,19 @@ body{
                         height: auto;
                         justify-content: center;
                         order: 3;
+                    }
+                    .menu-y-dropdown{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        text-align: center;
+                    }
+                    .menu-usuario{
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin: 10px;
                     }
                         .importadas{
                             padding: 10px;
@@ -53,22 +64,24 @@ body{
                             width: 120px;
                         }
                         .ofertas{
-                            padding: 10px;
-                            margin: 10px;
                             background: #5B7DB1;
                         }
                     .user-menu{
-                        margin: 10px;
+                        margin: 5px;
                         align-self: center;
                         display: flex;
-                        flex-flow: row nowrap;
+                        flex-flow: row wrap;
                         align-items: center;
+                        width: 100%;
+
                     }
                         .off{
                             font-size: 0px;
+                            color: black;
                         }
                         .search{                
                             flex: 1 1 auto;
+                            width: 100%;
                             }
                         .faq{
                             flex: 1 1 auto;
@@ -219,23 +232,28 @@ body{
 main{
     max-width: 100vw;
     height: auto;
+    padding: 5px;
+    padding-top: 0px;
 }
 .agregar-al-carrito{
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid rgb(145, 145, 145);
-    box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
-    width: 100%;
+    width: 150px;
     align-self: center;
     color: white;
     font-weight: bold;
     background-color: #4484cc ;
 }
+.agregar-al-carrito:hover{
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
+}
 h2{
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 .imagen-producto img {
     width: auto;
@@ -248,8 +266,8 @@ h2{
     justify-content: center;
 }
 .titulo-del-producto{
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 400;
 }
 .precio-anterior{
     font-size: 0.7rem;
@@ -258,7 +276,7 @@ h2{
     width: 100%;
 }
 .precio-actual{
-    font-size: 20px;
+    font-size: 1.75rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -285,9 +303,10 @@ h2{
     height: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 5px;
+    padding: 20px;
     width: 100%;
     align-content: center;
+    line-height: 1.7rem;
 }
 .cuerpo-descripcion{
     display: flex;
@@ -306,7 +325,7 @@ body {
     padding: 0;
   }
 p{
-font-size: 0.8rem;
+font-size: 1rem;
 }
 .banner{
     display: none;
@@ -315,8 +334,7 @@ font-size: 0.8rem;
     width: 100%;
 }
 .search input{
-    width: 75%;
-    margin-left: 10px;
+    width: 80%;
 }
 .faq{
     padding: 0%;
@@ -378,10 +396,11 @@ footer .newsletter-box p{
 
 }
 .burger-menu {
-    text-align: center;
-    margin-top: 25px;
-    margin-left: 10px;
+    text-align: left;
     font-size: 20px;
+    order: 0;
+    width: 100%;
+    margin: 10px;
 }
     .burger-menu i {
         color: black;
@@ -395,7 +414,6 @@ footer .newsletter-box p{
     .dropbtn {
         background-color: #ebebeb;
         color: black;
-        padding: 16px;
         font-size: 16px;
         border: none;
     }
@@ -434,28 +452,18 @@ footer .newsletter-box p{
     .ofertas{     
         background-color: #ebebeb;
         color: black;
-        padding: 10px;
         font-size: 16px;
         border: none;
     }
-        .ofertas a{
-            color:black;
-        }
+    .ofertas a{
+        color: black;
+    }
 .user-menu{
-    padding: 10px;
-    margin: 10px;
     align-self: center;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: baseline;
 }
-    .off{
-        font-size: 0px;
-    }
-    .faq{
-        padding: 8px;
-        display: none;
-    }
     .search-icon{
         padding: 8px;
         font-size: 2.5em;
@@ -471,22 +479,35 @@ footer .newsletter-box p{
         .user i{
             color: black;
         }
-.faq .fa-circle-question,
-    .cart .fa-cart-shopping,
-    .user .fa-user{
-    font-size: 1rem;
+.faq ,
+.cart .fa-cart-shopping,
+.user .fa-user{
+    font-size: 2rem;
 }
-
-@media all and (min-width:480px){
-    .articles{
-        flex-flow: row wrap;
-    }
-    .banner{
-        display: block;
-    }
+.logo{
+    width: 30%;
+     max-height: 160px;
+    text-align: center;
+}
+.logo a img{
+    width: auto;
+    max-height: 100px;
+    height: auto;
+    margin: 10px;
+}
+.menu-y-dropdown{
+     width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.articles{
+    flex-flow: row wrap;
+}
+.banner{
+    display: block;
+}
 .user-menu{
     width: 100%;
-    margin-bottom: 10px;
 }
 .faq{
     padding: 0%;
@@ -506,126 +527,173 @@ footer .newsletter-box p{
     flex-direction: column;
     width: 100%;
     align-items: flex-start;
-  }
+}
 .off{
     font-size: 16px
 }
+.menu-usuario{
+    width: 40%;
 }
-
-@media all and (min-width: 600px){
+.menu-usuario div span{
+    display: none;
+}
+.search{
+    width: 60%;
+}
+.user-menu div form{
+    width: 100%;
+    text-align: start;
+    display: none;
+}
+.imagen-producto{
+    width: 100%;
+}
+.imagen-producto:hover{
+    -webkit-transform:scale(1.3);
+    transform:scale(1.45);
+    filter: saturate(150%);
+    transition: all 700ms ease-in-out;
+}
+.imagen-producto{
+    overflow:hidden;
+}
     .article{
         flex: 1 1 30%;
     }
 .dropdown{
     display: flex;
-        flex-flow: row nowrap;
-        width: 100%;
-        justify-content: flex-start;
-        max-width: 40%;
-        align-items: center;
-    }
-    .search{
-        flex: 7 1 auto;
-        width: 80px;
-        margin: 10px;
-    }
-    
-.user-menu{
+    flex-flow: row nowrap;
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    order: 4;
+    margin: 10px;
+    display: none;
+}
+.search{
+    flex: 7 1 auto;
+    width: 80px;
+    margin: 10px;
 }
 .footer-menu{
     flex-flow: row nowrap;
 }
+.cursor-boton{
+    border: none;
+}
+.fa-search{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.fas.fa-search{
+    font-size: 2rem;
+    color: black;
+    border: none;
+}
+.menu-usuario .fa-circle-question,
+.fa-question-circle{
+    display: none;
 }
 @media all and (min-width: 768px){
-    .aside{
-        display: flex;
-    }
-    .menu{
-        flex-flow: row nowrap;
-        flex: 1 1 auto;
-
-    }
-    .user-menu{
-        display: flex;
-        align-content:center ;
-        flex: 4 1 auto;
-        width: 50%;
-        order: 2;
-
-    }
-    .faq{
-        padding: 0%;
-        flex: none;
-    }
-    .user{
-        padding: 0%;
-        margin: 0%;
-        flex: none;
-    }     
-    .cart{
-        padding: 0%;
-        flex: none;
-    }
-    /* .dropdown{
-        margin: 0%;
-        padding: 0%;
-        justify-content: center;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-items:center;
-        align-items:center;
-        } */
-    }
-    .logo img{
-        width: auto;
-    }
-    .banner{
-        background-size: cover;
-        height: auto;   
+header{
+    flex-wrap: wrap;
+}
+.user-menu div form{
+    display: block;
+}    
+.aside{
+    display: flex;
+}
+.menu{
+    flex-flow: row nowrap;
+    flex: 1 1 auto;
+}
+.menu-usuario div span{
+    display: block;
+}
+.magnifying{
+    display: none;
+}
+.user-menu{
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+}
+.menu-usuario .fas.fa-search{
+    display: none;
+}
+.menu-usuario{
+    width: 20%;
+    justify-content: space-around;
+}
+.menu-usuario .fa-circle-question,
+.fa-question-circle{
+    display: block;
+}
+.dropdown{
+    display: flex;
+    width: 100%;
+    order:100;
+}
+.menu-y-dropdown{
+    order: 3;
+}
+.faq{
+    padding: 0%;
+    flex: none;
+}
+.user{
+    padding: 0%;
+    margin: 0%;
+    flex: none;
+}     
+.cart{
+    padding: 0%;
+    flex: none;
+}
+.logo img{
+    width: auto;
+}
+.banner{
+     background-size: cover;
+    height: auto;   
+}
+.logo{
+        width: 20%;
     }
 .imagen-producto img{
     width: auto;
     max-height: 392px;
 }
-.cuerpo-descripcion{
-    height: 49%;
+.burger-menu {
+    display: none;
 }
+.cuerpo-descripcion{
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    height: 50%;
+    width: 100%;
+}
+.imagen-producto{
+    width: 50%;
+}   
 .caja-descripcion{
     display: flex;
     flex-direction: row;
     margin: 5px;
     padding: 10px;
-    max-width: 100%;
 }
-.burger-menu{
-    display: none;
-}
-.logo a img{
-    padding-left: 30px;
-    height: 100px;
-    width: auto;
-    padding-top: 10px;
-}
-    .importadas{
-        padding: 4px;     
-    }
-    .nacionales{
-        padding: 4px; 
-    }
-    .ofertas{     
-        padding: 4px; 
-    }
 .search-icon{
     display: none;
 }
 .faq{
     display: block;
 }
-    .banner img{
-        height: auto;
-        width: 100vw;
-    }
+.banner img{
+    height: auto;
+    width: 100vw;
+}
 }
 @media all and (min-width: 992){
 .faq{
@@ -637,13 +705,10 @@ footer .newsletter-box p{
 .cart{
     margin: 0px;
 }
-}
+
 .imagen-producto{
-    width: 49%;
+    width: 100%;
     max-height: 392px;
-}
-.caja-descripcion{
-    width: 49%;
 }
 .off{
     padding: 4px;
@@ -676,6 +741,6 @@ footer .newsletter-box p{
         max-height: 370px;
     }  
 .user-menu{
-    width: 30%;
+    width: 79%;
 }
 }

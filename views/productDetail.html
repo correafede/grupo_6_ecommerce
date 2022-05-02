@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles-detail.css">
     <script src="https://kit.fontawesome.com/3280e6a789.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div><a href="/productdetail"><button class="boton-prueba"><i class="fa fa-search" style="font-size: 20 px;"></i></button></div></a>
@@ -18,8 +21,9 @@
                 <i class="fas fa-bars"></i>
             </div>
             <div class="logo">
-                <a><img src="img/logo.webp" href="/index.html" alt="Logo de MercadoLiebre" class="logo"></img></a>
+                <a href="/"><img src="img/logo.webp" href="/index.html" alt="Logo de MercadoLiebre" class="logo"></img></a>
             </div>
+            <div class="menu-y-dropdown">
             <div class="dropdown">
                 <div class="drop-importadas">
                     <button class="dropbtn">Importadas</button>
@@ -41,26 +45,31 @@
                     <a href="/ofertas.html">Ofertas</a> 
                 </div>
             </div>
+            </div>
             <div class="user-menu">
                 <div class="search">
                     <form action="#" method="GET">
                         <input type="search" placeholder="Buscar productos" name="search">
                             <button type="submit" class="cursor-boton">
-                                <i class="fa fa-search" style="font-size: 20 px;"></i>
+                                <i class="fa fa-search"></i>
                             </button>  
                     </form>
                 </div>
+                <div class="menu-usuario">
                 <div class="faq">
                     <a href="#"><i class="fa-solid fa-circle-question"></i><span class="off">FAQ</span></a>
                 </div>
-                <div class="search-icon"><i class="fa fa-search"></i></div>
+                <div class="magnifying">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div>
                 <div class="user">
-                    <a href="/login"><i class="fa-solid fa-user"></i><span class="off">Perfil</span></a> 
+                    <a href="/login"><i class="fas fa-user"></i><span class="off">Perfil</span></a> 
                 </div>
                 <div class="cart">
                     <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a>
+                    </div>
                 </div>
-            </div> 
+            </div>
     </header>
     <div class="banner">
         <img src="img/banner.png" alt="Banner">
@@ -84,7 +93,7 @@
                     Andes Andina IPA Andina Edición limitada    
                 </div>
                 <div class="precio-anterior">$130</div>
-                <div class="precio-actual">$120.5<div class="descuento">14% Off</div></div><div><button type="button" class="agregar-al-carrito">Agregar al carrito</button></div>
+                <div class="precio-actual">$120.5<div class="descuento">14% Off</div></div><div><a href="/productCart"><button type="button" class="agregar-al-carrito">Agregar al carrito</button></a></div>
                 <div class="disponibles">Disponibles: 100</div>
                 <div class="descripcion-del-producto">
                     <h2>Información del producto</h2>
