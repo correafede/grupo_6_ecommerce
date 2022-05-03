@@ -43,11 +43,13 @@ body{
                         display: flex;
                         flex-wrap: wrap;
                         text-align: center;
+                        display: none;
+
                     }
                     .menu-usuario{
                         display: flex;
                         width: 100%;
-                        justify-content: space-around;
+                        justify-content: flex-end;
                         align-items: center;
                         margin: 10px;
                     }
@@ -75,11 +77,8 @@ body{
                         width: 100%;
 
                     }
-                        .off{
-                            font-size: 0px;
-                            color: black;
-                        }
-                        .search{                
+                        .search{
+                            display: none;                
                             flex: 1 1 auto;
                             width: 100%;
                             }
@@ -232,7 +231,6 @@ body{
 main{
     max-width: 100vw;
     height: auto;
-    padding: 5px;
     padding-top: 0px;
 }
 .agregar-al-carrito{
@@ -242,7 +240,8 @@ main{
     align-self: center;
     color: white;
     font-weight: bold;
-    background-color: #4484cc ;
+    background-color: #3483fa ;
+    margin-top: 5px;
 }
 .agregar-al-carrito:hover{
     border-right: 1px solid white;
@@ -346,7 +345,7 @@ font-size: 1rem;
     flex: none;
 }     
 .cart{
-    padding: 0%;
+    padding: 5px;
     flex: none;
 }
 .user-menu{
@@ -373,16 +372,15 @@ footer .newsletter-box p{
     position: fixed;
     width: 45px;
     height: 45px;
-    line-height: 45px;
     bottom: 30px;
     right: 30px;
     background: black;
     color: rgb(105, 101, 101);
     border-radius: 50px;
-    text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     box-shadow: 0px 1px 10px rgba(0,0,0,0,3);
     z-index: 100;
+    line-height: 1px;
 }
 .gap-xxs{
     list-style: none;
@@ -457,6 +455,7 @@ footer .newsletter-box p{
     }
     .ofertas a{
         color: black;
+        padding: 1px 6px;
     }
 .user-menu{
     align-self: center;
@@ -529,13 +528,18 @@ footer .newsletter-box p{
     align-items: flex-start;
 }
 .off{
-    font-size: 16px
+    font-size: 16px;
+    color: #fff;
+}
+.off2{
+    color: black;
 }
 .menu-usuario{
-    width: 40%;
+    width: 100%;
 }
 .menu-usuario div span{
     display: none;
+    color: black;
 }
 .search{
     width: 60%;
@@ -566,8 +570,6 @@ footer .newsletter-box p{
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    order: 4;
-    margin: 10px;
     display: none;
 }
 .search{
@@ -594,6 +596,17 @@ footer .newsletter-box p{
 .menu-usuario .fa-circle-question,
 .fa-question-circle{
     display: none;
+}
+.footer-menu{
+    flex-flow: column;
+}
+.fa-arrow-up-to-line{
+    color: #fff;
+}
+@media all and (min-width:421px) {
+.footer-menu{
+    flex-flow: row nowrap;
+}
 }
 @media all and (min-width: 768px){
 header{
@@ -634,10 +647,10 @@ header{
 .dropdown{
     display: flex;
     width: 100%;
-    order:100;
 }
 .menu-y-dropdown{
     order: 3;
+    display: block;
 }
 .faq{
     padding: 0%;
@@ -694,6 +707,9 @@ header{
     height: auto;
     width: 100vw;
 }
+.search{
+    display: block;
+}
 }
 @media all and (min-width: 992){
 .faq{
@@ -710,21 +726,8 @@ header{
     width: 100%;
     max-height: 392px;
 }
-.off{
-    padding: 4px;
-    font-size: 16px;
-    color: black;
-}
-.off2{
-    padding: 4px;
-    font-size: 16px;
-    color: white;
-}
 .banner{
     height: auto;
-}
-.user-menu{
-    order: 3;
 }
 }
 @media all and (min-width: 1279px){
