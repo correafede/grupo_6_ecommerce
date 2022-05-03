@@ -21,3 +21,6 @@ Por ser el Marketplace por excelencia y porque propone un diseño simple, limpio
 
 **Enlace del workspace:**
 https://trello.com/invite/b/zEWZhTj3/63d72c4c0ee072a0ac69926f131c94c6/proyectointegradorgrupo6
+
+**Enlace Heroku**
+https://birra-shop-grupo6.herokuapp.com/
