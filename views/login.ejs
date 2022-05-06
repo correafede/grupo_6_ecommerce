@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+    <!-- <div class="banner">
+        <img src="img/banner.png" alt="Banner">
+    </div> -->
+    <main>
+        <form action="usuarios.html" method="post">
+            <div class="login">
+            <div class="connect">
+                <i class="fa-brands fa-facebook-square"></i><span>Inicia sesion con Facebook</span>
+        </div>
+        <div class="division">
+        </div>
+        <div>
+            <input type="e-mail" placeholder="E-mail" name="E-mail" ></input>
+        </div>
+        <div>
+            <input type="password" placeholder="Contraseña" name="Password" >
+        </div>
+        <div>
+        <p class="recover-password">¿Olvidaste tu contraseña?</p>
+        </div>
+        <div class="remember-user">
+            <label>
+            <input type="checkbox" name="Recordar mi usuario" >
+            Recordar mi usuario
+            </label>
+        </div>
+        <div class="button">
+        <a href="/index"><input type="submit" value="Login"></input></a> 
+        </div>
+        <div class="check-in">
+            <p>¿Todavia no sos cliente? Registrate <a href="/register">acá</p></a>
+        </div>
+       </div>
+        </form>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>
