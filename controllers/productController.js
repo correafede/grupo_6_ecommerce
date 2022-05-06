@@ -1,11 +1,15 @@
-let mainController = {
-    index: (req, res) => { 
-        res.render("index", {lista: listaBirras}); 
+let productController = {
+    detalle: (req, res) => {
+        let birra = listaBirras.find(birra => birra.id == req.params.id);
+        res.render("detail", {birra: birra});
     },
-    error: (req, res) => { 
-        res.render("404");
+    carrito: (req, res) => { 
+        res.render("cart");
     }
 }
+
+
+
 
 const listaBirras = [
     {
@@ -88,5 +92,22 @@ const listaBirras = [
     }
 ]
 
+/*  **Template producto**
 
-module.exports = mainController;
+{
+    id:#,
+    nombre: '',
+    tamaño: '',
+    categoria: '',
+    abv: '',
+    ibu: '',
+    descripcion: '',
+    precio: '',
+    precio6: '',
+    cantidad: '',
+    img: ''
+}
+
+*/
+
+module.exports = productController;

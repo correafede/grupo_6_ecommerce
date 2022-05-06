@@ -5,7 +5,7 @@
 }
 html{
     scroll-behavior: smooth;
-  }
+}
 body{
     padding: 0px;
     background-color: #f0f0f0;
@@ -167,6 +167,21 @@ body{
                     width: 100vw;
                     height: auto;
                 }
+                .barra-navegacion{
+                    padding-left: 15px;
+                    padding-top: 10px;
+                }
+                    .lista-producto{
+                        list-style: none;
+                        padding: 5px;
+                        display: flex;
+                    }
+                    .item-home,
+                    .barra-van{
+                        margin-right: 5px;
+                        font-size: 1rem;
+                        color: #504c4c;
+                    }
 
 
 

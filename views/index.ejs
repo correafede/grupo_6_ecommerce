@@ -28,17 +28,17 @@
                 <div class="drop-importadas">
                     <button class="dropbtn">Importadas</button>
                     <div class="dropdown-content">
-                    <a href="\productDetail">Cerveza 1</a>
-                    <a href="\productDetail">Cerveza 2</a>
-                    <a href="\productDetail">Cerveza 3</a>
+                    <a href="#">Cerveza 1</a>
+                    <a href="#">Cerveza 2</a>
+                    <a href="#">Cerveza 3</a>
                     </div>
                 </div> 
                 <div class="drop-nacionales">
                     <button class="dropbtn">Nacionales</button>
                     <div class="dropdown-content">
-                    <a href="\productDetail">Cerveza 1</a>
-                    <a href="\productDetail">Cerveza 2</a>
-                    <a href="\productDetail">Cerveza 3</a>
+                    <a href="#">Cerveza 1</a>
+                    <a href="#">Cerveza 2</a>
+                    <a href="#">Cerveza 3</a>
                     </div>
                 </div>  
                 <div class="ofertas">
@@ -61,10 +61,10 @@
                 <a href="#"><i class="fas fa-search"></i></a>
             </div>
             <div class="user">
-                <a href="/login"><i class="fas fa-user"></i><span class="off">Perfil</span></a> 
+                <a href="/user/login"><i class="fas fa-user"></i><span class="off">Perfil</span></a> 
             </div>
             <div class="cart">
-                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a>
+                <a href="/product/cart"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a>
                 </div>
             </div>
         </div>
@@ -89,16 +89,15 @@
                 <% lista.forEach(beer => { %>
                 <article class="article beer1">
                     <div class="product-img">
-                        <a href="/productDetail/<%=beer.id%>"><img src="/img/<%=beer.img%>" alt="foto birra" ></a>
+                        <a href="/products/detail/<%=beer.id%>"><img src="/img/<%=beer.img%>" alt="foto birra" ></a>
                     </div>
                     <div class="description">
                         <p class="discount"></p>
                         <p class="price"><%= beer.precio%></p>
-                        <p class="class"><%= beer.titulo %>  <%= beer.tamaño %></p>   
+                        <p class="class"><%= beer.nombre %>  <%= beer.tamaño %></p>   
                         <p class="info"><%= beer.categoria %> / <%= beer.abv %></p>
                     </div>
                 </article>
-                
                 <%   }) %>
             </div>
         </section>
