@@ -15,6 +15,12 @@ let mainController = {
     carrito: (req, res) => { 
         res.render("productCart");
     },
+    create: (req, res) => {
+        res.render("createProduct");
+    },
+    modify: (req, res) => {
+        res.render("modifyProduct");
+    },
     error: (req, res) => { 
         res.render("404");
     }

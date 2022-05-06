@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <body>
+        <%- include('./partials/header') %>
+        <main>
+            <h1>Modifique un producto</h1>
+            <form action="productDetail.ejs" method="post">
+            <div class="create">
+                <div class="divisionModify">
+                </div>
+                <div>
+                    <input type="text" placeholder="Producto a modificar" name="modifyName" ></input>
+                </div>
+                <div>
+                    <input type="text" placeholder="Nuevo nombre" name="nuevo-nombre" ></input>
+                </div>
+                <div>
+                    <div class="tamanio-producto"><label for="tamanio" class="input-tamanio">Nuevo volumen del producto: 
+                        <div class="tamanio-producto">
+                        <label for="tamanio">330ml</label>
+                        <input type="radio" name="perfil">
+                        <label for="tamanio">473ml</label>
+                        <input type="radio" name="perfil">
+                        </label>
+                        </div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Nueva categoría" name="categoria" ></input>
+                </div>
+                <div>
+                <label>
+                    <input type="text" placeholder="Nuevo ABV" name="ABV" >
+                    </label>
+                </div>
+                <div>
+                    <input type="ibu" placeholder="Nuevo IBU" name="IBU" ></input>
+                </div>
+                <textarea name="textarea" rows="10" cols="50" placeholder="Inserte nueva descripción del producto"></textarea>
+                <div>
+                    <input type="precio" placeholder="Nuevo precio x unidad" name="precio" ></input>
+                </div>
+                <div>
+                    <input type="precio6" placeholder="Nuevo precio x pack" name="precio6" ></input>
+                </div>
+                <div>
+                    <input type="cantidad" placeholder="Nuevo unidades por pack" name="cantidad" ></input>
+                </div>
+                <div>
+                    <input type="file" name="imgProducto" accept=".jpg, .pdf" multiple>
+                </div>
+                <div class="button-create">
+                    <a href="#"><input type="submit" value="Modificar producto"></input></a> 
+                </div>
+        </div>
+    </form>
+        </main>
+        <%- include('./partials/footer') %>
+    </body>
+</html>
