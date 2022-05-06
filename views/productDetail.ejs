@@ -26,13 +26,18 @@
                 <div class="titulo-del-producto">
                 <%= birra.nombre %>
                 </div>
+                <br>
                 <div class="precio-anterior"></div>
-                <div class="precio-actual"><div class="descuento">14% Off</div></div><div><a href="/productCart"><button type="button" class="agregar-al-carrito">Agregar al carrito</button></a></div>
-                <div class="disponibles">Disponibles: 100</div>
+                <br>
+                <div class="precio-actual">$<%= birra.precio %><div class="descuento"></div></div><div><a href="/productCart"><button type="button" class="agregar-al-carrito">Agregar al carrito</button></a></div>
+                <div class="disponibles">Disponibles: <%= birra.cantidad %> unidades</div>
                 <div class="descripcion-del-producto">
                     <h2>Información del producto</h2>
-                    <p>
-                        <%= birra.descripcion %>
+                    <p><%= birra.descripcion %>
+                    <br>
+                    IBU: <%= birra.ibu %>
+                    <br>
+                    ALV: <%= birra.abv %>
                     </p> 
                 </div>
     </div>
