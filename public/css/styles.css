@@ -52,17 +52,14 @@ body{
             display: none;
         }
             .dropdown{
-                display: flex;
-                flex-flow: row nowrap;
-                width: 100%;
-                justify-content: space-between;
-                align-items: center;
                 display: none;
             }
                 .drop-nacionales,
                 .drop-importadas {
                     position: relative;
                     display: inline-block;
+                    padding: 0px 10px;
+                    padding-bottom: 15px;
                 }
                     .dropbtn {
                         background-color: #ebebeb;
@@ -100,6 +97,8 @@ body{
                     color: black;
                     font-size: 16px;
                     border: none;
+                    padding: 0px 10px;
+                    padding-bottom: 15px;
                 }
                     .ofertas a{
                         color: black;
@@ -252,13 +251,6 @@ body{
                                         max-height: 350px;
                                         padding: 0;
                                     }
-                                        .beer1 .product-img img,
-                                        .beer6 .product-img img,
-                                        .beer8 .product-img img,
-                                        .beer9 .product-img img{
-                                            margin-top: -35px;
-                                            max-height: 450px;
-                                        }
                                 .description{
                                     flex: 1 1 auto;
                                     font-weight: 500;
@@ -658,6 +650,11 @@ body{
     .dropdown{
         display: flex;
         width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        justify-content: center ;
+        align-items: center;
     }
     .menu-y-dropdown{
         order: 3;
