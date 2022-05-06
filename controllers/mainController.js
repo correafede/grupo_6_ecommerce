@@ -1,9 +1,10 @@
 let mainController = {
     index: (req, res) => { 
-        res.render("index",); 
+        res.render("index", {lista: listaBirras}); 
     },
-    detalle: (req, res) => { 
-        res.render("productDetail");
+    detalle: (req, res) => {
+        let birra = listaBirras.find(birra => birra.id == req.params.id);
+        res.render("productDetail", {birra: birra});
     },
     login: (req, res) => { 
         res.render("login");
@@ -24,7 +25,7 @@ const listaBirras = [
     {
         id: 1,
         titulo: 'Cerveza Andes Origen IPA Andina',
-        tamaño: 'Lata 473ml',
+        tamanio: 'Lata 473ml',
         categoria: 'IPA',
         abv: '4.5% ALC',
         ibu: '35',
@@ -36,7 +37,7 @@ const listaBirras = [
     {
         id: 2,
         titulo: 'Cerveza BierHaus Chalaland',
-        tamaño: 'Lata 473ml',
+        tamanio: 'Lata 473ml',
         categoria: 'AMERICAN IPA / IPA',
         abv: '5.3% ALC',
         ibu: '42',
@@ -48,7 +49,7 @@ const listaBirras = [
     {
         id: 3,
         titulo: 'Cerveza BierHaus IPA Superstar',
-        tamaño: 'Lata 473ml',
+        tamanio: 'Lata 473ml',
         categoria: 'IPA / DORADO',
         abv: '5.7% ALC',
         ibu: '45',
@@ -60,7 +61,7 @@ const listaBirras = [
     {
         id: 4,
         titulo: 'Cerveza Blest IPA',
-        tamaño: 'Lata 473ml',
+        tamanio: 'Lata 473ml',
         categoria: 'IPA',
         abv: '6.5% ALC',
         ibu: '54',
@@ -72,7 +73,7 @@ const listaBirras = [
     {
         id: 5,
         titulo: 'Cerveza Dos Dingos Aussie',
-        tamaño: 'Lata 473ml',
+        tamanio: 'Lata 473ml',
         categoria: 'IPA / DORADO',
         abv: '6.5% ALC',
         ibu: '45',
@@ -83,15 +84,15 @@ const listaBirras = [
     },
     {
         id: 6,
-        titulo: '',
-        tamaño: '',
+        titulo: 'Dos Dingos SUper Refreshing IPA',
+        tamanio: '',
         categoria: 'IPA / DORADO',
         abv: '7% ALC',
         ibu: '',
         descripcion: 'No te quede sin esta Edición Limitada de Dos Dingos, Super Refreshing IPA es un hibrido entre una IPA de la costa este y la oeste. Con un cuerpo medio y algo turbia, es extremadamente refrescante y sabrosa. Es de color amarillo pálido y amargor balanceado. Tiene sabores y aromas cítricos dulces tropicales, proveniente de una tripe dry hop de los lúpulos Vic-Secrete y Citra (Aus)',
         precio: '330',
         precio6: '1.980',
-        img: ''
+        img: 'dos-dingos-super-refreshing-ipa.webp'
     }
 ]
 

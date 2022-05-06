@@ -5,7 +5,7 @@
     <div><a href="/productdetail"><button class="boton-prueba"><i class="fa-solid fa-arrow-up"></i></button></a></div>
     <%- include('./partials/header') %>
     <div class="banner">
-        <img src="img/banner.png" alt="Banner">
+        <img src="../img/banner.png" alt="Banner">
     </div>
 <main>
     <div class="barra-navegacion">
@@ -19,20 +19,20 @@
         </ol>
     </div>
     <div class="cuerpo-descripcion">
-        <div class="imagen-producto"><img src="img/andes-origen-ipa-andina.webp"></div>  
+        <div class="imagen-producto"><img src="../img/<%= birra.img %>"></div>  
         <div class="caja-descripcion">
             <div class="texto-descripcion">
+                
                 <div class="titulo-del-producto">
-                    Andes Andina IPA Andina Edición limitada    
+                <%= birra.titulo %>
                 </div>
-                <div class="precio-anterior">$130</div>
-                <div class="precio-actual">$120.5<div class="descuento">14% Off</div></div><div><a href="/productCart"><button type="button" class="agregar-al-carrito">Agregar al carrito</button></a></div>
+                <div class="precio-anterior"></div>
+                <div class="precio-actual"><div class="descuento">14% Off</div></div><div><a href="/productCart"><button type="button" class="agregar-al-carrito">Agregar al carrito</button></a></div>
                 <div class="disponibles">Disponibles: 100</div>
                 <div class="descripcion-del-producto">
                     <h2>Información del producto</h2>
                     <p>
-                        La Andes IPA Andina es una cerveza estilo IPA, valga la redundancia, de la escuela Inglesa. Como seguramente usted sabe, este estilo de cerveza se caracteriza por el amargor que le otorga su alto contenido de lúpulo.
-                        Lo que seguramente no sabe es que la IPA Andina contiene uva mendocina. Este ingrediente es clave para que en el paladar perciba una especie de dulzor, que a su vez hace el amargor más amigable. Esta edición limitada es ideal para acompañar platos picantones, como unas papas bravas o algún dip a base de curry.
+                        <%= birra.descripcion %>
                     </p> 
                 </div>
     </div>
