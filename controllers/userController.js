@@ -4,6 +4,12 @@ let userController = {
     },
     register: (req, res) => { 
         res.render("register");
+    },
+    create: (req, res) => { 
+        res.render("create");
+    },
+    modify: (req, res) => { 
+        res.render("modify");
     }
 }
 
