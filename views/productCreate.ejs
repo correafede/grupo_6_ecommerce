@@ -4,15 +4,12 @@
     <body>
         <%- include('./partials/header') %>
         <main>
+        <div class="create">
             <h1>Cree un nuevo producto</h1>
-            <form action="productDetail.ejs" method="post">
-            <div class="create">
-                <div class="divisionCreate">
-                </div>
+                <form action="productDetail.ejs" method="post">
                 <div>
                     <input type="text" placeholder="Nombre" name="Nombre" ></input>
                 </div>
-                <div>
                     <div class="tamanio-producto"><label for="tamanio" class="input-tamanio">Volumen del producto: 
                         <div class="tamanio-producto">
                         <label for="tamanio">330ml</label>
@@ -21,15 +18,14 @@
                         <input type="radio" name="perfil">
                         </label>
                         </div>
-                </div>
-                <div>
-                    <input type="text" placeholder="Categoría" name="categoria" ></input>
-                </div>
-                <div>
-                <label>
-                    <input type="text" placeholder="ABV" name="ABV" >
-                    </label>
-                </div>
+                        <div>
+                            <input type="text" placeholder="Categoría" name="categoria" ></input>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="text" placeholder="ABV" name="ABV" >
+                            </label>
+                        </div>
                 <div>
                     <input type="ibu" placeholder="IBU" name="IBU" ></input>
                 </div>
@@ -49,8 +45,8 @@
                 <div class="button-create">
                     <a href="#"><input type="submit" value="Insertar producto"></input></a> 
                 </div>
-        </div>
-    </form>
+        </form>
+    </div>
         </main>
         <%- include('./partials/footer') %>
     </body>
