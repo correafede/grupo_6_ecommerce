@@ -3,9 +3,6 @@
     <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-    <!-- <div class="banner">
-        <img src="img/banner.png" alt="Banner">
-    </div> -->
     <main>
         <form action="usuarios.html" method="post">
         <div class="register">
@@ -15,26 +12,29 @@
             <div class="division">
             </div>
             <div>
-                <input type="text" placeholder="Nombre" name="Nombre" ></input>
+                <input type="text" placeholder="Nombre" name="Nombre" required></input>
             </div>
             <div>
-                <input type="text" placeholder="Apellido" name="Apellido" ></input>
+                <input type="text" placeholder="Apellido" name="Apellido" required></input>
             </div>
             <div>
-                <input type="e-mail" placeholder="E-mail" name="E-mail" ></input>
+                <input type="email" placeholder="E-mail" name="E-mail" min="user@email.com" required></input>
             </div>
             <div>
-                <input type="password" placeholder="Contraseña" name="Contraseña" ></input>
+                <input type="password" placeholder="Contraseña" name="Contraseña"  minlength="6" maxlength="18" required></input>
+            </div>
+            <div>
+                <input type="password" placeholder="Confirmar contraseña" minlength="6" maxlength="18" required/></input>
             </div>
             <div>
             <label>
-                <input type="checkbox" name="Mayor de edad" >
+                <input type="checkbox" name="Mayor de edad" required>
                 Soy mayor de 18 años
                 </label>
             </div>
             <div>
             <label>
-                <input type="checkbox" name="Términos y condiciones" >
+                <input type="checkbox" name="Términos y condiciones" required>
                 Acepto Términos y Condiciones
                 </label>
             </div>
