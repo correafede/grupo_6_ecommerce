@@ -1,16 +1,16 @@
 let productController = {
     detalle: (req, res) => {
         let birra = listaBirras.find(birra => birra.id == req.params.id);
-        res.render("productDetail", {birra: birra});
+        res.render("./products/productDetail", {birra: birra});
     },
     carrito: (req, res) => { 
-        res.render("productCart");
+        res.render("./products/productCart");
     },
     create: (req, res) => { 
-        res.render("productCreate");
+        res.render("./products/productCreate");
     },
     modify: (req, res) => { 
-        res.render("productModify");
+        res.render("./products/productModify");
     }
 }
 
