@@ -616,9 +616,6 @@ body{
                 z-index: 100;
                 line-height: 1px;
             }
-
-
-
 @media all and (min-width: 768px){
         /* header */
     header{
