@@ -7,6 +7,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
+    margin: 0px;
     padding: 0px;
     background-color: #f0f0f0;
 }
@@ -466,12 +467,15 @@ body{
             color: #fff;
             width: 100%;
             padding-left: 50px;
+            text-align: center;
         }
                     .container {
                         display: flex;
                         flex-direction: column;
                         width: 100%;
-                        align-items: flex-start;
+                        align-items: center;
+                        text-align: center;
+                        padding-bottom: 15px;
                     } 
                 .h3{
                     flex: 1 1 100%;
@@ -482,7 +486,6 @@ body{
                     .social{
                         display: flex;
                         flex-flow: column nowrap;
-                        padding: 5px;
                         width: 100%;
                     }
                         .faq-menu a,
@@ -490,7 +493,6 @@ body{
                         .empresas-menu a,
                         .social div a{
                             color: #fff;
-                            padding-right: 10px;
                         }
                         .social div i{
                             padding-right: 5px;
@@ -744,6 +746,14 @@ body{
     /* footer */
     .footer-menu{
         flex-flow: row nowrap;
+        justify-content: center;
+        align-items: baseline;
+    }
+    footer .newsletter-box div{
+        text-align: center;
+    }
+    footer .newsletter-box div input{
+        width: 40vw;
     }
 }
 @media all and (min-width: 992){
