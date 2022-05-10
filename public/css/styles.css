@@ -121,6 +121,7 @@ body{
                 }
                     .search input{
                         width: 80%;
+                        margin-right: 0px;
                     }
                     .fa-search{
                         border: 1px solid black;
@@ -178,13 +179,11 @@ body{
             .user .fa-user{
                 font-size: 2rem;
             }
-
-                /* BANNER */
+            /* BANNER */
                 .banner img{
                     width: 100vw;
                     height: auto;
                 }
-
                 /* RUTAS > PRODUCTOS */
                 .barra-navegacion{
                     padding-left: 15px;
@@ -604,19 +603,45 @@ body{
             }          
             .boton-prueba{
                 position: fixed;
-                width: 45px;
-                height: 45px;
+                width: 35px;
+                height: 35px;
                 bottom: 30px;
                 right: 30px;
                 background: black;
                 color: rgb(105, 101, 101);
                 border-radius: 50px;
-                font-size: 25px;
+                font-size: 20px;
                 box-shadow: 0px 1px 10px rgba(0,0,0,0,3);
                 z-index: 100;
                 line-height: 1px;
             }
-        
+            /* banner-transición - Marcos 100522*/
+            /* .banner{
+                background-image: url(/img/banner.png);
+                background-size: 100% 100%;
+                animation: banner 10s infinite;
+            }
+            @keyframes banner {
+                0%, 30%{
+                    background: magebackground-imageurl("/img/banner.png");
+                    opacity: 1;
+                }
+                31%, 34%{
+                    opacity: 0.1;
+                }
+                35%, 65%{
+                    background: magebackground-imageurl("/img/banner.png");
+                    opacity: 1;
+                }
+                66%, 69%{
+                    opacity: 0.1;
+                }
+                70%, 100%{
+                    background: magebackground-imageurl("/img/banner.png");
+                    opacity: 1;
+                }
+            } */
+            /*banner hasta acá */
 @media all and (min-width: 768px){
         /* header */
     header{
@@ -672,7 +697,7 @@ body{
     
     .banner{
         background-size: cover;
-        height: auto;   
+        height: auto;  
     }
     .logo{
         width: 20%;
@@ -698,10 +723,10 @@ body{
     .aside{
         display: flex;
     }
-    .item-home,
+    /* .item-home,
     .barra-van{
         font-size: 1.3rem;
-    }
+    } */
     .articles article{
         width: 45%;
         transition: all 400ms ease;
@@ -755,6 +780,7 @@ body{
     footer .newsletter-box div input{
         width: 40vw;
     }
+
 }
 @media all and (min-width: 992){
     /* header */
