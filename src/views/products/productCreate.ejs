@@ -4,50 +4,35 @@
     <body>
         <%- include('../partials/header') %>
         <main>
-        <div class="create">
-            <h1>Cree un nuevo producto</h1>
-                <form action="productDetail.ejs" method="post">
-                <div>
-                    <input type="text" placeholder="Nombre" name="Nombre" ></input>
-                </div>
-                    <div class="tamanio-producto"><label for="tamanio" class="input-tamanio">Volumen del producto: 
-                        <div class="tamanio-producto">
-                        <label for="tamanio">330ml</label>
-                        <input type="radio" name="perfil">
-                        <label for="tamanio">473ml</label>
-                        <input type="radio" name="perfil">
-                        </label>
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Categoría" name="categoria" ></input>
-                        </div>
-                        <div>
-                            <label>
-                                <input type="text" placeholder="ABV" name="ABV" >
-                            </label>
-                        </div>
-                <div>
-                    <input type="ibu" placeholder="IBU" name="IBU" ></input>
-                </div>
-                <textarea name="textarea" rows="10" cols="50" placeholder="Inserte descripción del producto"></textarea>
-                <div>
-                    <input type="precio" placeholder="Precio x unidad" name="precio" ></input>
-                </div>
-                <div>
-                    <input type="precio6" placeholder="Precio x pack" name="precio6" ></input>
-                </div>
-                <div>
-                    <input type="cantidad" placeholder="Unidades por pack" name="cantidad" ></input>
-                </div>
-                <div>
-                    <input type="file" name="imgProducto" accept=".jpg, .pdf" multiple>
-                </div>
-                <div class="button-create">
-                    <a href="#"><input type="submit" value="Insertar producto"></input></a> 
-                </div>
-        </form>
-    </div>
-        </main>
-        <%- include('../partials/footer') %>
-    </body>
+        <div class="modify">
+            <h1>Modifique un producto</h1>
+        <div class="modify-2">
+            <form action="productModify" method="post">
+                <input type="text" placeholder="Producto a modificar" name="producto-a-modificar">
+                <input type="text" placeholder="Nuevo nombre" name="nuevo-nombre" >
+        <div class="tamanio-producto">Nuevo volumen del producto:
+            <label for="tamanio">330ml</label>
+            <input type="radio" name="perfil">
+            <label for="tamanio">473ml</label>
+            <input type="radio" name="perfil">
+        </div>
+        <div>
+            <input type="text" placeholder="Nueva categoría" name="nueva-categoria" ></input>
+        </div>
+        <div>
+            <label><input type="text" placeholder="Nuevo ABV" name="nuevo-ABV"></label>
+        </div>
+        <div><input type="ibu" placeholder="Nuevo IBU" name="nuevo-IBU" ></input></div>
+            <textarea name="textarea" rows="10" cols="50" placeholder="Inserte nueva descripción del producto"></textarea>
+        <div><input type="precio" placeholder="Nuevo precio x unidad" name="nuevo-precio" ></input></div>
+        <div><input type="precio6" placeholder="Nuevo precio x pack" name="nuevo-precio6" ></input></div>
+        <div><input type="cantidad" placeholder="Nuevo unidades por pack" name="nuevo-cantidad" ></input></div>
+        <div><input type="file" name="imgProducto" accept=".jpg, .pdf" multiple></div>
+        <div class="button-modify"><a href="#"><input type="submit" value="Modificar producto"></input></a></div>
+            </form>
+        </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
 </html>
