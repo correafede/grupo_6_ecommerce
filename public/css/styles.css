@@ -200,6 +200,9 @@ body{
                         font-size: 1rem;
                         color: #504c4c;
                     }
+                        .item-detail span{
+                            font-size: 2rem;
+                        }
                     .gap-xxs{
                         list-style: none;
                         padding: 5px;
@@ -358,6 +361,7 @@ body{
                     }
                     .cart1{
                         display: flex;
+                        flex-flow: column wrap;
                     }
                     .products{
                         flex: 0.75;
@@ -413,8 +417,7 @@ body{
                         text-align: center;
                     }
                     .cart-total{
-                        flex: 0.25;
-                        margin-left: 20px;
+                        flex: 0.25;                       
                         padding: 20px;
                         height: 240px;
                         border: 1px solid silver;
@@ -615,33 +618,99 @@ body{
                 z-index: 100;
                 line-height: 1px;
             }
-            /* banner-transición - Marcos 100522*/
-            /* .banner{
-                background-image: url(/img/banner.png);
-                background-size: 100% 100%;
-                animation: banner 10s infinite;
-            }
-            @keyframes banner {
-                0%, 30%{
-                    background: magebackground-imageurl("/img/banner.png");
-                    opacity: 1;
-                }
-                31%, 34%{
-                    opacity: 0.1;
-                }
-                35%, 65%{
-                    background: magebackground-imageurl("/img/banner.png");
-                    opacity: 1;
-                }
-                66%, 69%{
-                    opacity: 0.1;
-                }
-                70%, 100%{
-                    background: magebackground-imageurl("/img/banner.png");
-                    opacity: 1;
-                }
-            } */
-            /*banner hasta acá */
+
+        /* PRODUCT CREATE */
+        .modify{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;   
+        }
+        .modify-2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .modify h1{
+            width: 100%;
+            text-align: center;
+        }
+        .modify textarea{
+            margin: 5px;
+            width: 100%;
+            font-size: 20px;
+        }
+        .modify-2 input{
+            margin: 5px;
+            width: 100%;
+        }
+        .tamanio-producto{
+            width: 100%;
+            margin: 5px;
+        }
+        .modify-2 .tamanio-producto input{
+            width: 10%;
+        }
+        .modify-2 .tamanio-producto label{
+            margin: 5px;
+        }
+        .button-modify input{
+            background-color: rgb(100, 211, 100);
+            color: #FFF;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        /* PRODUCT MODIFY */
+        .modify{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;   
+        }
+        .modify-2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .modify h1{
+            width: 100%;
+            text-align: center;
+        }
+        .modify textarea{
+            margin: 5px;
+            width: 100%;
+            font-size: 20px;
+        }
+        .modify-2 input{
+            margin: 5px;
+            width: 100%;
+        }
+        .tamanio-producto{
+            width: 100%;
+            margin: 5px;
+        }
+        .modify-2 .tamanio-producto input{
+            width: 10%;
+        }
+        .modify-2 .tamanio-producto label{
+            margin: 5px;
+        }
+        .button-modify input{
+            background-color: rgb(100, 211, 100);
+            color: #FFF;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
 @media all and (min-width: 768px){
         /* header */
     header{
@@ -808,7 +877,6 @@ body{
     }
 
 
-
      /* product cart */
     .imagen-producto{
         width: 100%;
@@ -832,14 +900,17 @@ body{
     }
     .banner{
         background-size: cover;
-        height: 360px;
+        height: auto;
         width: 90%;
         align-self: center;
     }
 
     /* index */
     .article{
-        flex: 1 1 23%;
+        flex: 1 1 24%;
+    }
+    .section{
+        padding: 0px 20px;
     }
     
     /* product detail */
