@@ -665,6 +665,52 @@ body{
             padding: 5px;
             border-radius: 4px;
         }
+
+        /* PRODUCT MODIFY */
+        .modify{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;   
+        }
+        .modify-2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .modify h1{
+            width: 100%;
+            text-align: center;
+        }
+        .modify textarea{
+            margin: 5px;
+            width: 100%;
+            font-size: 20px;
+        }
+        .modify-2 input{
+            margin: 5px;
+            width: 100%;
+        }
+        .tamanio-producto{
+            width: 100%;
+            margin: 5px;
+        }
+        .modify-2 .tamanio-producto input{
+            width: 10%;
+        }
+        .modify-2 .tamanio-producto label{
+            margin: 5px;
+        }
+        .button-modify input{
+            background-color: rgb(100, 211, 100);
+            color: #FFF;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+        }
         
 @media all and (min-width: 768px){
         /* header */
