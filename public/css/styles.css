@@ -201,6 +201,9 @@ body{
                         font-size: 1rem;
                         color: #504c4c;
                     }
+                        .item-detail span{
+                            font-size: 2rem;
+                        }
                     .gap-xxs{
                         list-style: none;
                         padding: 5px;
@@ -781,7 +784,6 @@ body{
     }
 
 
-
      /* product cart */
     .imagen-producto{
         width: 100%;
@@ -805,14 +807,17 @@ body{
     }
     .banner{
         background-size: cover;
-        height: 360px;
+        height: auto;
         width: 90%;
         align-self: center;
     }
 
     /* index */
     .article{
-        flex: 1 1 23%;
+        flex: 1 1 24%;
+    }
+    .section{
+        padding: 0px 20px;
     }
     
     /* product detail */
