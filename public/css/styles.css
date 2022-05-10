@@ -122,10 +122,14 @@ body{
                     .search input{
                         width: 80%;
                     }
+                    /* .search form input{
+                        height: 30px;
+                    } */
                     .fa-search{
                         border: 1px solid black;
                         border-radius: 5px;
                         border: none;
+                        font-size: 18px;
                     }
                     .fas.fa-search{
                         font-size: 2rem;
@@ -172,6 +176,12 @@ body{
                     .faq i,
                     .user i{
                         color: black;
+                    }
+                    .faq span{
+                        padding-left: 5px;
+                    }
+                    .cart span{
+                        padding-left: 2px;
                     }
             .faq ,
             .cart .fa-cart-shopping,
@@ -235,7 +245,7 @@ body{
                                 margin: 0 .35rem 1rem;
                                 width: 90vw;
                                 height: 500px;
-                                border-radius: 4px;
+                                border-radius: 25px;
                                 box-shadow: 0 3px 6px #0000000f;
                             }
                                 .product-img{
@@ -304,7 +314,7 @@ body{
                             color: #FFF;
                             padding: 5px;
                         }
-                        span{
+                        .connect span{
                             font-size: 15px;
                         }
                         .division{
@@ -442,64 +452,6 @@ body{
                     .cart-total a:hover{
                         background-color: lightseagreen;
                     }
-
-        /* FOOTER */            
-        .footer{
-            background: #2e2e2e;
-            display: flex;
-            flex-flow: column nowrap;
-            height: auto;
-            align-items: center;
-        }
-
-        .newsletter-box {
-            width: 60%;
-        }
-            footer .newsletter-box div input{
-                width: 100%;
-            }
-            footer .newsletter-box p{
-                text-align: center;
-                color: #ccc5b9;
-                margin-bottom: 5px;
-            } 
-        .footer-menu{
-            margin: 10px;
-            display: flex;
-            flex-flow: column nowrap;
-            color: #fff;
-            width: 100%;
-            padding-left: 50px;
-            text-align: center;
-        }
-                    .container {
-                        display: flex;
-                        flex-direction: column;
-                        width: 100%;
-                        align-items: center;
-                        text-align: center;
-                        padding-bottom: 15px;
-                    } 
-                .h3{
-                    flex: 1 1 100%;
-                }
-                    .faq-menu,
-                    .aboutus-menu,
-                    .empresas-menu,
-                    .social{
-                        display: flex;
-                        flex-flow: column nowrap;
-                        width: 100%;
-                    }
-                        .faq-menu a,
-                        .aboutus-menu a,
-                        .empresas-menu a,
-                        .social div a{
-                            color: #fff;
-                        }
-                        .social div i{
-                            padding-right: 5px;
-                        }
 
             /* PRODUCT DETAIL */
             main{
@@ -666,6 +618,109 @@ body{
             border-radius: 4px;
         }
         
+         /* PRODUCT MODIFY */
+         .modify{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;   
+        }
+        .modify-2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .modify h1{
+            width: 100%;
+            text-align: center;
+        }
+        .modify textarea{
+            margin: 5px;
+            width: 100%;
+            font-size: 20px;
+        }
+        .modify-2 input{
+            margin: 5px;
+            width: 100%;
+        }
+        .tamanio-producto{
+            width: 100%;
+            margin: 5px;
+        }
+        .modify-2 .tamanio-producto input{
+            width: 10%;
+        }
+        .modify-2 .tamanio-producto label{
+            margin: 5px;
+        }
+        .button-modify input{
+            background-color: rgb(100, 211, 100);
+            color: #FFF;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        /* FOOTER */            
+        .footer{
+            background: #2e2e2e;
+            display: flex;
+            flex-flow: column nowrap;
+            height: auto;
+            align-items: center;
+        }
+        .newsletter-box {
+            width: 60%;
+        }
+            footer .newsletter-box div input{
+                width: 100%;
+            }
+            footer .newsletter-box p{
+                text-align: center;
+                color: #ccc5b9;
+                margin-bottom: 5px;
+            } 
+        .footer-menu{
+            margin: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            color: #fff;
+            width: 100%;
+            padding-left: 50px;
+            text-align: center;
+        }
+                    .container {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                        text-align: center;
+                        padding-bottom: 15px;
+                    } 
+                .h3{
+                    flex: 1 1 100%;          
+                }
+                    .faq-menu,
+                    .aboutus-menu,
+                    .empresas-menu,
+                    .social{
+                        display: flex;
+                        flex-flow: column nowrap;
+                        width: 100%;
+                    }
+                        .faq-menu a,
+                        .aboutus-menu a,
+                        .empresas-menu a,
+                        .social div a{
+                            color: #fff;
+                        }
+                        .social div i{
+                            padding-right: 5px;
+                        }
+
 @media all and (min-width: 768px){
         /* header */
     header{
@@ -718,7 +773,6 @@ body{
         padding: 0%;
         flex: none;
     }
-    
     .banner{
         background-size: cover;
         height: auto;   
@@ -820,7 +874,7 @@ body{
     /* index */
     .item-home,
     .barra-van{
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
     .section{
         display: flex;
@@ -865,6 +919,9 @@ body{
     }
     .section{
         padding: 0px 20px;
+    }
+    .barra-van a{
+        font-size: 1.3rem;
     }
     
     /* product detail */
