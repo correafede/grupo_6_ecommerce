@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head') %>
-<body>
-    <div><a href="/"><button class="boton-prueba"><i class="fa-solid fa-arrow-up"></i></button></a></div>
+  <%- include('../partials/head') %>
+  <body>
+    <!-- <div><a href="/"><button class="boton-prueba"><i class="fa-solid fa-arrow-up"></i></button></a></div> -->
     <%- include('../partials/header') %>
     <div class="banner">
-        <img src="/img/banner.png" alt="Banner">
+      <!-- banner con imágenes - Marcos 100522 NO FUNCIONÓ-->
+      <img src="/img/banner.png" alt="banner">
     </div>
-<main>
-    <div class="barra-navegacion">
+    <main>
+      <div class="barra-navegacion">
         <ol class="flex flex-wrap gap-xxs">
         <li class="barra-van">
         <a href="/" title="Home" class="nav-home">IPA ></a>
@@ -17,33 +18,44 @@
         <span class="item-detail"><%= birra.nombre %></span]>
         </li>
         </ol>
-    </div>
-    <div class="cuerpo-descripcion">
-        <div class="imagen-producto"><img src="/img/<%= birra.img %>"></div>  
+      </div>
+      <div class="cuerpo-descripcion">
+        <div class="imagen-producto"><img src="/img/<%= birra.img %>" /></div>
         <div class="caja-descripcion">
-            <div class="texto-descripcion">
-                
-                <div class="titulo-del-producto">
-                <%= birra.nombre %>
-                </div>
-                <br>
-                <div class="precio-anterior"></div>
-                <br>
-                <div class="precio-actual">$<%= birra.precio %><div class="descuento"></div></div><div><a href="/productCart"><button type="button" class="agregar-al-carrito">Agregar al carrito</button></a></div>
-                <div class="disponibles">Disponibles: <%= birra.cantidad %> unidades</div>
-                <div class="descripcion-del-producto">
-                    <h2>Información del producto</h2>
-                    <p><%= birra.descripcion %>
-                    <br>
-                    IBU: <%= birra.ibu %>
-                    <br>
-                    ALV: <%= birra.abv %>
-                    </p> 
-                </div>
-    </div>
-    </div>
-</div>
-</main>
-<%- include('../partials/footer') %>
-</body>
+          <div class="texto-descripcion">
+            <div class="titulo-del-producto"><%= birra.nombre %></div>
+            <br />
+            <div class="precio-anterior"><%= birra.precioAnterior %></div>
+            <br />
+            <div class="precio-actual">
+              $<%= birra.precio %>
+              <div class="descuento"><%= birra.descuento %></div>
+            </div>
+            <div>
+              <a href="/products/cart"
+                ><button type="button" class="agregar-al-carrito">
+                  Agregar al carrito
+                </button></a
+              >
+            </div>
+            <div class="disponibles">
+              Disponibles: <%= birra.cantidad %> unidades
+            </div>
+            <div class="descripcion-del-producto">
+              <h2>Información del producto</h2>
+              <p>
+                <%= birra.descripcion %>
+                <br />
+                IBU: <%= birra.ibu %>
+                <br />
+                ALV: <%= birra.abv %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div>banner-bottom</div> -->
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
 </html>
