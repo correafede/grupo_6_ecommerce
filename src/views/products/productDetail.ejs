@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head') %>
+  <%- include('../partials/head', {title: 'Detalle de producto'}) %>
   <body>
     <!-- <div><a href="/"><button class="boton-prueba"><i class="fa-solid fa-arrow-up"></i></button></a></div> -->
     <%- include('../partials/header') %>
@@ -31,13 +31,16 @@
               $<%= birra.price %>
               <div class="descuento"><%= birra.discount %>%</div>
             </div>
-            <div>
+            <!-- <div>
               <a href="/products/cart"
                 ><button type="button" class="agregar-al-carrito">
                   Agregar al carrito
                 </button></a
               >
-            </div>
+            </div> -->
+            <div>
+            <a href="#" class="buy-now-button">COMPRAR AHORA</a>
+          </div>
             <div class="disponibles">
               Disponibles: <%= birra.quantity %> unidades
             </div>
@@ -51,9 +54,17 @@
                 ALV: <%= birra.abv %>% ALC
               </p>
             </div>
+            
           </div>
+          
         </div>
-        <!-- <div>banner-bottom</div> -->
+        
+      </div>
+      <div class="botones-changes">
+      <a href="/products/edit/<%=birra.id%>" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/delete/<%=birra.id%>" method="POST" style="display: inline-flex">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
       </div>
     </main>
     <%- include('../partials/footer') %>

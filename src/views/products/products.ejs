@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head', {title: 'Inicio'}) %>
+    <%- include('../partials/head', {title: 'Listado de productos'}) %>
 <body>
-    <%- include('./partials/header') %>
+    <%- include('../partials/header') %>
     <div class="banner">
         <img src="img/banner.png" alt="Banner">
     </div>
@@ -20,7 +20,7 @@
         <section class="section">
             <div class="aside"></div>
             <div class="articles">
-                <% lista.forEach(beer => { %>
+                <% products.forEach(beer => { %>
                 <article class="article">
                     <div class="product-img">
                         <a href="/products/detail/<%=beer.id%>"><img src="/img/<%=beer.image%>" alt="foto birra" ></a>
@@ -36,6 +36,6 @@
             </div>
         </section>
     </main>
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 </body>
 </html>
