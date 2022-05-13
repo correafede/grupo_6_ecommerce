@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "firstName": "Federico",
+        "lastName": "Correa",
+        "email": "correafedde@gmail.com",
+        "password": "admin123",
+        "category": "admin",
+        "image": "federico-correa.jpg"
+    }
+]

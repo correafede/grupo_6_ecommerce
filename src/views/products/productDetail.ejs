@@ -15,21 +15,21 @@
         <a href="/" title="Home" class="nav-home">IPA ></a>
         </li>
         <li class="item-home">
-        <span class="item-detail"><%= birra.nombre %></span]>
+        <span class="item-detail"><%= birra.name %></span]>
         </li>
         </ol>
       </div>
       <div class="cuerpo-descripcion">
-        <div class="imagen-producto"><img src="/img/<%= birra.img %>" /></div>
+        <div class="imagen-producto"><img src="/img/<%= birra.image %>" /></div>
         <div class="caja-descripcion">
           <div class="texto-descripcion">
-            <div class="titulo-del-producto"><%= birra.nombre %></div>
+            <div class="titulo-del-producto"><%= birra.name %></div>
             <br />
-            <div class="precio-anterior"><%= birra.precioAnterior %></div>
+            <div class="precio-anterior"><%= birra.priceAnterior %></div>
             <br />
             <div class="precio-actual">
-              $<%= birra.precio %>
-              <div class="descuento"><%= birra.descuento %></div>
+              $<%= birra.price %>
+              <div class="descuento"><%= birra.discount %>%</div>
             </div>
             <div>
               <a href="/products/cart"
@@ -39,16 +39,16 @@
               >
             </div>
             <div class="disponibles">
-              Disponibles: <%= birra.cantidad %> unidades
+              Disponibles: <%= birra.quantity %> unidades
             </div>
             <div class="descripcion-del-producto">
               <h2>Información del producto</h2>
               <p>
-                <%= birra.descripcion %>
+                <%= birra.description %>
                 <br />
                 IBU: <%= birra.ibu %>
                 <br />
-                ALV: <%= birra.abv %>
+                ALV: <%= birra.abv %>% ALC
               </p>
             </div>
           </div>

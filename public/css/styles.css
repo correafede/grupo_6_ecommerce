@@ -593,29 +593,36 @@ body{
         .modify textarea{
             margin: 5px;
             width: 100%;
+            max-height: 90px;
             font-size: 20px;
         }
         .modify-2 input{
             margin: 5px;
             width: 100%;
         }
-        .tamanio-producto{
+        .modify-2 div,
+        .modify-2 form{
+             padding: 5px 0px;
+        }
+        .size-product{
             width: 100%;
             margin: 5px;
         }
-        .modify-2 .tamanio-producto input{
-            width: 10%;
-        }
-        .modify-2 .tamanio-producto label{
+        .modify-2 .size-product label{
             margin: 5px;
         }
-        .button-modify input{
-            background-color: rgb(100, 211, 100);
-            color: #FFF;
-            border: none;
-            padding: 5px;
-            border-radius: 4px;
+        .button-modify{
+            display: flex;
+            justify-content: center;
         }
+            .button-modify input{
+                background-color: rgb(100, 211, 100);
+                color: #FFF;
+                border: none;
+                padding: 5px;
+                border-radius: 4px;
+            }
+            
 
          /* PRODUCT MODIFY */
          .modify{
@@ -644,16 +651,6 @@ body{
         .modify-2 input{
             margin: 5px;
             width: 100%;
-        }
-        .tamanio-producto{
-            width: 100%;
-            margin: 5px;
-        }
-        .modify-2 .tamanio-producto input{
-            width: 10%;
-        }
-        .modify-2 .tamanio-producto label{
-            margin: 5px;
         }
         .button-modify input{
             background-color: rgb(100, 211, 100);

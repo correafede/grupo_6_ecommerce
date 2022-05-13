@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+        <div class="modify">
+            <h1>Modifique un producto</h1>
+        <div class="modify-2">
+            <form action="/productEdit" method="POST" enctype="multipart/form-data">
+                <input type="text" placeholder="Producto a modificar" name="id>
+                <input type="text" placeholder="Nuevo nombre" name="name" >
+        <div class="size-product">
+            <label for="category" class="form-label">Categoría:</label>
+                <select name="category" id="category" class="form-input">
+                    <option value="">Elegí</option>
+                    <option value="330ml">330ml</option>
+                    <option value="473ml">473ml</option>
+                </select>
+        </div>
+        <div>
+            <label><input type="text" placeholder="Nuevo ABV" name="abv"></label>
+        </div>
+        <div><input type="text" placeholder="Nuevo IBU" name="ibu" ></input></div>
+            <textarea type="textarea" rows="10" cols="50" placeholder="Inserte nueva descripción del producto" name="description"></textarea>
+        <div><input type="text" placeholder="Nuevo precio x unidad" name="price ></input></div>
+        <div><input type="text" placeholder="Nuevo descuento" name="discount" ></input></div>
+        <div><input type="text" placeholder="Nuevo unidades por pack" name="quantity" ></input></div>
+        <div><input type="file" name="image" accept=".jpg, .pdf"></div>
+        <div class="button-modify"><a href="#"><input type="submit" value="Modificar producto"></input></a></div>
+            </form>
+        </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
