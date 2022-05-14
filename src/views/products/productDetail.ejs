@@ -8,22 +8,25 @@
       <!-- banner con imágenes - Marcos 100522 NO FUNCIONÓ-->
       <img src="/img/banner.png" alt="banner">
     </div>
-    <main>
+    <main class="main">
       <div class="barra-navegacion">
         <ol class="flex flex-wrap gap-xxs">
         <li class="barra-van">
-        <a href="/" title="Home" class="nav-home">IPA ></a>
+        <a href="/" title="Home" class="nav-home">INICIO ></a>
         </li>
+        <li class="barra-van">
+          <span title="category" class="nav-home"><%= birra.category%> ></span>
+          </li>
         <li class="item-home">
-        <span class="item-detail"><%= birra.name %></span]>
-        </li>
+          <span class="item-detail"><%= birra.name %></span>
+          </li>
         </ol>
       </div>
       <div class="cuerpo-descripcion">
         <div class="imagen-producto"><img src="/img/<%= birra.image %>" /></div>
         <div class="caja-descripcion">
           <div class="texto-descripcion">
-            <div class="titulo-del-producto"><%= birra.name %></div>
+            <div class="titulo-del-producto"><%= birra.name %> <%= birra.size %></div>
             <br />
             <div class="precio-anterior"><%= birra.priceAnterior %></div>
             <br />
@@ -49,6 +52,8 @@
               <p>
                 <%= birra.description %>
                 <br />
+                Color: <%= birra.color %>
+                <br />
                 IBU: <%= birra.ibu %>
                 <br />
                 ALV: <%= birra.abv %>% ALC
@@ -61,8 +66,8 @@
         
       </div>
       <div class="botones-changes">
-      <a href="/products/edit/<%=birra.id%>" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/delete/<%=birra.id%>" method="POST" style="display: inline-flex">
+      <a href="/products/edit/<%=birra.id%>?_method=PATCH" class="action-button edit">EDITAR PRODUCTO</a>
+      <form action="/products/delete/<%=birra.id %>?_method=DELETE" method="POST">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
 						</form>
       </div>
