@@ -181,20 +181,6 @@
  },
  {
   "id": 13,
-  "name": "test",
-  "size": "Botella 500ml",
-  "category": "IPA",
-  "color": "Dorada",
-  "abv": "42",
-  "ibu": "45",
-  "description": "Esto es una prueba. A ver que pasa.",
-  "price": "578",
-  "discount": "0",
-  "quantity": "150",
-  "image": "newproduct1652509290188-.jpg"
- },
- {
-  "id": 14,
   "name": "Cerveza Patagonia Küné",
   "size": "Lata 473ml",
   "category": "APA",
@@ -208,7 +194,7 @@
   "image": "patagonia-kune.webp"
  },
  {
-  "id": 15,
+  "id": 14,
   "name": "Cerveza Ocaso Tropical APA",
   "size": "Lata 473ml",
   "category": "APA",
