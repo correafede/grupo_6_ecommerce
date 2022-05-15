@@ -11,6 +11,10 @@ let userController = {
     },
     register: (req, res) => { 
         res.render("./users/register");
+    },
+    //Marcos140522
+    prueba: (req, res) => {
+        res.render("./users/prueba");
     }
 }
 
