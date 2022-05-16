@@ -387,10 +387,11 @@ body{
                         }
                         .register{
                             text-align: center;  
-                            padding-top: 12px;
+                            padding: 10px;
                             background-color: white;
-                            width: 80%;
+                            width: 100%;
                             border-radius: 20px;
+
                         }
                         .button-register input{
                             background-color: purple;
@@ -413,7 +414,14 @@ body{
                         .user-name{
                             padding-top: 15px;
                         }
-
+                        .conjunto-register{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        .conjunto-register form{
+                            width: 80%;
+                        }
                     /* PRODUCT CART */
                     hr{
                         height: 5px;
@@ -447,6 +455,7 @@ body{
                         border: none;
                         /* box-shadow: 2px 2px 4px rgba(0,0,0,0.2); */
                         transform: scale(1.01);
+                        filter: saturate(150%);
                     }
                     .product > img{
                         width: 300px;
@@ -455,6 +464,7 @@ body{
                     }
                     .product > img:hover{
                         transform: scale(1.04);
+                        filter: saturate(150%);
                     }
                     .product-info{
                         padding: 20px;
@@ -484,6 +494,9 @@ body{
                         font-size: 15px;
                         text-align: center;
                         font-weight: lighter;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         /*      background-color: rgb(248, 69, 37);
                                 padding: 8px;
                                 border-radius: 10px;
@@ -571,10 +584,10 @@ body{
                 overflow:hidden;
             }
                 .imagen-producto:hover{
-                    -webkit-transform:scale(1.1);
-                    transform:scale(1.15);
+                    border: none;
+                    /* box-shadow: 2px 2px 4px rgba(0,0,0,0.2); */
+                    transform:scale(1.1);
                     filter: saturate(150%);
-                    transition: all 500ms ease-in-out;
                 }
             .titulo-del-producto{
                 font-size: 2rem;
