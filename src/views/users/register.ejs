@@ -4,45 +4,47 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <form action="usuarios.html" method="post">
+        <form action="/" method="POST" enctype="multipart/form-data">
         <div class="register">
             <div class="connect">
                 <i class="fa-brands fa-facebook-square"></i><span>Inicia sesion con Facebook</span>
             </div>
             <div class="division">
             </div>
-            <div>
-                <input type="text" placeholder="Nombre" name="Nombre" required></input>
+            <div class="user-name">
+                <input type="text" placeholder="Nombre" name="firstName" required></input>
             </div>
             <div>
-                <input type="text" placeholder="Apellido" name="Apellido" required></input>
+                <input type="text" placeholder="Apellido" name="lastName" required></input>
             </div>
             <div>
-                <input type="email" placeholder="E-mail" name="E-mail" min="user@email.com" required></input>
+                <input type="email" placeholder="E-mail" name="email" min="user@email.com" required></input>
             </div>
             <div>
-                <input type="password" placeholder="Contraseña" name="Contraseña"  minlength="6" maxlength="18" required></input>
+                <input type="password" placeholder="Contraseña" name="password"  minlength="6" maxlength="18" required></input>
             </div>
             <div>
                 <input type="password" placeholder="Confirmar contraseña" minlength="6" maxlength="18" required/></input>
             </div>
-            <div>
-            <label>
-                <input type="checkbox" name="Mayor de edad" required>
-                Soy mayor de 18 años
-                </label>
-            </div>
-            <div>
-            <label>
-                <input type="checkbox" name="Términos y condiciones" required>
-                Acepto Términos y Condiciones
-                </label>
+            <div class="checkboxes">
+                <div class="underage">
+                    <label>
+                        <input type="checkbox" name="Mayor de edad" required>
+                        Soy mayor de 18 años
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="Términos y condiciones" required>
+                        Acepto Términos y Condiciones
+                    </label>
+                </div>
             </div>
             <div class="button-register">
-                <a href="/index"><input type="submit" value="Registrarme"></input></a> 
+                <a href="#"><input type="submit" value="Registrarme"></input></a> 
             </div>
             <div>
-                <p>¿Ya sos cliente?<a href="/user/login"> Inicia sesión</a></p>
+                <p>¿Ya sos cliente?<a href="/user/login" class="register-link"> Inicia sesión</a></p>
             </div>
     </div>
 </form>

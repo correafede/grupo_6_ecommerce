@@ -9,13 +9,31 @@ let userController = {
    login: (req, res) => { 
         res.render("./users/login");
     },
-    register: (req, res) => { 
+    register: (req, res) => {
         res.render("./users/register");
     },
-    //Marcos140522
+    newaccount: (req, res) => {
+        let image
+		if(req.file != undefined) {
+			image = req.file.filename;
+		} else {
+			image = "default-image.png";
+		}
+		let newUser = {
+			id: users[users.length -1].id + 1,
+			...req.body,
+			image: image,
+		};
+
+		users.push(newUser);
+		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+		res.redirect("./");
+    },
+	//Marcos140522
     prueba: (req, res) => {
-        res.render("./users/prueba");
-    }
+        res.render("./users/prueba")
+	//Marcos140522
+	},
 }
 
 module.exports = userController;
