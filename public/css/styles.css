@@ -338,8 +338,9 @@ body{
                             border-radius: 20px;
                             padding-top: 12px;
                             background-color: white;
-                            width: 100%;
+                            width: auto;
                             padding: 10px;
+                            margin: 30px;
                         }          
                         .connect{
                             background-color: rgb(29, 29, 170);
