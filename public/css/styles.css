@@ -107,6 +107,27 @@ body{
                         color: black;
                         padding: 1px 6px;
                     }
+                .nav-effect{
+                    display: inline-block;
+                    text-decoration: none;
+                    position: relative;
+                }
+                    .nav-effect::after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color:#2e2e2e;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform .5s;
+                    }
+                        .nav-effect:hover::after{
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
             .user-menu{
                 align-self: center;
                 display: flex;
