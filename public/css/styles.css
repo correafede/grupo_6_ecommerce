@@ -302,14 +302,19 @@ body{
                             background-color: rgb(29, 29, 170);
                             color: #FFF;
                             padding: 5px;
+                            
                         }
+                    
                         span{
                             font-size: 15px;
+
                         }
                         .division{
                             border-bottom: solid 3px black;
                             width: 400px;
+                            
                         }
+                        
                         .remember-user{
                             font-size: 15px;
                         }
@@ -329,6 +334,7 @@ body{
                         }
                         .login{
                             text-align: center;
+                            align-items: center;
 
                         }
                         /* REGISTER */
