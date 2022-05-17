@@ -3,8 +3,7 @@
     <%- include('./partials/head', {title: 'Inicio'}) %>
 <body>
     <%- include('./partials/header') %>
-            <div class="nuevo-banner"></div>
-    </div>
+        <div class="nuevo-banner"></div>
     <main>
         <div class="barra-navegacion">
             <ol class="lista-producto">
@@ -28,7 +27,7 @@
                         <p class="discount"></p>
                         <p class="price">$ <%= beer.price %></p>
                         <p class="class"><%= beer.name %>  <%= beer.size %></p>   
-                        <p class="info"><%= beer.category %> / <%= beer.color %> / <%= beer.abv %>% ALC</p>
+                        <p class="info"><%= beer.category %> / <%= beer.color %> / <%= beer.abv %>%</p>
                     </div>
                 </article>
                 <%   }) %>

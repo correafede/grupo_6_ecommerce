@@ -28,12 +28,7 @@ let userController = {
 		users.push(newUser);
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
 		res.redirect("./");
-    },
-	//Marcos140522
-    prueba: (req, res) => {
-        res.render("./users/prueba")
-	//Marcos140522
-	},
+    }
 }
 
 module.exports = userController;

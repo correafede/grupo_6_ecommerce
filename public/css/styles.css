@@ -44,7 +44,7 @@ body{
                 width: auto;
                 max-height: 100px;
                 height: auto;
-                margin: 10px;
+                margin: 15px 0px 5px -15px;
                 filter: contrast(1.5);
             }
         .menu-y-dropdown{
@@ -198,11 +198,16 @@ body{
             .faq{
                 display: none;
             }
+
             /* BANNER */
-                .banner img{
-                    width: 100vw;
-                    height: auto;
+                .nuevo-banner{
+                    width: 100%;
+                    height: 150px;
+                    animation: banner 9s infinite linear alternate;
+                    background-size: 100% 100%;
+                    display: flex;
                 }
+
                 /* RUTAS > PRODUCTOS */
                 .barra-navegacion{
                     padding-left: 15px;
@@ -239,7 +244,6 @@ body{
                             display: none;
                         }
                         .articles{
-                            
                             display: flex;
                             flex-flow:row wrap;
                             justify-content: center;
@@ -255,12 +259,6 @@ body{
                                 height: 500px;
                                 border-radius: 25px;
                                 box-shadow: 3px 6px 6px 3px #0000000f;
-
-                            }
-                            .article:hover{
-                                border: none;
-                                box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-                                transform: scale(1.01);
                             }
                                 .product-img{
                                     border-bottom: none;
@@ -269,11 +267,10 @@ body{
                                     justify-items: center;
                                     align-items: center;
                                     margin-left: auto;
-                                     margin-right: auto;
+                                    margin-right: auto;
                                     flex: 2 1 100%;
                                 }
                                     .product-img img{
-                                        display: block;
                                         width: auto;
                                         height: auto;
                                         max-height: 350px;
@@ -720,35 +717,6 @@ body{
                 margin-left: 6px ;
                 font-size: 1.2rem;
               }
-/*BANNER SLICE marcos 160522*/
-              .nuevo-banner{
-                  width: 100%;
-                  height: 200px;
-                  animation: banner 9s infinite linear alternate;
-                  background-size: 100% 100%;
-                  display: flex;
-              }
-            @keyframes banner {
-                0%, 30%{
-                    background-image: url("../img/banner.png");
-                    opacity: 1;
-                }
-                31%, 34%{
-                    opacity: 0.1;
-                }
-                35%, 65%{
-                    background-image: url("../img/banner1.png");
-                    opacity: 1;
-                }
-                66%, 69%{
-                    opacity: 0.1;
-                }
-                70%, 100%{
-                    opacity: 1;
-                    background-image: url("../img/banner2.png");
-                }
-            }
-/*BANNER SLICE MARCOS 160522*/
 
         /* PRODUCT CREATE */
         .modify{
@@ -895,6 +863,28 @@ body{
                             padding-right: 5px;
                         }
 
+@keyframes banner {
+    0%, 30%{
+        background-image: url("../img/banner.png");
+        opacity: 1;
+    }
+    31%, 34%{
+        opacity: 0.7;
+    }
+    35%, 65%{
+        background-image: url("../img/banner1.png");
+        opacity: 1;
+    }
+    66%, 69%{
+        opacity: 0.7;
+    }
+    70%, 100%{
+        opacity: 1;
+        background-image: url("../img/banner2.png");
+    }
+}
+
+
 @media all and (min-width: 768px){
         /* header */
     header{
@@ -947,10 +937,6 @@ body{
         padding: 0%;
         flex: none;
     }
-    .banner{
-        background-size: cover;
-        height: auto;  
-    }
     .logo{
         width: 20%;
     }
@@ -964,11 +950,11 @@ body{
         display: block;
         font-size: 2.5rem;
     }
-    .banner img{
-        width: 100vw;
-    }
     .search{
         display: block;
+    }
+    .nuevo-banner{
+        height: 250px;
     }
     /* index */
     .aside{
@@ -1055,16 +1041,11 @@ body{
         display: flex;
         flex-flow: row nowrap;
     }
-    
-
 
      /* product cart */
     .imagen-producto{
         width: 100%;
         max-height: 392px;
-    }
-    .banner{
-        height: auto;
     }
     .cart1{
         flex-direction: column;
@@ -1079,20 +1060,14 @@ body{
     .user-menu{
         width: 79%;
     }
-    .banner{
-        background-size: cover;
-        height: auto;
-        width: 90%;
-        align-self: center;
+    .nuevo-banner{
+        height: 300px;
     }
-
+   
     /* index */
-    
-        .articles article{
-            width: 24%;
-        }
-    .section{
-        padding: 0px 20px;
+    .articles article{
+        width: 22%;
+        transition: all 300ms ease;
     }
     .barra-van a{
         font-size: 1.3rem;

@@ -10,8 +10,8 @@ const storage = multer.diskStorage({
         cb(null, path.join(__dirname, '../../public/img/users'));
     } ,
     filename: (req, file, cb) => {
-        let newproduct = 'newuser' + Date.now() + '-'+ path.extname(file.originalname);
-        cb(null, newproduct);
+        let newuserpic = 'newuser' + Date.now() + '-'+ path.extname(file.originalname);
+        cb(null, newuserpic);
     }
 });
 
@@ -19,9 +19,6 @@ const upload = multer({storage});
 
 
 router.get('/login', userController.login);
-//Marcos140522
-router.get('/prueba', userController.prueba);
-
 router.get('/register', userController.register);
 router.post('/', upload.single('image'), userController.newaccount); 
 
