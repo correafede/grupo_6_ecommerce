@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Resultados de tu búsqueda'}) %>
+<body>
+    <%- include('./partials/header') %>
+    <div class="banner">
+        <img src="../img/banner.png" alt="Banner">
+    </div>
+    <main>
+        <div class="barra-navegacion">
+            <ol class="lista-producto">
+                <li class="barra-van">
+                    <a class="item-class">Resultados de la búsqueda: <%=search%></a>
+                </li>
+            </ol>
+        </div>
+        <section class="section">
+            <div class="aside"></div>
+            <div class="articles">
+                <% if (birraSearch.length > 0) {
+                    birraSearch.forEach(beer => {  %>
+                <article class="article">
+                    <div class="product-img">
+                        <a href="/products/detail/<%=beer.id%>"><img src="/img/<%=beer.image%>" alt="foto birra" ></a>
+                    </div>
+                    <div class="description">
+                        <p class="discount"></p>
+                        <p class="price">$ <%= beer.price %></p>
+                        <p class="class"><%= beer.name %>  <%= beer.size %></p>   
+                        <p class="info"><%= beer.category %> / <%= beer.abv %>% ALC</p>
+                    </div>
+                </article>
+                <% })} else { %>
+                    <div class="barra-navegacion">
+                        <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+                    </div>
+                    <% } %>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

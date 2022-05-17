@@ -1,6 +1,6 @@
 <header>
     <div class="burger-menu">
-        <i class="fas fa-bars"></i>
+        <ion-icon name="menu-outline"></ion-icon>
     </div>
     <div class="logo">
         <a href="/"><img src="/img/logo.webp" href="/index" alt="Logo de MercadoLiebre" class="logo"></img></a>
@@ -24,29 +24,36 @@
                 </div>
             </div>  
             <div class="ofertas">
-                <a href="#">Ofertas</a> 
+                <a href="/products">All Products</a> 
+            </div>
+            <div class="ofertas">
+                <a href="/products/create">Crear</a> 
             </div>
         </div>
     </div>
     <div class="user-menu">
         <div class="search">
             <form action="/products/search" method="GET">
-                <input type="search" placeholder="Buscar productos" name="search">
-                    <button type="submit" class="cursor-boton" style="font-size: 20px"><i class="fa fa-search"></i></button>                 
+                <input type="search" placeholder="Buscar productos" name="keywords">
+                    <button type="submit" class="cursor-boton" style="font-size: 20px"><ion-icon name="search-outline"></ion-icon></button>                 
             </form>
         </div>
         <div class="menu-usuario">
         <div class="faq">
-            <a href="#"><i class="fa-solid fa-circle-question"></i><span class="off">FAQ</span></a>
+            <a href="#"><ion-icon name="help-circle-outline"></ion-icon><span class="off">FAQ</span></a>
         </div>
         <div class="magnifying">
-            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
         </div>
+
         <div class="user">
-            <a href="/user/login"><i class="fas fa-user"></i><span class="off">Perfil</span></a> 
+            <a href="/user/login"><ion-icon name="people-outline"></ion-icon><span class="off">Perfil</span></a> 
         </div>
         <div class="cart">
-            <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i><span class="off">Carrito</span></a>
+            <a href="/products/cart"><ion-icon name="cart-outline"></ion-icon><span class="off">Carrito</span></a>
+<!--  íconos --><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+           
             </div>
         </div>
     </div>

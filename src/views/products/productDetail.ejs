@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head') %>
+  <%- include('../partials/head', {title: 'Detalle de producto'}) %>
   <body>
     <!-- <div><a href="/"><button class="boton-prueba"><i class="fa-solid fa-arrow-up"></i></button></a></div> -->
     <%- include('../partials/header') %>
-    <div class="banner">
-      <!-- banner con imágenes - Marcos 100522 NO FUNCIONÓ-->
-      <img src="/img/banner.png" alt="banner">
-    </div>
-    <main>
+    <!-- BANNER ANIMADO -->
+    <!-- <img src="/img/banner.png" alt="banner"> -->
+    <!-- BANNER ANIMADO -->
+    <div class="nuevo-banner"></div>    
+    <main class="main">
       <div class="barra-navegacion">
         <ol class="flex flex-wrap gap-xxs">
-          <li class="barra-van">
-            <a href="/" title="Home" class="nav-home">Home ></a>
+        <li class="barra-van">
+        <a href="/" title="Home" class="nav-home">INICIO ></a>
+        </li>
+        <li class="barra-van">
+          <span title="category" class="nav-home"><%= birra.category%></span>
           </li>
-          <li class="item-home">
-            <span class="item-detail"> Andes Origen Lata 473ml</span>
+        <li class="item-home">
+          <span class="item-detail"><%= birra.name %></span>
           </li>
         </ol>
       </div>
       <div class="cuerpo-descripcion">
-        <div class="imagen-producto"><img src="/img/<%= birra.img %>" /></div>
+        <div class="imagen-producto"><img src="/img/<%= birra.image %>" /></div>
         <div class="caja-descripcion">
           <div class="texto-descripcion">
-            <div class="titulo-del-producto"><%= birra.nombre %></div>
+            <div class="titulo-del-producto"><%= birra.name %> <%= birra.size %></div>
             <br />
-            <div class="precio-anterior"><%= birra.precioAnterior %></div>
+            <div class="precio-anterior"><%= birra.priceAnterior %></div>
             <br />
             <div class="precio-actual">
-              $<%= birra.precio %>
-              <div class="descuento"><%= birra.descuento %></div>
+              $<%= birra.price %>
+              <div class="descuento"><%= birra.discount %>%</div>
             </div>
-            <div>
+            <!-- <div>
               <a href="/products/cart"
                 ><button type="button" class="agregar-al-carrito">
                   Agregar al carrito
                 </button></a
               >
-            </div>
+            </div> -->
+            <div>
+            <a href="#" class="buy-now-button">COMPRAR AHORA</a>
+          </div>
             <div class="disponibles">
-              Disponibles: <%= birra.cantidad %> unidades
+              Disponibles: <%= birra.quantity %> unidades
             </div>
             <div class="descripcion-del-producto">
               <h2>Información del producto</h2>
               <p>
-                <%= birra.descripcion %>
+                <%= birra.description %>
+                <br />
+                Color: <%= birra.color %>
                 <br />
                 IBU: <%= birra.ibu %>
                 <br />
-                ALV: <%= birra.abv %>
+                ALV: <%= birra.abv %>% ALC
               </p>
             </div>
+            
           </div>
+          
         </div>
-        <!-- <div>banner-bottom</div> -->
+        
+      </div>
+      <div class="botones-changes">
+      <a href="/products/edit/<%=birra.id%>?_method=PATCH" class="action-button edit">EDITAR PRODUCTO</a>
+      <form action="/products/delete/<%=birra.id %>?_method=DELETE" method="POST">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
       </div>
     </main>
     <%- include('../partials/footer') %>

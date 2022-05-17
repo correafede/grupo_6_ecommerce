@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head') %>
+    <%- include('../partials/head', {title: 'Carrito de compras'}) %>
 </head>
 <body>
     <%- include('../partials/header') %>
+    <div class="nuevo-banner"></div>
 <main>
     <div class="container1">
         <div class="cart1">
@@ -16,7 +17,7 @@
                         <h4 class="product-offer">50% OFF</h4>
                         <p class="product-quantity">Cnt: <input value="1" name="">
                         <p class="product-remove">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <ion-icon name="trash-outline"></ion-icon>
                             <span class="remove">Eliminar</span>
                         </p>
                     </div>
@@ -29,7 +30,7 @@
                         <h4 class="product-offer">40% OFF</h4>
                         <p class="product-quantity">Cnt: <input value="1" name="">
                         <p class="product-remove">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <ion-icon name="trash-outline"></ion-icon>
                             <span class="remove">Eliminar</span>
                         </p>
                     </div>
