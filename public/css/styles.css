@@ -348,6 +348,9 @@ body{
                             display: flex;
                             flex-direction: column;
                             align-items: center;
+                            /**/
+                            background-image: url("/img/sacos_de_lupulo-300x158@2x.png");
+                            background-size: cover;
                         }
                         .conjunto-login form{
                             width: 80%;
@@ -356,9 +359,13 @@ body{
                             border-radius: 20px;
                             padding-top: 12px;
                             background-color: white;
-                            width: auto;
+                            /**/
+                            width: 50%;
                             padding: 10px;
-                            margin: 30px;
+                            margin: auto;
+                            margin-top: 30px;
+                            margin-bottom: 30px;
+                            /**/
                         }          
                         .connect{
                             background-color: rgb(29, 29, 170);
@@ -412,8 +419,11 @@ body{
                             text-align: center;  
                             padding: 10px;
                             background-color: white;
-                            width: 100%;
+                            width: 50%;
                             border-radius: 20px;
+                            margin: auto;
+                            margin-top: 30px;
+                            margin-bottom: 30px;
 
                         }
                         .button-register input{
@@ -441,6 +451,8 @@ body{
                             display: flex;
                             flex-direction: column;
                             align-items: center;
+                            background-image: url("/img/sacos_de_lupulo-300x158@2x.png");
+                            background-size: cover;
                         }
                         .conjunto-register form{
                             width: 80%;
