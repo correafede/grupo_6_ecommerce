@@ -11,6 +11,17 @@ body{
     padding: 0px;
     background-color: #f0f0f0;
 }
+    /* scrollbar */
+    ::-webkit-scrollbar{
+        width: 20px;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: #fff;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #d6cece;
+        border-radius: 20px;
+    }
     /* HEADER */
     header{
         background-color: #ebebeb;
@@ -270,33 +281,33 @@ body{
                             justify-content: center;
                             transition: all 400ms ease;
                         }
-                        .article{
-                            min-width: 250px;
-                            background-color: #fff;
-                            display: flex;
-                            flex-flow: column nowrap;
-                            margin: 0 .5rem 1.2rem;
-                            width: 90vw;
-                            height: 500px;
-                            border-radius: 25px;
-                            box-shadow: 3px 6px 6px 3px #0000000f;
-                        }
-                                .product-img{
-                                    border-bottom: none;
-                                    padding-top: 15px;
+                            .article{
+                                min-width: 250px;
+                                background-color: #fff;
+                                display: flex;
+                                flex-flow: column nowrap;
+                                margin: 0 .5rem 1.2rem;
+                                width: 90vw;
+                                height: 500px;
+                                border-radius: 25px;
+                                box-shadow: 3px 6px 6px 3px #0000000f;
+                            }
+                            .product-img{
+                                border-bottom: none;
+                                padding-top: 15px;
+                                height: auto;
+                                justify-items: center;
+                                align-items: center;
+                                margin-left: auto;
+                                margin-right: auto;
+                                flex: 2 1 100%;
+                            }
+                                .product-img img{
+                                    width: auto;
                                     height: auto;
-                                    justify-items: center;
-                                    align-items: center;
-                                    margin-left: auto;
-                                    margin-right: auto;
-                                    flex: 2 1 100%;
+                                    max-height: 350px;
+                                    padding: 0;
                                 }
-                                    .product-img img{
-                                        width: auto;
-                                        height: auto;
-                                        max-height: 350px;
-                                        padding: 0;
-                                    }
                                 .description{
                                     flex: 1 1 auto;
                                     font-weight: 500;
@@ -332,10 +343,16 @@ body{
                                         font-weight: 700;
                                         margin-bottom: 5px;
                                         line-height: .9rem;
-                                        }
+                                        }                 
+
+                        /* RESULTS */
+                        .title-result{
+                            color: rgb(255, 97, 70);
+                        }
+
                         /* LOGIN */
-                        main, 
-                        input, 
+                        main,
+                        input,
                         div.login input,
                         .division{
                             font-size: 20px;
@@ -987,7 +1004,7 @@ body{
         display: block;
     }
     .nuevo-banner{
-        height: 250px;
+        height: 250px;  
     }
     /* index */
     .aside{
@@ -998,7 +1015,7 @@ body{
         font-size: 1.3rem;
     } 
     .articles article{
-        width: 45%;
+        width: 45vw;
         transition: all 400ms ease;
     }
 
