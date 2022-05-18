@@ -23,6 +23,7 @@ let productController = {
         res.render("./products/productEdit", { birra });
     },
     update: (req, res) => {
+		let id = req.params.id
 		let birra = products.find(product => product.id == req.params.id)
 		let image
 
@@ -32,7 +33,7 @@ let productController = {
 			image = birra.image
 		};
 
-		productToEdit = {
+		birra = {
 			id: birra.id,
 			...req.body,
 			image: image,
@@ -46,7 +47,7 @@ let productController = {
 		})
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.render("./products/productEdit", { birra });
+		res.redirect("../");
     },
     destroy: (req, res) => { 
 		let productoDestroy = products.filter(product => product.id != req.params.id);
@@ -72,7 +73,7 @@ let productController = {
     },
 	search: (req, res) => { 
         let search = req.query.keywords;
-		let birraSearch = products.filter(product => product.name.toLowerCase().includes(search));	
+		let birraSearch = products.filter(product => product.name.toLowerCase().includes(search));
 		res.render('results', { 
 			birraSearch, 
 			search,
