@@ -31,6 +31,9 @@ body{
         justify-content: space-between;
         align-items: center;
         height: auto;
+        /* MARCOS 200522 */
+        position: fixed;
+        z-index: 100;
     }
         .burger-menu {
             text-align: left;
@@ -64,6 +67,10 @@ body{
             flex-wrap: wrap;
             text-align: center;
             display: none;
+            /* MARCOS 200522
+            position: absolute; 
+            bottom: -10;*/
+
         }
             .dropdown{
                 display: none;
@@ -238,6 +245,9 @@ body{
                     animation: banner 9s infinite linear alternate;
                     background-size: 100% 100%;
                     display: flex;
+                    /*marcos200522*/
+                    position: relative;
+                    bottom: -124.8px;
                 }
 
                 /* RUTAS > PRODUCTOS */
@@ -360,6 +370,7 @@ body{
                         }
                         main{
                             margin: 0px;
+                            margin-top: 120px;
                         }
                         .conjunto-login{
                             display: flex;
@@ -371,6 +382,7 @@ body{
                         }
                         .conjunto-login form{
                             width: 80%;
+                            margin-top: 124.8px;
                         }
                         div.login{
                             border-radius: 20px;
@@ -388,7 +400,8 @@ body{
                             background-color: rgb(29, 29, 170);
                             color: #FFF;
                             padding: 5px;
-                            width: 250px;
+                            width: auto;
+                            max-width: 250px;
                             margin: auto;
                         }
                         .connect span{
@@ -439,7 +452,7 @@ body{
                             width: 50%;
                             border-radius: 20px;
                             margin: auto;
-                            margin-top: 30px;
+                            margin-top: 155px;
                             margin-bottom: 30px;
 
                         }
@@ -483,6 +496,7 @@ body{
                     .container1{
                         max-width: 80%;
                         margin: 0 auto;
+                        padding-top: 10px;
                     }
                     .container1 > h1{
                         padding: 20px 0;
@@ -543,7 +557,7 @@ body{
                         color: white;
                         cursor: pointer;
                         border-radius: 3px;
-                        width: 120px;
+                        max-width: 60px;
                         font-size: 15px;
                         text-align: center;
                         font-weight: lighter;
@@ -593,6 +607,9 @@ body{
                     .cart-total a:hover{
                         background-color: rgb(11, 174, 11);
                     }
+                    .remove{
+                        display: none;
+                    }
 
             /* PRODUCT DETAIL */
             .main{
@@ -602,7 +619,9 @@ body{
                 background-color: #fff;
                 border-radius: 40px;
                 margin: 2% 11% 4%;
+                margin-top: 150px;
                 padding-bottom: 20px;
+                padding-top: 0px;
             }
             /* .agregar-al-carrito{
                 padding: 5px;
@@ -741,6 +760,8 @@ body{
                 justify-content:flex-end;
                 text-align: center;
                 padding-right: 40px;
+                width: 100%;
+
               }
               .action-button {
                 border: none;
@@ -940,6 +961,12 @@ body{
     header{
         flex-wrap: wrap;
     }
+    main{
+        margin-top: 160px;
+    }
+    .main{
+        margin-top: 200px;
+    }
     .user-menu div form{
         display: block;
     }
@@ -977,7 +1004,23 @@ body{
     .menu-y-dropdown{
         order: 3;
         display: block;
+        /* MARCOS 200522  */
+        /* position: relative;
+        bottom: 0;
+        background-color: #ebebeb;*/
     }
+    /*BARRA FIJA MARCOS 190522*/
+    /* .nav-menu-y-drop {
+        background-color: #000;
+            padding: 1px;
+            color: whitesmoke;
+            position: relative;
+
+            width: 100%;
+            top: 0;
+            z-index: 10000;
+            transition: 0.7s;
+        } */
     .user{
         padding: 0%;
         margin: 0%;
@@ -1004,7 +1047,8 @@ body{
         display: block;
     }
     .nuevo-banner{
-        height: 250px;  
+        height: 250px;
+        bottom: -165.8px;  
     }
     /* index */
     .aside{
@@ -1039,10 +1083,17 @@ body{
         margin: 5px;
         padding: 10px;
     }
-
+    /*LOGIN*/
+    .conjunto-login form{
+        margin-top: 170px;
+    }
+    /*REGISTER*/
+    .register{
+        margin-top: 200px;
+    }
     /* product cart */
     .remove{
-        display: none;
+        display: block;
     }
     .product{
         height: auto;
@@ -1054,6 +1105,9 @@ body{
     }
     .product-name, .product-price, .product-offer{
         margin-bottom: 10px;
+    }
+    .product-remove{
+        max-width: 200px;
     }
 
     /* footer */
