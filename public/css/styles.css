@@ -35,7 +35,49 @@ body{
         position: fixed;
         z-index: 100;
         top: 0;
+        transition-duration: 1s;
     }
+    /* MARCOS HEADER SCROLL 220522*/
+    header.abajo{
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    header.abajo .logo{
+        order: 2;
+    }
+    header.abajo .logo a img{
+        max-height: 80px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    header.abajo .user-menu div form{
+        display: none;
+        width: 0%;
+        order: 5;
+    }
+    header.abajo .user-menu{
+        width: 100%;
+        margin: 0;
+        order: 2;
+        justify-content: end;
+    }
+    header.abajo .menu-y-dropdown{
+        width: 100%;
+        order: 0;
+    }
+    header.abajo .dropdown{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    header.abajo .menu-usuario{
+        font-size: 1.5em;
+    }
+    header.abajo .menu-usuario .faq{
+        font-size: 1em;
+    }
+
+    /*scrollbar marcos 220522*/
+
         .burger-menu {
             text-align: left;
             font-size: 20px;
@@ -621,7 +663,7 @@ body{
                 padding-top: 0px;
                 background-color: #fff;
                 border-radius: 40px;
-                margin: 2% 11% 4%;
+                margin: 2% 11%;
                 margin-top: 150px;
                 padding-bottom: 20px;
                 padding-top: 0px;
@@ -725,17 +767,17 @@ body{
             .caja-descripcion{
                 width: 100%;
             }          
-            .boton-prueba{
+            .boton-up{
                 position: fixed;
                 width: 35px;
                 height: 35px;
                 bottom: 30px;
                 right: 30px;
-                background: black;
+                background: transparent;
                 color: rgb(105, 101, 101);
                 border-radius: 50px;
                 font-size: 20px;
-                box-shadow: 0px 1px 10px rgba(0,0,0,0,3);
+                box-shadow:  0px 0px 10px 0px rgba(0,0,0,0,3);
                 z-index: 100;
                 line-height: 1px;
             }
