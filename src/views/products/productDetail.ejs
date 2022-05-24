@@ -5,6 +5,7 @@
     <!-- boton -->
     <%- include('../partials/button') %>
     <%- include('../partials/header') %>
+    
     <div class="nuevo-banner"></div>    
     <main class="main">
       <div class="barra-navegacion">
@@ -57,17 +58,14 @@
                 ALV: <%= birra.abv %>% ALC
               </p>
             </div>
-            
           </div>
-          
         </div>
-        
-      </div>
-      <div class="botones-changes">
-      <a href="/products/edit/<%=birra.id%>" class="action-button edit">EDITAR PRODUCTO</a>
-      <form action="/products/delete/<%=birra.id%>?_method=DELETE" method="POST">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
-						</form>
+        <div class="botones-changes">
+          <a href="/products/edit/<%=birra.id%>" class="action-button edit">EDITAR PRODUCTO</a>
+          <form action="/products/delete/<%=birra.id%>?_method=DELETE" method="POST">
+                  <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
+          </div>
       </div>
     </main>
     <%- include('../partials/footer') %>
