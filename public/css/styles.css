@@ -37,6 +37,9 @@ body{
         top: 0;
         transition-duration: 1s;
     }
+    .hydrated{
+        text-align: center;
+    }
     /* MARCOS HEADER SCROLL 220522*/
     header.abajo{
         width: 100%;
@@ -75,6 +78,9 @@ body{
     header.abajo .menu-usuario .faq{
         font-size: 1em;
     }
+    header.abajo .burger-menu{
+        font-size: 2em;
+    }
 
     /*scrollbar marcos 220522*/
 
@@ -84,7 +90,7 @@ body{
             order: 0;
             width: 100%;
             margin: 10px;
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
             .burger-menu i {
                 color: black;
@@ -194,6 +200,7 @@ body{
                 display: flex;
                 flex-flow: row wrap;
                 margin: 5px;
+                margin-right: 0px;
                 align-items: center;
                 width: 100%;
             }  
@@ -234,7 +241,7 @@ body{
                     justify-content: flex-end;
                     align-items: center;
                     margin: 10px;
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                 }
                 .menu-usuario a{
                     color: black;
@@ -253,12 +260,12 @@ body{
                     margin: 0%;
                 }     
                 .cart{
-                    padding: 5px;
+                    /* padding: 5px; */
                     flex: none;
                     margin: 0%;
                 }
                 .off{
-                    font-size: 16px;
+                    font-size: 1rem;
                     color: #fff;
                 }
                     .cart i,
@@ -266,12 +273,12 @@ body{
                     .user i{
                         color: black;
                     }
-                    .faq span{
+                    /* .faq span{
                         padding-left: 5px;
-                    }
-                    .cart span{
+                    } */
+                    /* .cart span{
                         padding-left: 2px;
-                    }
+                    } */
             .faq ,
             .cart .fa-cart-shopping,
             .user .fa-user{
@@ -433,7 +440,7 @@ body{
                             /* background-color: url("/public/img/pexels-michelle-riach-995686.jpg"); */
                             /**/
                             background-color: white;
-                            width: 50%;
+                            width: auto;
                             padding: 10px;
                             margin: auto;
                             margin-top: 30px;
@@ -1017,7 +1024,7 @@ body{
     }
     .menu-usuario{
         width: 20%;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
         .menu-usuario div span{
             display: block;
@@ -1086,7 +1093,7 @@ body{
     }
     .faq{
         display: block;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .search{
         display: block;
@@ -1180,7 +1187,9 @@ body{
     .cart{
         margin: 0px;
     }
-
+    .menu-usuario{
+        width: 10%;
+    }
     /* index */
     .item-home,
     .barra-van{
