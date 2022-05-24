@@ -3,12 +3,13 @@
     <%- include('./partials/head', {title: 'Error'}) %>
 <body>
     <%- include('./partials/header') %>
-    <div class="banner">
-        <img src="img/banner.png" alt="Banner">
-    </div>
+    <%- include('./partials/toggle') %>
+    <div class="nuevo-banner"></div>
     <main>
     <p class="error404"> ERROR 404</p>
     </main>
     <%- include('./partials/footer') %>
+    <!-- MARCOS BARRA SCROLL 220522 -->
+    <%- include('../partials/scrollbar') %>
 </body>
 </html>

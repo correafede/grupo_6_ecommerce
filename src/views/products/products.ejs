@@ -4,6 +4,7 @@
 <body>
     <%- include('../partials/button') %>
     <%- include('../partials/header') %>
+    <%- include('../partials/toggle') %>
     <div class="nuevo-banner"></div>
     <main>
         <div class="barra-navegacion">
@@ -19,7 +20,7 @@
                 <% products.forEach(beer => { %>
                 <article class="article">
                     <div class="product-img">
-                        <a href="/products/detail/<%=beer.id%>"><img src="/img/<%=beer.image%>" alt="foto birra" ></a>
+                        <a href="/products/detail/<%=beer.id%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
                     </div>
                     <div class="description">
                         <p class="discount"></p>

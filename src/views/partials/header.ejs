@@ -39,22 +39,31 @@
             </form>
         </div>
         <div class="menu-usuario">
-        <div class="faq">
-            <a href="#"><ion-icon name="help-circle-outline"></ion-icon><span class="off">FAQ</span></a>
-        </div>
-        <div class="magnifying">
-            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
-        </div>
-
-        <div class="user">
-            <a href="/user/login"><ion-icon name="people-outline"></ion-icon><span class="off">Perfil</span></a> 
-        </div>
-        <div class="cart">
-            <a href="/products/cart"><ion-icon name="cart-outline"></ion-icon><span class="off">Carrito</span></a>
-<!--  íconos --><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-           
+            <div class="faq">
+                <a href="#"><ion-icon name="help-circle-outline"></ion-icon><span class="off">FAQ</span></a>
             </div>
+            <div class="magnifying">
+                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+            </div>
+            <div class="cart">
+                <a href="/products/cart"><ion-icon name="cart-outline"></ion-icon><span class="off">Carrito</span></a>
+            <!--  íconos --><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </div>
+            <% if (locals.isLogged) { %>
+                <div class="dropdownB">
+                    <img src="/img/users/<%= locals.userLogged.img %>" width="40" style="border-radius: 100%;">
+                    <button onclick="myFunction()" class="dropbtnB">Hola <%= locals.userLogged.firstName %>  <i class="fa-solid fa-angle-down"></i></button>
+                    <div id="myDropdown" class="dropdown-contentB">
+                        <a href="/user/profile">My Profile</a>
+                        <a href="/user/logout">Logout</a>
+                    </div>
+                </div>
+            <% } else { %>
+            <div class="user">
+                <a href="/user/login"><ion-icon name="people-outline"></ion-icon><span class="off">Login</span></a> 
+            </div>
+            <% } %>
         </div>
     </div>
 </header>

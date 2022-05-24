@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Register'}) %>
+<body>
+    <%- include('../partials/header') %>
+    <%- include('../partials/toggle') %>
+    <main style="margin-top: 0px">
+        <div class="profile">
+            <div class="container" style="margin-top: 40px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2>Hi <%= user.firstName %>!</h2>
+                        <!-- <img src="/images/avatars/<%= user.image %> "> -->
+                        <img src="/img/users/<%= locals.userLogged.img %>" style="width:260px; ">
+                        <br>
+                        <br>
+                        <div class="alert alert-success"><%= user.email %> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <!-- MARCOS BARRA SCROLL 220522 -->
+    <%- include('../partials/scrollbar') %>
+</body>
+</html>

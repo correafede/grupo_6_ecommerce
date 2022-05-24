@@ -325,6 +325,54 @@ body{
                         display: flex;
                     }
 
+                    /* DROPDOWN USER */
+                    .dropbtnB{
+                        display: block;
+                        margin-top: 55px;
+                        background-color: #ebebeb;
+                        color: black;
+                        padding: 16px;
+                        font-size: 1.2rem;
+                        border: none;
+                        width: 150px;
+                        cursor: pointer;;
+                    }
+                        .dropbtnB i{
+                            font-size: 1rem;
+                            padding-left: 5px;
+                        }
+                    .dropbtnB:hover, 
+                    .dropbtnB:focus{
+                        background-color: #bbb3b3;
+                    }
+                    .dropdownB{
+                        position: relative;
+                        display: inline-block;
+                    }
+                    .dropdown-contentB{
+                        font-size: 1.3rem;
+                        display: none;
+                        position: absolute;
+                        background-color: #ebebeb;
+                        min-width: 100px;
+                        width: auto;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                    }
+                    .dropdown-contentB a{
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+                    .dropdown-contentB a:hover {
+                        background-color: #ddd
+                    }
+                    .show{
+                        display:block;
+                    }
+
+
                     /* INDEX */
                     .section{
                         display: flex;
@@ -408,6 +456,11 @@ body{
                         /* RESULTS */
                         .title-result{
                             color: rgb(255, 97, 70);
+                        }
+
+                        /* PROFILE */
+                        .profile{
+                            padding: 250px;
                         }
 
                         /* LOGIN */
@@ -877,6 +930,7 @@ body{
         .size-product{
             width: 100%;
             margin: 5px;
+            text-align: left;
         }
         .modify-2 .size-product label{
             margin: 5px;
