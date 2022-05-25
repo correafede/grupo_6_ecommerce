@@ -1,26 +1,21 @@
 var express = require('express');
 var router = express.Router();
 const userController = require('../controllers/userController');
-const src = require('debug');
-const multer = require('multer');
-const path = require('path');
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/img/users'));
-    } ,
-    filename: (req, file, cb) => {
-        let newuserpic = 'newuser' + Date.now() + '-'+ path.extname(file.originalname);
-        cb(null, newuserpic);
-    }
-});
+const uploadUFile = require('../middlewares/multerUMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
+const loginCheck = require('../middlewares/validateLoginMiddleware')
+const registerCheck = require('../middlewares/validateRegisterMiddleware')
+const guestMiddleware = require('../middlewares/guestMIddleware') 
 
-const upload = multer({storage});
+router.get('/login', guestMiddleware, userController.login);
+router.post('/login', loginCheck, userController.processLogin);
 
+router.get('/register', guestMiddleware, userController.register);
+router.post('/register', registerCheck, userController.processRegister);
 
-router.get('/login', userController.login);
-router.get('/register', userController.register);
-router.post('/', upload.single('image'), userController.newaccount); 
+router.get('/profile', authMiddleware, userController.profile);
 
+router.get('/logout', userController.logout);
 
 module.exports = router;

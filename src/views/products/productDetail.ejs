@@ -5,7 +5,7 @@
     <!-- boton -->
     <%- include('../partials/button') %>
     <%- include('../partials/header') %>
-    
+    <%- include('../partials/toggle') %>
     <div class="nuevo-banner"></div>    
     <main class="main">
       <div class="barra-navegacion">
@@ -22,7 +22,7 @@
         </ol>
       </div>
       <section><div class="cuerpo-descripcion">
-        <div class="imagen-producto"><img src="/img/<%= birra.image %>" /></div>
+        <div class="imagen-producto"><img src="/img/products/<%= birra.image %>" /></div>
         <div class="caja-descripcion">
           <div class="texto-descripcion">
             <div class="titulo-del-producto"><%= birra.name %> <%= birra.size %></div>

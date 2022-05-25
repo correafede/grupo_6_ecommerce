@@ -4,9 +4,10 @@
 <body>
     <%- include('../partials/header') %>
     <%- include('../partials/button') %>
+    <%- include('../partials/toggle') %>
     <main style="margin-top: 0px">
      <div class="conjunto-register">
-          <form action="/" method="POST" enctype="multipart/form-data">
+          <form action="/user/register" method="POST">
          <div class="register">
                 <div class="connect">
                  <i class="fa-brands fa-facebook-square"></i><span>Inicia sesion con Facebook</span>
@@ -14,36 +15,51 @@
               <div class="division">
              </div>
               <div class="user-name">
-                  <input type="text" placeholder="Nombre" name="firstName" required></input>
+                  <input type="text" placeholder="Nombre" name="firstName" value="<%= locals.oldData ? oldData.firstName : null %>">
+                  <% if (locals.errors && errors.firstName) { %>
+                    <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.firstName.msg %></div>
+                    <% } %>
               </div>
                <div>
-                  <input type="text" placeholder="Apellido" name="lastName" required></input>
+                  <input type="text" placeholder="Apellido" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
+                  <% if (locals.errors && errors.lastName) { %>
+                    <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.lastName.msg %></div>
+                    <% } %>
              </div>
              <div>
-                 <input type="email" placeholder="E-mail" name="email" min="user@email.com" required></input>
+                 <input type="email" placeholder="Email" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+                 <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.email.msg %></div>
+                    <% } %>
               </div>
               <div>
-                 <input type="password" placeholder="Contraseña" name="password"  minlength="6" maxlength="18" required></input>
+                 <input type="password" placeholder="Contraseña" name="password">
+                 <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.password.msg %></div>
+                    <% } %>
               </div>
               <div>
-                  <input type="password" placeholder="Confirmar contraseña" minlength="6" maxlength="18" required/></input>
+                  <input type="password" placeholder="Confirmar contraseña">
+                  <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.password.msg %></div>
+                    <% } %>
              </div>
               <div class="checkboxes">
                    <div class="underage">
                      <label>
-                            <input type="checkbox" name="Mayor de edad" required>
+                            <input type="checkbox" name="legalAge" required>
                           Soy mayor de 18 años
                      </label>
                  </div>
                   <div>
                         <label>
-                         <input type="checkbox" name="Términos y condiciones" required>
+                         <input type="checkbox" name="tyc" required>
                          Acepto Términos y Condiciones
                       </label>
                     </div>
               </div>
               <div class="button-register">
-                  <a href="#"><input type="submit" value="Registrarme"></input></a> 
+                  <input type="submit" value="Registrarme">
              </div>
                 <div>
                     <p>¿Ya sos cliente?<a href="/user/login" class="register-link"> Inicia sesión</a></p>
