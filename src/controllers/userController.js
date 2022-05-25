@@ -13,6 +13,10 @@ let userController = {
 
         res.render("./users/login");
     },
+	login2: (req, res) => { 
+
+        res.render("./users/login2");
+    },
     register: (req, res) => {
         res.render("./users/register");
     },

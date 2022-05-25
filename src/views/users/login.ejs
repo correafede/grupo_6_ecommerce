@@ -9,11 +9,14 @@
         <div class="conjunto-login">
           <form action="/user/login" method="POST">
               <div class="login">
-              <div class="connect">
-                  <i class="fa-brands fa-facebook-square" style="font-size: 1rem;"></i><span>Inicia sesion con Facebook</span>
-          </div>
-          <div class="division">
-          </div>
+                <div class="col">
+                    <a href="#" class="fb btn">
+                      <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                     </a>
+                    <a href="#" class="google btn"><i class="fa fa-google fa-fw"></i> Login with Google+
+                    </a>
+                  </div>
+          <div class="division"></div>
           <div class="user-email">
               <input type="email" placeholder="E-mail" name="email" value="<%= locals.oldData ? oldData.email : null %>">
               <% if (locals.errors && errors.email) { %>

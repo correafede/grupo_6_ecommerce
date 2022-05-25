@@ -9,11 +9,14 @@
      <div class="conjunto-register">
           <form action="/user/register" method="POST">
          <div class="register">
-                <div class="connect">
-                 <i class="fa-brands fa-facebook-square"></i><span>Inicia sesion con Facebook</span>
+            <div class="col">
+                <a href="#" class="fb btn">
+                  <i class="fa fa-facebook fa-fw"></i> Register with Facebook
+                 </a>
+                <a href="#" class="google btn"><i class="fa fa-google fa-fw"></i> Register with Google+
+                </a>
               </div>
-              <div class="division">
-             </div>
+              <div class="division"></div>
               <div class="user-name">
                   <input type="text" placeholder="Nombre" name="firstName" value="<%= locals.oldData ? oldData.firstName : null %>">
                   <% if (locals.errors && errors.firstName) { %>

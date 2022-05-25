@@ -1,5 +1,5 @@
 *{
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -467,10 +467,6 @@ body{
                         }
 
                         /* LOGIN */
-                        div.button{
-                            width: 50%;
-                            margin: auto;
-                        }
                         main,
                         input,
                         div.login input,
@@ -494,31 +490,117 @@ body{
                             width: 80%;
                             margin-top: 124.8px;
                         }
-                        div.login{
-                            border-radius: 20px;
-                            padding-top: 12px;
-                            background-color: white;
-                            width: auto;
-                            padding: 10px;
-                            margin: auto;
-                            margin-top: 30px;
-                            margin-bottom: 30px;
-                            width: auto;
-                        }          
-                        .connect{
-                            background-color: rgb(29, 29, 170);
-                            color: #FFF;
-                            padding: 2px;
-                            padding-top: 0px;
-                            width: 50%;
-                            margin: auto;
-                            border-radius: 10px;
 
+                        .col{
+                            width: 50vmin;
+                            padding: 0 50px;
+                            margin-top: 6px;
+                            margin: 6px auto 0 auto;
                         }
-                        .connect span{
-                            font-size: 1rem;
-                            margin-left: 8px;
+                           
+                        col input,
+                        .btn{
+                          width: 100%;
+                          padding: 12px;
+                          border: none;
+                          border-radius: 4px;
+                          margin: 5px 0;
+                          opacity: 0.85;
+                          display: inline-block;
+                          font-size: 17px;
+                          line-height: 20px;
+                          text-decoration: none;   
                         }
+                        col input:hover,
+                        .btn:hover {
+                            opacity: 1;
+                        }
+                        .fb{
+                            background-color: #3B5998;
+                            color: white;
+                        }
+                        .google {
+                            background-color: #dd4b39;
+                            color: white;
+                        }
+
+                        /*test*/
+
+                        .login-box {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 400px;
+                            padding: 40px;
+                            transform: translate(-50%, -50%);
+                            background: rgba(0,0,0,.5);
+                            box-shadow: 0 15px 25px rgba(0,0,0,.6);
+                            border-radius: 10px;
+                          }
+                          .login-box h2{
+                            margin: 0 0 30px;
+                            padding: 0;
+                            color: #fff;
+                            text-align: center;
+                          }
+                          .login-box .recover-password{
+                            text-align: center;
+                            color: #fff;
+                          }
+
+                        .login-box .user-box {
+                             position: relative;
+                            }   
+                            .login-box .user-box input {
+                                width: 100%;
+                                padding: 10px 0;
+                                font-size: 16px;
+                                color: rgba(0,0,0,.5);
+                                margin-bottom: 30px;
+                                border: none;
+                                border-bottom: 1px solid #fff;
+                                outline: none;
+                                background: transparent;
+                            }
+                            .login-box .user-box label {
+                                position: absolute;
+                                top:0;
+                                left: 0;
+                                padding: 10px 0;
+                                font-size: 16px;
+                                color: #fff;
+                                pointer-events: none;
+                                transition: .5s;
+                            }
+                            
+                            .login-box .user-box input:focus ~ label, /* efect label que sube */
+                            .login-box .user-box input:valid ~ label {
+                                top: -20px;
+                                left: 0;
+                                color: rgb(100, 211, 100);
+                                font-size: 14px;
+                            }
+                            
+                            .login-box form a { /* boton login verde */
+                                position: relative;
+                                display: flex;
+                                padding: 10px 20px;
+                                background-color: rgb(100, 211, 100);
+                                color: #FFF;
+                                width: 150px;
+                                border-radius: 10px;
+                                font-size: 16px;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                overflow: hidden;
+                                transition: .5s;
+                                margin-top: 40px;
+                                letter-spacing: 4px;
+                                justify-content: center;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+
                         .division{
                             border-bottom: solid 3px black;
                             display: flex;
@@ -565,8 +647,8 @@ body{
                             margin: auto;
                             margin-top: 155px;
                             margin-bottom: 30px;
-
                         }
+                       
                         .button-register input{
                             background-color: purple;
                             color: #FFF;
@@ -1000,9 +1082,11 @@ body{
             width: 60%;
         }
             footer .newsletter-box div input{
-                width: 100%;
+                width: auto;
+                min-width: 80px;
             }
             footer .newsletter-box p{
+                font-size: 1.2rem;
                 text-align: center;
                 color: #ccc5b9;
                 margin-bottom: 5px;
@@ -1013,7 +1097,6 @@ body{
             flex-flow: column nowrap;
             color: #fff;
             width: 100%;
-            padding-left: 50px;
             text-align: center;
         }
                     .container {
@@ -1039,6 +1122,7 @@ body{
                         .aboutus-menu a,
                         .empresas-menu a,
                         .social div a{
+                            font-weight: 300;
                             color: #fff;
                         }
                         .social div i{

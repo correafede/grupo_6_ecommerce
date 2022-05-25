@@ -9,6 +9,7 @@ const registerCheck = require('../middlewares/validateRegisterMiddleware')
 const guestMiddleware = require('../middlewares/guestMIddleware') 
 
 router.get('/login', guestMiddleware, userController.login);
+router.get('/login2', guestMiddleware, userController.login2);
 router.post('/login', loginCheck, userController.processLogin);
 
 router.get('/register', guestMiddleware, userController.register);
