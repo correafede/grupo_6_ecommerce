@@ -11,8 +11,15 @@ module.exports = [
     .notEmpty().withMessage('Debes completar el campo con una contraseña.').bail()
     .isLength({min: 8}).withMessage('Contraseña no tiene un minimo de 8 caracteres.').bail()
     .isLength({max: 16}).withMessage('Contraseña tiene mas de 16 caracteres.'),
+    body('confirmPassword')
+    .notEmpty().withMessage('Debes completar el campo con la misma contraseña.').bail()
+    .custom((value,{req}) =>{
+        if(value !== req.body.password){
+            throw new Error('Las contraseñas ingresadas no son las mismas.')
+        }
+        return true;
+    }),
 ]
-
 
 
 /* image check */               //si nos llegan a pedir que subamos una foto en el register //

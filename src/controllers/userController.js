@@ -42,6 +42,7 @@ let userController = {
 			lastName: req.body.lastName,
 			email: req.body.email,
 			password: bcryptjs.hashSync(req.body.password, 10),
+			img: 'default-image.png'
 		};
 
 		let userCreated = User.create(userToCreate);

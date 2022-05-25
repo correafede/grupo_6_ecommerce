@@ -39,9 +39,9 @@
                     <% } %>
               </div>
               <div>
-                  <input type="password" placeholder="Confirmar contraseña">
-                  <% if (locals.errors && errors.password) { %>
-                    <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.password.msg %></div>
+                  <input type="password" placeholder="Confirmar contraseña" name="confirmPassword>
+                  <% if (locals.errors && errors.confirmPassword) { %>
+                    <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.confirmPassword.msg %></div>
                     <% } %>
              </div>
               <div class="checkboxes">

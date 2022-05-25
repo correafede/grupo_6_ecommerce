@@ -14,13 +14,5 @@
      "email": "test@correo.com",
      "password": "$2a$10$l17X2F2v5l8hmxd3O8sHS.xTgdVA2hinlIGRKeFDHTT.Hy16KEOZK",
      "img": "default-image.png"
-    },
-    {
-     "id": 3,
-     "firstName": "test",
-     "lastName": "test",
-     "email": "test1@correo.com",
-     "password": "$2a$10$6mFWF0HDsr6KBn82NHID3uoxC9nDxV.A489QuZ.8xAwGhk3hrDaBu",
-     "img": "default-img.png"
     }
    ]
