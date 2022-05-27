@@ -632,8 +632,9 @@ body{
                             background-size: cover;
                         }
                         .conjunto-login form{
-                            width: 80%;
-                            margin-top: 124.8px;
+                            max-width: 80%;
+                            width: auto;
+                            margin-top: 110px;
                         }
 
                         .col{
@@ -672,13 +673,11 @@ body{
                         /*test*/
 
                         .login-box {
-                           
-                            width: 400px;
                             padding: 40px;
                             background-color: #fff;
                             box-shadow: 0 5px 10px rgba(0,0,0,.6);
                             border-radius: 10px;
-                            margin-bottom: 50px;
+                            margin-bottom: 310px;
                           }
                           .login-box h2{
                             margin: 0 0 30px;
