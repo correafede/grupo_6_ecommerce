@@ -21,7 +21,7 @@
                     birraSearch.forEach(beer => {  %>
                 <article class="article">
                     <div class="product-img">
-                        <a href="/products/detail/<%=beer.id%>"><img src="/img/<%=beer.image%>" alt="foto birra" ></a>
+                        <a href="/products/detail/<%=beer.id%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
                     </div>
                     <div class="description">
                         <p class="discount"></p>
@@ -40,6 +40,6 @@
     </main>
     <%- include('./partials/footer') %>
     <!-- MARCOS BARRA SCROLL 220522 -->
-    <%- include('../partials/scrollbar') %>
+    <%- include('./partials/scrollbar') %>
 </body>
 </html>

@@ -1,18 +1,42 @@
 [
-    {
-     "id": 1,
-     "firstName": "Federico",
-     "lastName": "Correa",
-     "email": "correafedde@gmail.com",
-     "password": "$2a$10$J6hogqIYsL7voMehYsspqOknt3dbQpdxsNb6ZdHugpnnLvgdwo7De",
-     "img": "default-image.png"
-    },
-    {
-     "id": 2,
-     "firstName": "Usuario",
-     "lastName": "N",
-     "email": "test@correo.com",
-     "password": "$2a$10$l17X2F2v5l8hmxd3O8sHS.xTgdVA2hinlIGRKeFDHTT.Hy16KEOZK",
-     "img": "default-image.png"
-    }
-   ]
+ {
+  "id": 1,
+  "firstName": "Federico",
+  "lastName": "Correa",
+  "email": "correafedde@gmail.com",
+  "password": "$2a$10$J6hogqIYsL7voMehYsspqOknt3dbQpdxsNb6ZdHugpnnLvgdwo7De",
+  "img": "default-image.png"
+ },
+ {
+  "id": 2,
+  "firstName": "Usuario",
+  "lastName": "N",
+  "email": "test@correo.com",
+  "password": "$2a$10$l17X2F2v5l8hmxd3O8sHS.xTgdVA2hinlIGRKeFDHTT.Hy16KEOZK",
+  "img": "default-image.png"
+ },
+ {
+  "id": 3,
+  "firstName": "test",
+  "lastName": "test",
+  "email": "test1@correo.com",
+  "password": "$2a$10$6mFWF0HDsr6KBn82NHID3uoxC9nDxV.A489QuZ.8xAwGhk3hrDaBu",
+  "img": "default-image.png"
+ },
+ {
+  "id": 4,
+  "firstName": "Marcos",
+  "lastName": "Chapire",
+  "email": "marcoschapire@gmail.com",
+  "password": "$2a$10$CC71jhqnIMkky4JZ7J.rfudN6oo.DsVuY0VFzfqrIKUpeu8MUPuKS",
+  "img": "default-image.png"
+ },
+ {
+  "id": 5,
+  "firstName": "pepito",
+  "lastName": "juarez",
+  "email": "pepitojuarez@gmail.com",
+  "password": "$2a$10$PsGVQk3Ri7ziMYk8W.Wbue4vyRf3NFAXzW17lkDFS4MnyD1oizeIW",
+  "img": "default-image.png"
+ }
+]

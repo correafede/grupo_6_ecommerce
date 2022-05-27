@@ -52,7 +52,7 @@
             </div>
             <% if (locals.isLogged) { %>
                 <div class="dropdownB">
-                    <img src="/img/users/<%= locals.userLogged.img %>" width="40" style="border-radius: 100%;">
+                    <img src="/img/users/<%= locals.userLogged.img %>" width="40" style="border-radius: 100%;" class="img-user">
                     <button onclick="myFunction()" class="dropbtnB">Hola <%= locals.userLogged.firstName %>  <i class="fa-solid fa-angle-down"></i></button>
                     <div id="myDropdown" class="dropdown-contentB">
                         <a href="/user/profile">My Profile</a>
