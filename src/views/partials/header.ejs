@@ -5,6 +5,9 @@
     <div class="logo">
         <a href="/"><img src="/img/logo.webp" href="/index" alt="Logo de MercadoLiebre" class="logo"></img></a>
     </div>
+    <div class="logo2">
+        <h1 class="logo-titulo">BIRRASHOP</h1>
+    </div>
     <div class="menu-y-dropdown">
         <div class="dropdown">
             <div class="drop-importadas">
@@ -51,9 +54,16 @@
             <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             </div>
             <% if (locals.isLogged) { %>
-                <div class="dropdownB">
+                <div class="dropdownB" >
                     <img src="/img/users/<%= locals.userLogged.img %>" width="40" style="border-radius: 100%;" class="img-user">
                     <button onclick="myFunction()" class="dropbtnB">Hola <%= locals.userLogged.firstName %>  <i class="fa-solid fa-angle-down"></i></button>
+                    <div id="myDropdown" class="dropdown-contentB">
+                        <a href="/user/profile">My Profile</a>
+                        <a href="/user/logout">Logout</a>
+                    </div>
+                </div>
+                <div class="dropdownC" >
+                    <img src="/img/users/<%= locals.userLogged.img %>" onclick="myFunction()" width="40" style="border-radius: 100%;" class="img-user">
                     <div id="myDropdown" class="dropdown-contentB">
                         <a href="/user/profile">My Profile</a>
                         <a href="/user/logout">Logout</a>

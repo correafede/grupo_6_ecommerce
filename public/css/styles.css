@@ -91,6 +91,9 @@ body{
         font-size: 2em;
     }
 
+    header.abajo .logo-titulo{
+        font-size: 1.7rem
+    }
     /*scrollbar marcos 220522*/
 
         .burger-menu {
@@ -108,9 +111,11 @@ body{
                 font-size: 2em;
             }
         .logo{
-            width: 30%;
-            max-height: 160px;
-            text-align: center;
+            display: none;
+        }
+        .logo-titulo{
+            font-family: 'Alfa Slab One', regular;
+            font-weight: 500;
         }
             .logo a img{
                 width: auto;
@@ -272,6 +277,10 @@ body{
                     /* padding: 5px; */
                     flex: none;
                     margin: 0%;
+                    display: none;
+                }
+                .magnifying{
+                    display: none;
                 }
                 .off{
                     font-size: 1rem;
@@ -298,15 +307,8 @@ body{
             }
 
             /* BANNER */
-                .nuevo-banner{
-                    width: 100%;
-                    height: 150px;
-                    animation: banner 9s infinite linear alternate;
-                    background-size: 100% 100%;
-                    display: flex;
-                    /*marcos200522*/
-                    position: relative;
-                    bottom: -124.8px;
+                .nuevo-banner{  
+                    display: none;
                 }
 
                 /* RUTAS > PRODUCTOS */
@@ -353,9 +355,7 @@ body{
                         background-color: #bbb3b3;
                     }
                     .dropdownB{
-                        position: relative;
-                        display: flex;
-                        align-items: center;
+                        display: none;
                     }
                     .dropdown-contentB{
                         font-size: 1.3rem;
@@ -378,6 +378,11 @@ body{
                     }
                     .show{
                         display:block;
+                    }
+                    .dropdownC{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
                     }
 
 
@@ -459,7 +464,12 @@ body{
                                         font-weight: 700;
                                         margin-bottom: 5px;
                                         line-height: .9rem;
-                                        }                 
+                                        }          
+                                        
+                                        
+                                    .preferred-section{
+                                        display: flex;
+                                    }
 
                         /* RESULTS */
                         .title-result{
@@ -497,34 +507,34 @@ body{
                         }
 
                         .col{
-                            width: 50vmin;
-                            padding: 0 50px;
-                            margin-top: 6px;
                             margin: 6px auto 0 auto;
+                            text-align: center;
                         }
                            
                         col input,
                         .btn{
-                          width: 100%;
-                          padding: 12px;
-                          border: none;
-                          border-radius: 4px;
-                          margin: 5px 0;
-                          opacity: 0.85;
-                          display: inline-block;
-                          font-size: 17px;
-                          line-height: 20px;
-                          text-decoration: none;   
+                            width: 100%;
+                            padding: 12px;
+                            border: none;
+                            border-radius: 4px;
+                            margin: 5px 0;
+                            opacity: 0.85;
+                            display: inline-block;
+                            font-size: 17px;
+                            line-height: 20px;
+                            text-decoration: none;   
                         }
                         col input:hover,
                         .btn:hover {
                             opacity: 1;
                         }
                         .fb{
+                            width: auto;
                             background-color: #3B5998;
                             color: white;
                         }
                         .google {
+                            width: auto;
                             background-color: #dd4b39;
                             color: white;
                         }
@@ -554,7 +564,7 @@ body{
                           }
 
                         .login-box .user-box {
-                             position: relative;
+                                position: relative;
                             }   
                             .login-box .user-box input {
                                 width: 100%;
@@ -815,25 +825,10 @@ body{
                 height: auto;
                 padding-top: 0px;
                 border-radius: 40px;
-                margin-top: 150px;
+                margin-top: 70px;
                 padding-bottom: 20px;
                 padding-top: 0px;
             }
-            /* .agregar-al-carrito{
-                padding: 5px;
-                border-radius: 5px;
-                width: 150px;
-                align-self: center;
-                color: white;
-                font-weight: bold;
-                background-color: #3483fa ;
-                margin-top: 5px;
-            }
-            .agregar-al-carrito:hover{
-                border-right: 1px solid white;
-                border-top: 1px solid white;
-                box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
-            } */
             h2{
                 margin-top: 5px;
                 margin-bottom: 5px;
@@ -1018,6 +1013,8 @@ body{
         .modify-2 div,
         .modify-2 form{
              padding: 5px 0px;
+             width: 90%;
+             margin: auto;
         }
         .size-product{
             width: 100%;
@@ -1072,7 +1069,6 @@ body{
         }
         .modify-2 input{
             margin: 5px;
-            width: 100%;
         }
 
         /* FOOTER */            
@@ -1184,9 +1180,7 @@ body{
         .fa-question-circle{
             display: block;
         }
-    .magnifying{
-        display: none;
-    }
+    
     .user-menu{
         width: 90vw;
         align-items: center;
@@ -1226,15 +1220,27 @@ body{
         flex: none;
     }     
     .cart{
+        display: flex;
         padding: 0%;
         flex: none;
     }
     .logo{
         width: 10%;
+        max-height: 160px;
+        text-align: center;
+        display:flex;
     }
-        .logo img{
+        .logo a img{
             width: auto;
+            max-height: 100px;
+            height: auto;
+            margin: 15px 0px 5px -15px;
+            filter: contrast(1.5);
         }
+
+    .logo-titulo{
+        display: none;
+    }
     .burger-menu {
         display: none;
     }
@@ -1246,8 +1252,21 @@ body{
         display: block;
     }
     .nuevo-banner{
-        height: 250px;
-        bottom: -165.8px;  
+        width: 100%;
+        height: 240px;
+        animation: banner 9s infinite linear alternate;
+        background-size: 100% 100%;
+        display: flex;
+        position: relative;
+        bottom: -165.8px;
+    }
+    .dropdownB{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .dropdownC{
+        display: none;
     }
     /* index */
     .aside{
@@ -1302,6 +1321,11 @@ body{
     .product-remove{
         max-width: 200px;
     }
+    .modify-2 div,
+    .modify-2 form{
+        width: 100%;
+        margin: auto;
+        }
 
     /* footer */
     .footer-menu{
@@ -1340,7 +1364,10 @@ body{
         display: flex;
         flex-flow: row nowrap;
     }
-
+    .preferred-section{
+        display: flex;
+        flex-flow: row nowrap;
+    }
      /* product cart */
     .imagen-producto{
         width: 100%;

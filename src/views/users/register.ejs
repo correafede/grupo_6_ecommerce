@@ -29,12 +29,12 @@
                     <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.lastName.msg %></div>
                     <% } %>
              </div>
-             <div>
+             <classs>
                  <input type="email" placeholder="Email" name="email" value="<%= locals.oldData ? oldData.email : null %>">
                  <% if (locals.errors && errors.email) { %>
                     <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.email.msg %></div>
                     <% } %>
-              </div>
+              </classs>
               <div>
                  <input type="password" placeholder="Contraseña" name="password">
                  <% if (locals.errors && errors.password) { %>

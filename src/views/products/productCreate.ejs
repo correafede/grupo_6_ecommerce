@@ -10,46 +10,46 @@
             <h1>Agregar un producto</h1>
         <div class="modify-2">
             <form action="/products" method="POST" enctype="multipart/form-data">
-                <input type="text" placeholder="Nombre" name="name" >
-        <div class="size-product">
-            <label for="size" class="form-label">Tamaño:</label>
-                <select name="size" id="size" class="form-input">
-                    <option value="">Elegí</option>
-                    <option value="Lata 330ml">Lata 330ml</option>
-                    <option value="Botella 355ml">Botella 355ml</option>
-                    <option value="Lata 473ml">Lata 473ml</option>
-                    <option value="Botella 500ml">Botella 500ml</option>
-                </select>
-        </div>
-        <div class="size-product">
-            <label for="category" class="form-label">Categoria:</label>
-                <select name="category" id="category" class="form-input">
-                    <option value="">Elegí</option>
-                    <option value="IPA">IPA</option>
-                    <option value="APA">APA</option>
-                    <option value="AMBER">AMBER</option>
-                    <option value="HONEY">HONEY</option>
-                </select>
-        </div>
-        <div class="size-product">
-            <label for="color" class="form-label">Color:</label>
-                <select name="color" id="color" class="form-input">
-                    <option value="">Elegí</option>
-                    <option value="Dorada">Dorada</option>
-                    <option value="Roja">Roja</option>
-                    <option value="Oscura">Oscura</option>
-                </select>
-        </div>
-        <div>
-            <label><input type="text" placeholder="ABV" name="abv"></label>
-        </div>
-        <div><input type="text" placeholder="IBU" name="ibu" ></input></div>
-            <textarea type="textarea" rows="10" cols="50" placeholder="Inserte una descripción del producto" name="description"></textarea>
-        <div><input type="text" placeholder="Precio x unidad" name="price" ></input></div>
-        <div><input type="text" placeholder="Descuento" name="discount" ></input></div>
-        <div><input type="text" placeholder="Unidades" name="quantity"></input></div>
-        <div><input type="file" name="image" accept=".jpg, .webp"></div>
-        <div class="button-modify"><a href="#"><input type="submit" value="Crear producto"></input></a></div>
+                <div><input type="text" placeholder="Nombre" name="name" ></div>
+                <div class="size-product">
+                    <label for="size" class="form-label">Tamaño:</label>
+                        <select name="size" id="size" class="form-input">
+                            <option value="">Elegí</option>
+                            <option value="Lata 330ml">Lata 330ml</option>
+                            <option value="Botella 355ml">Botella 355ml</option>
+                            <option value="Lata 473ml">Lata 473ml</option>
+                            <option value="Botella 500ml">Botella 500ml</option>
+                        </select>
+                </div>
+                <div class="size-product">
+                    <label for="category" class="form-label">Categoria:</label>
+                        <select name="category" id="category" class="form-input">
+                            <option value="">Elegí</option>
+                            <option value="IPA">IPA</option>
+                            <option value="APA">APA</option>
+                            <option value="AMBER">AMBER</option>
+                            <option value="HONEY">HONEY</option>
+                        </select>
+                </div>
+                <div class="size-product">
+                    <label for="color" class="form-label">Color:</label>
+                        <select name="color" id="color" class="form-input">
+                            <option value="">Elegí</option>
+                            <option value="Dorada">Dorada</option>
+                            <option value="Roja">Roja</option>
+                            <option value="Oscura">Oscura</option>
+                        </select>
+                </div>
+                <div>
+                    <label><input type="text" placeholder="ABV" name="abv"></label>
+                </div>
+                <div><input type="text" placeholder="IBU" name="ibu" ></input></div>
+                <div><textarea type="textarea" rows="10" cols="50" placeholder="Inserte una descripción del producto" name="description"></textarea></div>
+                <div><input type="text" placeholder="Precio x unidad" name="price" ></input></div>
+                <div><input type="text" placeholder="Descuento" name="discount" ></input></div>
+                <div><input type="text" placeholder="Unidades" name="quantity"></input></div>
+                <div><input type="file" name="image" accept=".jpg, .webp"></div>
+                <div class="button-modify"><a href="#"><input type="submit" value="Crear producto"></input></a></div>
             </form>
         </div>
         </div>
