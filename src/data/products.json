@@ -8,8 +8,8 @@
   "abv": 4.5,
   "ibu": 35,
   "description": "La Andes IPA Andina es una cerveza estilo IPA, valga la redundancia, de la escuela Inglesa. Como seguramente usted sabe, este estilo de cerveza se caracteriza por el amargor que le otorga su alto contenido de lúpulo. Lo que seguramente no sabe es que la IPA Andina contiene uva mendocina. Este ingrediente es clave para que en el paladar perciba una especie de dulzor, que a su vez hace el amargor más amigable. Esta edición limitada es ideal para acompañar platos picantones, como unas papas bravas o algún dip a base de curry.",
-  "price": 212,
-  "priceAnterior": 200,
+  "price": 200,
+  "priceAnterior": 212,
   "discount": 15,
   "quantity": 100,
   "image": "andes-origen-ipa-andina.webp"
