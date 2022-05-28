@@ -8,7 +8,6 @@
     <main style="margin-top: 0px">
         <div class="conjunto-login">
           <form action="/user/login" method="POST">
-              
             <div class="login-box">
               <h2>Login</h2>
               <div class="col">
@@ -18,14 +17,19 @@
                   <a href="#" class="google btn"><i class="fa fa-google fa-fw"></i> Login with Google+
                   </a>
                 </div>
-              <form action="/user/login" method="POST">
                   <div class="user-box">
                       <input type="text" name="email" required="">
                       <label>Email</label>
+                      <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.email.msg %></div>
+                        <% } %>
                   </div>
                   <div class="user-box">
                       <input type="password" name="password" required="">
                       <label>Password</label>
+                      <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.password.msg %></div>
+                        <% } %>
                   </div>
                   <div class="recover-password">
                       <p>¿Olvidaste tu contraseña?</p>
@@ -38,54 +42,10 @@
                     <input type="submit" value="Login">
                   </div>
                     <div class="check-in">
-                        <p>¿Todavia no sos cliente? Registrate <a href="/user/register" class="login-link">acá</p></a>
+                        <p>¿Todavia no sos cliente? <a href="/user/register" class="login-link">Login</p></a>
                     </div>
               </form>
           </div>
-            
-            
-            
-            
-            
-            
-            <!-- <div class="login">
-                <div class="col">
-                    <a href="#" class="fb btn">
-                      <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-                     </a>
-                    <a href="#" class="google btn"><i class="fa fa-google fa-fw"></i> Login with Google+
-                    </a>
-                  </div>
-          <div class="division"></div>
-          <div class="user-email">
-              <input type="email" placeholder="E-mail" name="email" value="<%= locals.oldData ? oldData.email : null %>">
-              <% if (locals.errors && errors.email) { %>
-                <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.email.msg %></div>
-                <% } %>
-         </div>
-          <div>
-             <input type="password" placeholder="Contraseña" name="password">
-             <% if (locals.errors && errors.password) { %>
-                <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.password.msg %></div>
-                <% } %>
-         </div>
-          <div>
-          <p class="recover-password">¿Olvidaste tu contraseña?</p>
-           </div>
-          <div class="remember-user">
-              <label>
-              <input type="checkbox" name="remember_user" >
-               Recordar mi usuario
-              </label>
-          </div>
-          <div class="button">
-          <a href="/index"><input type="submit" value="Login" style="font-size: 1rem;"></input></a>  
-          </div>
-           <div class="check-in">
-             <p>¿Todavia no sos cliente? Registrate <a href="/user/register" class="login-link">acá</p></a>
-         </div>
-          </div> -->
-         </form>
         </div>
     </main>
     <%- include('../partials/footer') %>
