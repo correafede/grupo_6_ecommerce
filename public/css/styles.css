@@ -641,11 +641,8 @@ body{
                             background-size: cover;
                         }
                         .conjunto-login form{
-                            max-width: 80%;
-                            width: auto;
-                            margin-top: 110px;
-                            /* width: 90vw;
-                            margin-top: 124.8px; MARCOS 280522*/
+                            width: 90vw;
+                            margin-top: 124.8px;
                         }
 
                         .col{
@@ -687,12 +684,13 @@ body{
                         /*test*/
 
                         .login-box {
+                           
                             width: 90vw;
                             padding: 40px;
                             background-color: #fff;
                             box-shadow: 0 2px 4px rgba(0,0,0,.6);
                             border-radius: 10px;
-                            margin-bottom: 30px;
+                            margin-bottom: 50px;
                           }
                           .login-box h2{
                             margin: 0 0 30px;
@@ -710,14 +708,14 @@ body{
                             }   
                             .login-box .user-box input {
                                 width: 100%;
-                                padding-bottom: 5px;
+                                padding: 10px 0;
                                 font-size: 16px;
                                 color: rgba(0,0,0,.5);
+                                margin-bottom: 30px;
                                 border: none;
                                 border-bottom: 1px solid black;
                                 outline: none;
                                 background: transparent;
-                                margin-bottom: 20px;
                             }
                             .login-box .user-box label {
                                 position: absolute;
