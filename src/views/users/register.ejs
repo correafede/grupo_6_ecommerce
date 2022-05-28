@@ -12,10 +12,10 @@
             <h2>Register</h2>
             <div class="col">
               <a href="#" class="fb btn">
-                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                <i class="fa fa-facebook fa-fw"></i> Register with Facebook
               </a>
               <a href="#" class="google btn">
-                <i class="fa fa-google fa-fw"></i> Login with Google+
+                <i class="fa fa-google fa-fw"></i> Register with Google+
               </a>
             </div>
             <div class="user-box">
@@ -26,21 +26,56 @@
                     <% } %>
             </div>
             <div class="user-box">
-                    <input type="password" name="password" required="">
-                    <label>Password</label>
-                    <% if (locals.errors && errors.password) { %>
-                      <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.password.msg %></div>
+              <input type="text" name="lastName" required="" value="<%= locals.oldData ? oldData.lastName : null %>">
+                    <label>Apellido</label>
+                    <% if (locals.errors && errors.lastName) { %>
+                      <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.lastName.msg %></div>
                       <% } %>
                 </div>
-                <div class="button">
-                  <input type="submit" value="Register">
-                </div>
-                    <div>
-                      <p>¿Ya sos cliente?<a href="/user/login" class="register-link"> Inicia sesión</a></p>
-                  </div>
-            </form>
-        </div>
+                <div class="user-box">
+                  <input type="email" name="email" required="" value="<%= locals.oldData ? oldData.email : null %>">
+                  <label>Email</label>
+                  <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.email.msg %></div>
+                    <% } %>
+              </div>
+              <div class="user-box">
+                <input type="password" name="password" required="">
+                <label>Contraseña</label>
+                <% if (locals.errors && errors.password) { %>
+                  <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.password.msg %></div>
+                  <% } %>
+            </div>
+            <div class="user-box">
+              <input type="password" name="confirmPassword" required="">
+              <label>Confirmar contraseña</label>
+              <% if (locals.errors && errors.confirmPassword) { %>
+                <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.confirmPassword.msg %></div>
+                <% } %>
+          </div>
+          <div class="checkboxes">
+            <div class="underage">
+              <label>
+                     <input type="checkbox" name="legalAge" required>
+                   Soy mayor de 18 años
+              </label>
+          </div>
+           <div>
+                 <label>
+                  <input type="checkbox" name="tyc" required>
+                  Acepto Términos y Condiciones
+               </label>
+             </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Register">
+          </div>
+          <div>
+            <p>¿Ya sos cliente?<a href="/user/login" class="register-link"> Inicia sesión</a></p>
+          </div>
+        </form>
       </div>
+    </div>
   </main>
     <%- include('../partials/footer') %>
     <!-- MARCOS BARRA SCROLL 220522 -->

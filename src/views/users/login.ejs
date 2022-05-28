@@ -18,7 +18,7 @@
                   </a>
                 </div>
                   <div class="user-box">
-                      <input type="text" name="email" required="">
+                      <input type="text" name="email" required="" value="<%= locals.oldData ? oldData.email : null %>">
                       <label>Email</label>
                       <% if (locals.errors && errors.email) { %>
                         <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.email.msg %></div>
@@ -42,7 +42,7 @@
                     <input type="submit" value="Login">
                   </div>
                     <div class="check-in">
-                        <p>¿Todavia no sos cliente? <a href="/user/register" class="login-link">Login</p></a>
+                        <p>¿Todavia no sos cliente? <a href="/user/register" class="login-link">Registrate</p></a>
                     </div>
               </form>
           </div>
