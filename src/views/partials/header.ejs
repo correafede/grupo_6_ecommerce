@@ -81,8 +81,16 @@
                     </div>
                 </div>
             <% } else { %>
-            <div class="user">
+            <!-- <div class="user">
                 <a href="/user/login"><ion-icon name="people-outline"></ion-icon><span class="off">Login</span></a> 
+            </div> -->
+            <div id="user" >
+                <input type="checkbox" />
+                <a href="#" class="test-icono"><ion-icon name="people-outline"></ion-icon><span class="off">Login</span></a> 
+                    <ul id="user-lista">
+                        <a href="/user/profile"><li>Mi perfil</li></a>
+                        <a href="/user/logout"><li>Logout</li></a>
+                    </ul>
             </div>
             <% } %>
         </div>

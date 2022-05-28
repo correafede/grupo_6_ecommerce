@@ -240,6 +240,129 @@ body{
       transform: none;
     }
 
+                    
+
+
+
+
+
+                                #user
+                                {
+                                display: block;
+                                position: relative;
+                                width: 100%;
+                                z-index: 0;
+                                -webkit-user-select: none;
+                                user-select: none;
+                                }
+                                
+                                #user .test-icono
+                                {
+                                text-decoration: none;
+                                color: #232323;
+                                transition: color 0.3s ease;
+                                }
+
+                                #user input
+                                {
+                                display: block;
+                                width: 40px;
+                                height: 32px;
+                                position: absolute;
+                                top: -14px;
+                                right: -1px;
+                                
+                                cursor: pointer;
+                                
+                                opacity: 0; /* hide this */
+                                z-index: 2; /* and place it over the hamburger */
+                                
+                                -webkit-touch-callout: none;
+                                }
+                                /*
+                                * Just a quick hamburger
+                                */
+                                #user-lista .ion-icon
+                                {
+                                    display: block;
+                                    width: 33px;
+                                    height: 3px;
+                                    margin-bottom: 5px;
+                                    position: relative;
+                                    z-index: 1;
+                                }                     
+                                
+                                /*
+                                * Make this absolute positioned
+                                * at the top left of the screen
+                                */
+                                #user-lista
+                                {
+                                position: absolute;
+                                width: 300px;
+                                margin: 0px 0 0 -50px;
+                                padding: 50px;
+                                padding-top: 20px;
+                                
+                                background: #ebebeb;
+                                list-style-type: none;
+                                -webkit-font-smoothing: antialiased;
+                                /* to stop flickering of text in safari */
+                                
+                                transform-origin: 0% 0%;
+                                transform: translate(200%, 0);
+                                
+                                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                                }
+                                
+                                #user-lista li
+                                {
+                                padding: 10px 0;
+                                font-size: 22px;
+                                }
+                                
+                                /*
+                                * And let's slide it in from the left
+                                */
+                                #user input:checked ~ ul
+                                {
+                                transform: none;
+                                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         .logo{
             display: none;
         }
@@ -847,7 +970,7 @@ body{
                         background-color: gray;
                     }
                     .container1{
-                        max-width: 80%;
+                        max-width: 90%;
                         margin: 0 auto;
                         padding-top: 10px;
                     }
@@ -857,7 +980,7 @@ body{
                     .cart1{
                         display: flex;
                         flex-flow: column wrap;
-                        margin: 30px;
+                        margin: auto;
                     }
                     .products{
                         flex: 0.75;
@@ -872,25 +995,24 @@ body{
                         margin-bottom: 20px;
                         border: 2px solid transparent;
                     }
-                    .product:hover{
-                        border: none;
-                        /* box-shadow: 2px 2px 4px rgba(0,0,0,0.2); */
-                        transform: scale(1.01);
-                        filter: saturate(150%);
-                    }
                     .product > img{
                         width: 300px;
                         height: 200px;
                         object-fit: cover;
                     }
-                    .product > img:hover{
-                        transform: scale(1.04);
-                        filter: saturate(150%);
+                    .products .linea-span{
+                        width: 70%;
+                        display: block;
+                        background: #ebebeb;
+                        margin: auto;
+                        height: 2px;
                     }
                     .product-info{
                         padding: 20px;
+                        padding-left: 0;
                         width: 100%;
                         position: relative;
+                        text-align: left;
                         line-height: 0;
                     }
                     .product-name, .product-price, .product-offer{
@@ -904,7 +1026,7 @@ body{
                     }
                     .product-remove{
                         position: absolute;
-                        bottom: 10px;
+                        bottom: 20px;
                         right: 10px;
                         padding: 5px 15px;
                         background-color: red;
@@ -937,11 +1059,12 @@ body{
                         border-radius: 20px;
                         background-color: white;
                         margin-top: 20px;
+                        margin-bottom: 20px;
                     }
                     .cart-total p{
                         display: flex;
                         justify-content: space-between;
-                        margin-bottom: 30px;
+                        line-height: 1;
                         font-size: 20px;
                     }
                     .cart-total a{
@@ -953,7 +1076,7 @@ body{
                         border-radius: 10px;
                         font-size: 1em;
                         width: auto;
-                        min-width: 120px;
+                        max-width: 120px;
                         margin: auto;
                     }
                     .cart-total a:hover{
@@ -1062,7 +1185,7 @@ body{
                 text-align: justify;
                 border-bottom: 1px solid #ccd3da;
             }
-            p{
+            .descripcion-del-producto p{
             font-size: 1rem;
             line-height: 1.5;
             }
