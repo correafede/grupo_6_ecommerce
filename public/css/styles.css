@@ -247,6 +247,11 @@ body{
             font-family: 'Alfa Slab One', regular;
             font-weight: 500;
             margin: auto 0; 
+            text-decoration: none;
+            color: black;
+        }
+        .logo-titulo a:visited{
+            color: inherit;
         }
             .logo a img{
                 width: auto;
@@ -466,6 +471,12 @@ body{
                         display: flex;
                     }
 
+                    .titulo-productos{
+                        font-size: 1.2rem;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 400;
+                    }
                     /* DROPDOWN USER */
                     .dropbtnB{
                         display: block;
@@ -627,12 +638,10 @@ body{
                             display: flex;
                             flex-direction: column;
                             align-items: center;
-                            /**/
-                            /* background-image: url("/img/sacos_de_lupulo-300x158@2x.png"); */
                             background-size: cover;
                         }
                         .conjunto-login form{
-                            width: 80%;
+                            width: 90vw;
                             margin-top: 124.8px;
                         }
 
@@ -640,7 +649,10 @@ body{
                             margin: 6px auto 0 auto;
                             text-align: center;
                         }
-                           
+                        .col .google{
+                            margin-bottom: 28px;
+                        }
+
                         col input,
                         .btn{
                             width: 100%;
@@ -673,10 +685,10 @@ body{
 
                         .login-box {
                            
-                            width: 400px;
+                            width: 90vw;
                             padding: 40px;
                             background-color: #fff;
-                            box-shadow: 0 5px 10px rgba(0,0,0,.6);
+                            box-shadow: 0 2px 4px rgba(0,0,0,.6);
                             border-radius: 10px;
                             margin-bottom: 50px;
                           }
@@ -1406,6 +1418,8 @@ body{
     .dropdownC{
         display: none;
     }
+
+
     /* index */
     .aside{
         display: flex;
@@ -1417,6 +1431,11 @@ body{
     .articles article{
         width: 45vw;
         transition: all 400ms ease;
+    }
+
+    /* productos */
+    .titulo-productos{
+        padding-top: 15px;
     }
 
     /* product detail */
@@ -1503,6 +1522,10 @@ body{
         flex-flow: row nowrap;
     }
     .preferred-section{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .info-section{
         display: flex;
         flex-flow: row nowrap;
     }
