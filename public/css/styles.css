@@ -210,11 +210,11 @@ body{
     #menu
     {
       position: absolute;
-      width: 300px;
-      margin: 0px 0 0 -50px;
-      padding: 50px;
-      padding-top: 20px;
-      
+      width: 135px;
+      margin: 0px 0 0 -11px;
+      padding-top: 6px;
+      text-align: left;
+      padding-inline-start: 20px;
       background: #ebebeb;
       list-style-type: none;
       -webkit-font-smoothing: antialiased;
@@ -249,48 +249,37 @@ body{
                                 #user
                                 {
                                 display: block;
-                                position: relative;
                                 width: 100%;
                                 z-index: 0;
                                 -webkit-user-select: none;
                                 user-select: none;
                                 }
                                 
-                                #user .test-icono
-                                {
+                                #user .img-user{
                                 text-decoration: none;
                                 color: #232323;
                                 transition: color 0.3s ease;
+                                position: absolute;
+                                top: 13px;
+                                right: 11px;
                                 }
 
                                 #user input
                                 {
                                 display: block;
-                                width: 40px;
+                                width: 32px;
                                 height: 32px;
                                 position: absolute;
-                                top: -14px;
-                                right: -1px;
-                                
+                                top: 13px;
+                                right: 8px;
                                 cursor: pointer;
-                                
                                 opacity: 0; /* hide this */
                                 z-index: 2; /* and place it over the hamburger */
-                                
                                 -webkit-touch-callout: none;
                                 }
                                 /*
                                 * Just a quick hamburger
-                                */
-                                #user-lista .ion-icon
-                                {
-                                    display: block;
-                                    width: 33px;
-                                    height: 3px;
-                                    margin-bottom: 5px;
-                                    position: relative;
-                                    z-index: 1;
-                                }                     
+                  
                                 
                                 /*
                                 * Make this absolute positioned
@@ -299,19 +288,16 @@ body{
                                 #user-lista
                                 {
                                 position: absolute;
-                                width: 300px;
-                                margin: 0px 0 0 -50px;
-                                padding: 50px;
-                                padding-top: 20px;
-                                
+                                width: 128px;
+                                margin: 12px 0 0 -14px;
+                                padding-inline-start: 0px;
+                                padding-top: 6px;
                                 background: #ebebeb;
                                 list-style-type: none;
                                 -webkit-font-smoothing: antialiased;
                                 /* to stop flickering of text in safari */
-                                
                                 transform-origin: 0% 0%;
                                 transform: translate(200%, 0);
-                                
                                 transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
                                 }
                                 
@@ -748,7 +734,6 @@ body{
 
                         /* LOGIN */
                         main,
-                        input,
                         div.login input,
                         .division{
                             font-size: 20px;
@@ -892,6 +877,7 @@ body{
                         
                         .remember-user{
                             font-size: 15px;
+                            margin-bottom: 15px;
                         }
                         .recover-password{
                             font-size: 15px;
@@ -940,11 +926,9 @@ body{
                             font-size: 1rem; 
                         }
                         .checkboxes{
-                            display: flex;
-                            flex-flow: column nowrap;
-                        }
-                        .checkboxes .underage{
-                            margin-left: -72px;
+                            display: block;
+                            text-align: left;
+                            margin-bottom: 15px;
                         }
                         .login-link:hover,
                         .register-link:hover{
@@ -1540,7 +1524,7 @@ body{
         display: flex;
         align-items: center;
     }
-    .dropdownC{
+    #user{
         display: none;
     }
 

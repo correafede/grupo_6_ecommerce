@@ -4,14 +4,21 @@
         <span></span>
         <span></span>
         <span></span>
+        <% if (locals.isLogged) { %>
         <ul id="menu">
           <a href="/"><li>Home</li></a>
           <a href="/products"><li>Products</li></a>
-          <a href="/user/register"><li>Register</li></a>
-          <a href="/user/login"><li>Login</li></a>
           <a href="/products/cart"><li>Carrito</li></a>
           <a href="/products/create"><li>Crear</li></a>
         </ul>
+        <% } else { %>
+        <ul id="menu">
+            <a href="/"><li>Home</li></a>
+            <a href="/products"><li>Products</li></a>
+            <a href="/user/register"><li>Register</li></a>
+            <a href="/user/login"><li>Login</li></a>
+        </ul>
+            <% } %>
       </div>
     <div class="logo">
         <a href="/"><img src="/img/logo.webp" href="/index" alt="Logo de MercadoLiebre" class="logo"></img></a>
@@ -73,24 +80,17 @@
                         <a href="/user/logout">Logout</a>
                     </div>
                 </div>
-                <div class="dropdownC" >
-                    <img src="/img/users/<%= locals.userLogged.img %>" onclick="myFunction()" width="40" style="border-radius: 100%;" class="img-user">
-                    <div id="myDropdown" class="dropdown-contentB">
-                        <a href="/user/profile">My Profile</a>
-                        <a href="/user/logout">Logout</a>
-                    </div>
+                <div id="user" >
+                    <input type="checkbox" />
+                    <img src="/img/users/<%= locals.userLogged.img %>" width="40" style="border-radius: 100%;" class="img-user"> 
+                        <ul id="user-lista">
+                            <a href="/user/profile"><li>Mi perfil</li></a>
+                            <a href="/user/logout"><li>Logout</li></a>
+                        </ul>
                 </div>
             <% } else { %>
-            <!-- <div class="user">
+            <div class="user">
                 <a href="/user/login"><ion-icon name="people-outline"></ion-icon><span class="off">Login</span></a> 
-            </div> -->
-            <div id="user" >
-                <input type="checkbox" />
-                <a href="#" class="test-icono"><ion-icon name="people-outline"></ion-icon><span class="off">Login</span></a> 
-                    <ul id="user-lista">
-                        <a href="/user/profile"><li>Mi perfil</li></a>
-                        <a href="/user/logout"><li>Logout</li></a>
-                    </ul>
             </div>
             <% } %>
         </div>
