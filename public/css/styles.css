@@ -49,10 +49,12 @@ body{
     }
     .cursor-boton{
         position: relative;
-        right: 30px;
+        right: 40px;
         background-color: transparent;
         border: none;
         margin-top: 2px;
+        top: 5px;
+        font-size: 1.4em;
     }
     /* MARCOS HEADER SCROLL 220522*/
     header.abajo{
@@ -372,17 +374,17 @@ body{
         }
             .logo a img{
                 width: auto;
-                max-height: 100px;
+                max-height: 60px;
                 height: auto;
                 margin: 15px 0px 5px -15px;
                 filter: contrast(1.5);
             }
         .menu-y-dropdown{
-            width: 100%;
             display: flex;
             flex-wrap: wrap;
             text-align: center;
             display: none;
+
             /* MARCOS 200522
             position: absolute; 
             bottom: -10;*/
@@ -395,8 +397,6 @@ body{
                 .drop-importadas {
                     position: relative;
                     display: inline-block;
-                    padding: 0px 10px;
-                    padding-bottom: 15px;
                 }
                     .dropbtn {
                         background-color: #ebebeb;
@@ -434,8 +434,6 @@ body{
                     color: black;
                     font-size: 16px;
                     border: none;
-                    padding: 0px 10px;
-                    padding-bottom: 15px;
                 }
                     .ofertas a{
                         color: black;
@@ -469,7 +467,7 @@ body{
                 margin: 5px;
                 margin-right: 0px;
                 align-items: center;
-                width: 100%;
+                width: 55%;
             }  
                 .search{
                 display: none;                
@@ -480,7 +478,11 @@ body{
                 
                     .search input{
                         width: 80%;
+                        height: 38px;
                         margin-right: 0px;
+                        border: none;
+                        border-radius: 10px;
+                        font-size: 1rem;
                     }
                     /* .search form input{
                         height: 30px;
@@ -498,7 +500,7 @@ body{
                     }
                     .user-menu div form{
                         width: 100%;
-                        text-align: start;
+                        text-align: end;
                         display: none;
                     }
                 
@@ -1421,7 +1423,7 @@ body{
 @media all and (min-width: 768px){
         /* header */
     header{
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     main{
         margin-top: 160px;
@@ -1431,15 +1433,13 @@ body{
     }
     .user-menu div form{
         display: block;
-        position: absolute;
-        width: 30%;
     }
     .menu-usuario{
         width: 20%;
         justify-content: space-evenly;
     }
         .menu-usuario div span{
-            display: block;
+            display: none;
         }
         .menu-usuario .fas.fa-search{
             display: none;
@@ -1450,8 +1450,8 @@ body{
         }
     
     .user-menu{
-        width: 84%;
         align-items: center;
+        order: 4;
     }
     .dropdown{
         display: flex;
@@ -1500,7 +1500,7 @@ body{
     }
         .logo a img{
             width: auto;
-            max-height: 100px;
+            max-height: 60px;
             height: auto;
             margin: 15px 0px 5px -15px;
             filter: contrast(1.5);
@@ -1515,9 +1515,6 @@ body{
     .faq{
         display: block;
         font-size: 2rem;
-    }
-    .search{
-        display: block;
     }
     .nuevo-banner{
         width: 100%;
@@ -1658,6 +1655,11 @@ body{
     .cart-total{
         margin-left: 0;
         margin-bottom: 20px;
+    }
+}
+@media all and (min-width: 1024px){
+    .search{
+        display: block;
     }
 }
 @media all and (min-width: 1279px){
