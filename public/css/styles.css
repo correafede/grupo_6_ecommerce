@@ -47,6 +47,13 @@ body{
         height: 1.2em;
         order: 2;
     }
+    .cursor-boton{
+        position: relative;
+        right: 30px;
+        background-color: transparent;
+        border: none;
+        margin-top: 2px;
+    }
     /* MARCOS HEADER SCROLL 220522*/
     header.abajo{
         width: 100%;
@@ -1424,9 +1431,11 @@ body{
     }
     .user-menu div form{
         display: block;
+        position: absolute;
+        width: 30%;
     }
     .menu-usuario{
-        width: 30%;
+        width: 20%;
         justify-content: space-evenly;
     }
         .menu-usuario div span{
@@ -1441,7 +1450,7 @@ body{
         }
     
     .user-menu{
-        width: 90vw;
+        width: 84%;
         align-items: center;
     }
     .dropdown{
@@ -1484,10 +1493,10 @@ body{
         flex: none;
     }
     .logo{
-        width: 10%;
+        width: 15%;
         max-height: 160px;
-        text-align: center;
         display:flex;
+        justify-content: center;
     }
         .logo a img{
             width: auto;
