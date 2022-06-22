@@ -7,7 +7,7 @@
     <%- include('../partials/toggle') %>
     <main style="margin-top: 0px">
       <div class="conjunto-login">
-        <form action="/user/register" method="POST">
+        <form action="/user/register" method="POST" enctype="multipart/form-data">
           <div class="login-box">
             <h2>Register</h2>
             <div class="col">
@@ -30,7 +30,7 @@
                     <label>Apellido</label>
                     <% if (locals.errors && errors.lastName) { %>
                       <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.lastName.msg %></div>
-                      <% } %>
+                      <% } %>:
                 </div>
                 <div class="user-box">
                   <input type="email" name="email" required="" value="<%= locals.oldData ? oldData.email : null %>">
@@ -53,6 +53,13 @@
                 <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.confirmPassword.msg %></div>
                 <% } %>
           </div>
+          <div class="user-box">
+            <input type="file" name="image" >
+            <label>Imagen de perfil</label>
+            <% if (locals.errors && errors.image) { %>
+              <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.image.msg %></div>
+              <% } %>
+        </div>
           <div class="checkboxes">
             <div class="underage">
               <label>

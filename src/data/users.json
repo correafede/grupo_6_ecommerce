@@ -30,13 +30,5 @@
   "email": "marcoschapire@gmail.com",
   "password": "$2a$10$CC71jhqnIMkky4JZ7J.rfudN6oo.DsVuY0VFzfqrIKUpeu8MUPuKS",
   "img": "default-image.png"
- },
- {
-  "id": 5,
-  "firstName": "pepito",
-  "lastName": "juarez",
-  "email": "pepitojuarez@gmail.com",
-  "password": "$2a$10$PsGVQk3Ri7ziMYk8W.Wbue4vyRf3NFAXzW17lkDFS4MnyD1oizeIW",
-  "img": "default-image.png"
  }
 ]

@@ -7,6 +7,9 @@ const User = {
     getData: function() {
         return JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
     },
+    findAll: function() {
+        return this.getData();
+    },
     generateId: function() {
         let allUsers = this.findAll();
         let lastUser = allUsers.pop();
@@ -14,9 +17,6 @@ const User = {
             return lastUser.id + 1;
         } 
         return 1;
-    },
-    findAll: function() {
-        return this.getData();
     },
     findByPk: function(id) {
         let allUsers = this.findAll();
@@ -33,7 +33,6 @@ const User = {
         let newUser = {
             id: this.generateId(),
             ...userData,
-            img: 'default-img.png'
         }
         allUsers.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(allUsers, null, ' '));

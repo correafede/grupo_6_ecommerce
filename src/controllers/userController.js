@@ -13,10 +13,6 @@ let userController = {
 
         res.render("./users/login");
     },
-	login2: (req, res) => { 
-
-        res.render("./users/login2");
-    },
     register: (req, res) => {
         res.render("./users/register");
     },
@@ -41,12 +37,19 @@ let userController = {
 				});
 			}
 
+		let image
+		if(req.file != undefined) {
+			image = req.file.filename;
+		} else {
+			image = "default-image.png";
+		};
+
 		let userToCreate = {
 			firstName: req.body.firstName,
 			lastName: req.body.lastName,
 			email: req.body.email,
 			password: bcryptjs.hashSync(req.body.password, 10),
-			img: 'default-image.png'
+			img: image
 		};
 
 		let userCreated = User.create(userToCreate);

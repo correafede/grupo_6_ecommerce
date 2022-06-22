@@ -19,24 +19,18 @@ module.exports = [
         }
         return true;
     }),
+    body('image').custom((value, {req}) => { 
+        let file = req.file;
+        let accepetedExtensions = ['.jpg', '.png', '.gif' ];
+    
+        if (!file) {
+            throw new Error('Tiene que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!accepetedExtensions.includes(fileExtension)){
+                throw new Error('Las extensiones de archivo pertimidas son: ' + accepetedExtensions.join(', '));
+            } 
+        }
+        return true
+    })
 ]
-
-
-/* image check */               //si nos llegan a pedir que subamos una foto en el register //
-
-// body('avatar').custom((value, {req }) => { 
-//     let fle = req.file;
-//     let accepetedExtensions = ['.jpg', '.png', '.gif' ];
-    
-
-//     if (!file) {
-//         throw new Error('Tiene que subir una imagen');
-//     } else {
-//         let fileExtension = path.extname(file.originalname);
-//         if (!accepetedExtensions.includes(fileExtension)){
-//             throw new Error('Las extensiones de archivo pertimidas son: ' + accepetedExtensions.join(', '));
-//         }
-//     }
-    
-//     return true
-// })
