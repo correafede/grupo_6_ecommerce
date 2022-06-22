@@ -17,6 +17,22 @@
                   <a href="#" class="google btn"><i class="fa fa-google fa-fw"></i> Login with Google+
                   </a>
                 </div>
+                              <!-- <div class="user-box2">
+                                <input type="text" name="email"  value="<%= locals.oldData ? oldData.email : null %>">
+                                <label for="email">
+                                  <span class="icon"><i class="far fa-envelope"></i></span>Email</label>
+                                <% if (locals.errors && errors.email) { %>
+                                  <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.email.msg %></div>
+                                  <% } %>
+                            </div>
+                            <div class="user-box2">
+                                <input type="password" name="password" >
+                                <label for="password">
+                                <span class="icon"><i class="fas fa-lock"></i></span>Password</label> 
+                                <% if (locals.errors && errors.password) { %>
+                                  <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.password.msg %></div>
+                                  <% } %>
+                            </div> -->
                   <div class="user-box">
                       <input type="text" name="email" required="" value="<%= locals.oldData ? oldData.email : null %>">
                       <label>Email</label>

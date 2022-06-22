@@ -249,12 +249,6 @@ body{
       transform: none;
     }
 
-                    
-
-
-
-
-
                                 #user
                                 {
                                 display: block;
@@ -324,40 +318,6 @@ body{
                                 transform: none;
                                 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         .logo{
             display: none;
         }
@@ -384,6 +344,7 @@ body{
             flex-wrap: wrap;
             text-align: center;
             display: none;
+            width: 45%;
 
             /* MARCOS 200522
             position: absolute; 
@@ -483,6 +444,7 @@ body{
                         border: none;
                         border-radius: 10px;
                         font-size: 1rem;
+                        padding-left: 10px;
                     }
                     /* .search form input{
                         height: 30px;
@@ -500,13 +462,11 @@ body{
                     }
                     .user-menu div form{
                         width: 100%;
-                        text-align: end;
                         display: none;
                     }
                 
                 .menu-usuario{
                     display: flex;
-                    width: 100%;
                     justify-content: flex-end;
                     align-items: center;
                     font-size: 2rem;
@@ -626,6 +586,8 @@ body{
                         width: auto;
                         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                         z-index: 1;
+                        left: 20px;top: 40px;
+    
                     }
                     .dropdown-contentB a{
                         color: black;
@@ -757,6 +719,7 @@ body{
                             flex-direction: column;
                             align-items: center;
                             background-size: cover;
+                            
                         }
                         .conjunto-login form{
                             width: 90vw;
@@ -803,7 +766,7 @@ body{
                         /*test*/
 
                         .login-box {
-                           
+            
                             width: 90vw;
                             padding: 40px;
                             background-color: #fff;
@@ -855,6 +818,58 @@ body{
                                 color: rgb(100, 211, 100);
                                 font-size: 14px;
                             }
+
+
+                                        /* .login-box .user-box2 {
+                                            position: relative;
+                                            padding-right: 27px;
+                                        }   
+                                        .login-box .user-box2 input {
+                                            width: 100%;
+                                            padding: 10px 0;
+                                            font-size: 1rem;
+                                            color: rgba(0,0,0,.8);
+                                            margin-bottom: 30px;
+                                            border: none;
+                                            border-bottom: 1px solid black;
+                                            outline: none;
+                                            background: transparent;
+                                        }
+                                        .login-box .user-box2 label {
+                                            position: absolute;
+                                            top:-20px;
+                                            left: -26px;
+                                            display: inline-flex;
+                                            column-gap: 10px;
+                                            align-items: center;
+                                            transition: transform .25s, opacity .25s;
+                                        }
+                                        .login-box .user-box2 .icon {
+                                            display: inline-flex;
+                                            opacity: 0;
+                                        }
+                                        
+                                        .login-box .user-box2 input:focus+label {
+                                           transform: translateX(26px);
+                                        }
+                                        .login-box .user-box2 input:focus+label .icon {
+                                            opacity: 1;
+                                            transition-delay: .1s;
+                                        }
+                                        .login-box .user-box2 input::placeholder {
+                                            transition: opacity .25s;
+                                        }
+                                        .login-box .user-box2 input::placeholder {
+                                            opacity: 0;
+                                        } */
+
+
+
+
+
+
+
+
                             
                             .login-box form a { /* boton login verde */
                                 position: relative;
@@ -1351,14 +1366,20 @@ body{
             width: 60%;
         }
             footer .newsletter-box div input{
-                width: auto;
-                min-width: 80px;
+                    width: 80%;
+                    height: 38px;
+                    margin-right: 0px;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 1rem;
+                    padding-left: 10px;
             }
             footer .newsletter-box p{
                 font-size: 1.2rem;
                 text-align: center;
                 color: #ccc5b9;
                 margin-bottom: 5px;
+                padding-bottom: 5px;
             } 
         .footer-menu{
             margin: 10px;
@@ -1425,19 +1446,13 @@ body{
     header{
         flex-wrap: nowrap;
     }
-    main{
-        margin-top: 160px;
-    }
     .main{
-        margin-top: 200px;
+        margin-top: 90px;
     }
     .user-menu div form{
         display: block;
     }
-    .menu-usuario{
-        width: 20%;
-        justify-content: space-evenly;
-    }
+
         .menu-usuario div span{
             display: none;
         }
@@ -1523,7 +1538,7 @@ body{
         background-size: 100% 100%;
         display: flex;
         position: relative;
-        bottom: -165.8px;
+        bottom: -100px;
     }
     .dropdownB{
         position: relative;
@@ -1550,7 +1565,7 @@ body{
 
     /* productos */
     .titulo-productos{
-        padding-top: 25px;
+        padding-top: 35px;
     }
 
     /* product detail */
@@ -1570,6 +1585,11 @@ body{
     /*LOGIN*/
     .conjunto-login form{
         margin-top: 170px;
+    }
+    .login-box{
+        max-width: 50vw;
+        margin: auto;
+        margin-bottom: 50px;
     }
     /*REGISTER*/
     .register{
@@ -1640,9 +1660,10 @@ body{
         display: flex;
         flex-flow: row nowrap;
     }
-    .info-section{
+    .animacion{
         display: flex;
-        flex-flow: row nowrap;
+        flex-direction: row;
+        flex-direction: row nowrap;
     }
      /* product cart */
     .imagen-producto{

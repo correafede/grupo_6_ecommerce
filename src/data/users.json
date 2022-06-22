@@ -30,5 +30,13 @@
   "email": "marcoschapire@gmail.com",
   "password": "$2a$10$CC71jhqnIMkky4JZ7J.rfudN6oo.DsVuY0VFzfqrIKUpeu8MUPuKS",
   "img": "default-image.png"
+ },
+ {
+  "id": 5,
+  "firstName": "test",
+  "lastName": "sdf",
+  "email": "test2@correo.com",
+  "password": "$2a$10$2SxpXM7v/PNV.ZTS5D8tBu3FXoIBXwmoyuhMBlFXNabC6LsN2AJlS",
+  "img": "newuser-1655861942977.jpg"
  }
 ]

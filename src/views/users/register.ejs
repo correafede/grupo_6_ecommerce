@@ -30,7 +30,7 @@
                     <label>Apellido</label>
                     <% if (locals.errors && errors.lastName) { %>
                       <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.lastName.msg %></div>
-                      <% } %>:
+                      <% } %>
                 </div>
                 <div class="user-box">
                   <input type="email" name="email" required="" value="<%= locals.oldData ? oldData.email : null %>">

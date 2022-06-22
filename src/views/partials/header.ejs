@@ -47,9 +47,11 @@
             <div class="ofertas">
                 <a href="/products" class="nav-effect">All Products</a> 
             </div>
+            <% if (locals.isLogged) { %>
             <div class="ofertas">
                 <a href="/products/create" class="nav-effect">Crear</a> 
             </div>
+            <% } %>
         </div>
     </div>
     <div class="user-menu">
@@ -60,9 +62,6 @@
             </form>
         </div>
         <div class="menu-usuario">
-            <div class="faq">
-                <a href="#"><ion-icon name="help-circle-outline"></ion-icon><span class="off">FAQ</span></a>
-            </div>
             <div class="faq">
                 <a href="#"><ion-icon name="help-circle-outline"></ion-icon><span class="off">FAQ</span></a>
             </div>

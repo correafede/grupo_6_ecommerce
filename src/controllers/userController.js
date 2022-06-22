@@ -71,13 +71,15 @@ let userController = {
 
 				return res.redirect('/user/profile')
 			}
+			
 			return res.render('./users/login', {
+				
 				errors: {
 					email: {
 						msg: 'Las credenciales no son correctas'
 					}
 				},
-				oldData: req.body, 
+				oldData: req.body,
 			});
 		}
 
