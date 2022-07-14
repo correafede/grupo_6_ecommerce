@@ -55,7 +55,26 @@
 	-Postergar las actividades hasta los últimos días de entrega.
 	-Dejar dudas para último momento.
 
-
+**Restrospectiva Sprint 5**
+1. Comenzar a hacer:
+    -Deberíamos comenzar a implementar las daily/weeklys standup;
+    -Comunicarnos mejor y con más frecuencia
+2. Hacer más:
+    -Aprovechar las posibilidades que otorga Trello para el seguimiento de las tareas;
+    -Distribuir las teareas individualmente;
+    -Mejorar la comunicación respecto a problemas que aparecen con el código;
+    -Hacer más reuniones;
+3. Continuar haciendo
+    -Weeklys standups;
+    -Comunicarnos;
+    -Resolver los problemas en grupo;
+4. Hacer menos
+    -No plantear las dudas para resolverlas en grupo;
+    -Reuniones periódicas para exponer los problemas con los que nos vamos encontrando"
+    -Trabajar individualmente
+5. Dejar de hacer
+    -Postergar las actividades hasta los últimos días de entrega.
+    -Dejar dudas para último momento.
 
 
 **Enlace del workspace:**
