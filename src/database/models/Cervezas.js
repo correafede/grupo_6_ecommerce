@@ -40,6 +40,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TINYINT(255).UNSIGNED,
             allowNull: false
         },
+        image: dataTypes.STRING(255),
     };
 
     let config = {
