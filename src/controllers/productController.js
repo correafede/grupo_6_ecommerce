@@ -4,17 +4,15 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const Beer = db.Beer;
-const Color = db.Color;
-const Category = db.Category;
-const Size = db.Size;
 
 let productController = {
     list: (req, res) => { 
         Beer.findAll({
-            include: ['size', 'category', 'color']
+            include: [ 'size', 'category', 'color']
+           
         })
             .then(products => {
-                res.render("./products/products", { products });
+                res.render("./products/products", { products});
             })
     },
     detalle: (req, res)=> {
@@ -108,20 +106,30 @@ let productController = {
             return res.redirect("../")})
     },
     search: (req, res) => { 
-    let promKey = req.query.keywords;
-    let promSearch = db.Beer.findAll({
-        where: {
-            Nombre: { [Op.like]: '%' + req.query.keywords + '%' }
-        }
-            });
-    Promise
-    .all([promKey, promSearch])
-    .then(([search, birraSearch]) => {
-            return res.render('results', { 
-                birraSearch, 
-                search
-            })})
-        }
+        let promKey = req.query.keywords;
+        let promSearch = db.Beer.findAll({
+            include: [ 'size', 'category', 'color'],
+            where: {
+                [Op.or]: 
+                    [
+                {Nombre: { [Op.like]: '%' + req.query.keywords + '%' }},
+                {ibu: { [Op.like]: '%' + req.query.keywords + '%' }},
+                {abv: { [Op.like]: '%' + req.query.keywords + '%' }},
+                {image: { [Op.like]: '%' + req.query.keywords + '%' }}
+                    ]
+                   } 
+                }
+            );
+        Promise
+        .all([promKey, promSearch])
+        .then(([search, birraSearch]) => {
+                return res.render('results', { 
+                    birraSearch, 
+                    search
+                }
+            )
+        })
+    }
 }
 
-module.exports = productController;
+module.exports = productController

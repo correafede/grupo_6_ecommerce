@@ -14,7 +14,7 @@
         <a href="/" title="Home" class="nav-home">INICIO ></a>
         </li>
         <li class="barra-van">
-          <span title="category" class="nav-home"><%= birra.category%></span>
+          <span title="category" class="nav-home"><%= birra.category.Nombre %> ></span>
           </li>
         <li class="item-home">
           <span class="item-detail"><%= birra.Nombre %></span>
@@ -25,7 +25,7 @@
         <div class="imagen-producto"><img src="/img/products/<%= birra.image %>" /></div>
         <div class="caja-descripcion">
           <div class="texto-descripcion">
-            <div class="titulo-del-producto"><%= birra.Nombre %> <%= birra.size %></div>
+            <div class="titulo-del-producto"><%= birra.Nombre %> <%= birra.size.Nombre %></div>
             <br />
             <div class="precio-anterior"><%= birra.priceAnterior %></div>
             <br />
@@ -49,9 +49,9 @@
             <div class="descripcion-del-producto">
               <h2>Información del producto</h2>
               <p>
-                <%= birra.description %>
+                <%= birra.descrip %>
                 <br />
-                Color: <%= birra.Color %>
+                Color: <%= birra.color.Nombre %>
                 <br />
                 IBU: <%= birra.ibu %>
                 <br />

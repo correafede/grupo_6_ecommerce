@@ -7,7 +7,7 @@
         <%- include('../partials/toggle') %>
         <main>
         <div class="modify">
-            <h1>Modificando: <%=birra.Nombre%></h1>
+            <h1>Modificando: <%=birra.Nombre%> <%=birra.size.Nombre %></h1>
         <div class="modify-2"> 
             <form action="/products/edit/<%=birra.idCerveza%>?_method=PATCH" method="POST" enctype="multipart/form-data">
                 <input type="text" placeholder="<%=birra.Nombre%>" name="name" class="form-input">

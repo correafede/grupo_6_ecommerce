@@ -13,7 +13,7 @@
                 <div><input type="text" placeholder="Nombre" name="name" ></div>
                 <div class="size-product">
                     <label for="size" class="form-label">Tamaño:</label>
-                        <select name="idSize" id="id_Size" class="form-input">
+                        <select name="idSize" id="size" class="form-input">
                             <option value="" disabled selected>Elegí</option>
                             <% allSizes.forEach(size => { %>
                             <option value="<%= size.idSize %>"><%= size.Nombre %></option>

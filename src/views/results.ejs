@@ -26,8 +26,8 @@
                     <div class="description">
                         <p class="discount"></p>
                         <p class="price">$ <%= beer.price %></p>
-                        <p class="class"><%= beer.Nombre %>  <%= beer.id_Size %></p>   
-                        <p class="info"><%= beer.id_Category %> / <%= beer.abv %>% ALC</p>
+                        <p class="class"><%= beer.Nombre %>  <%= beer.size.Nombre %></p>   
+                        <p class="info"><%= beer.category.Nombre %> / <%= beer.abv %>% ALC</p> 
                     </div>
                 </article>
                 <% })} else { %>
