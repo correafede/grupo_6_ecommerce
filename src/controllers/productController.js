@@ -107,7 +107,7 @@ let productController = {
     },
     search: (req, res) => { 
         let promKey = req.query.keywords;
-        let promSearch = db.Beer.findAll({
+        let promSearch = Beer.findAll({
             include: [ 'size', 'category', 'color'],
             where: {
                 [Op.or]: 
