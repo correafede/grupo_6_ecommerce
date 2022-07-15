@@ -7,16 +7,16 @@ module.exports = {
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
+    "username": "bba458536fe565",
+    "password": "479b432b",
+    "database": "heroku_7fe3405a867cfa8",
     "host": "us-cdbr-east-06.cleardb.net",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
+    "username": "bba458536fe565",
+    "password": "479b432b",
+    "database": "heroku_7fe3405a867cfa8",
     "host": "us-cdbr-east-06.cleardb.net",
     "dialect": "mysql"
   }
