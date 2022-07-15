@@ -17,7 +17,7 @@
           <span title="category" class="nav-home"><%= birra.category%></span>
           </li>
         <li class="item-home">
-          <span class="item-detail"><%= birra.name %></span>
+          <span class="item-detail"><%= birra.Nombre %></span>
           </li>
         </ol>
       </div>
@@ -25,7 +25,7 @@
         <div class="imagen-producto"><img src="/img/products/<%= birra.image %>" /></div>
         <div class="caja-descripcion">
           <div class="texto-descripcion">
-            <div class="titulo-del-producto"><%= birra.name %> <%= birra.size %></div>
+            <div class="titulo-del-producto"><%= birra.Nombre %> <%= birra.size %></div>
             <br />
             <div class="precio-anterior"><%= birra.priceAnterior %></div>
             <br />
@@ -51,7 +51,7 @@
               <p>
                 <%= birra.description %>
                 <br />
-                Color: <%= birra.color %>
+                Color: <%= birra.Color %>
                 <br />
                 IBU: <%= birra.ibu %>
                 <br />
@@ -61,8 +61,8 @@
           </div>
         </div>
         <div class="botones-changes">
-          <a href="/products/edit/<%=birra.id%>" class="action-button edit">EDITAR</a>
-          <form action="/products/delete/<%=birra.id%>?_method=DELETE" method="POST">
+          <a href="/products/edit/<%=birra.idCerveza%>" class="action-button edit">EDITAR</a>
+          <form action="/products/delete/<%=birra.idCerveza%>?_method=DELETE" method="POST">
                   <button type="submit" class="action-button delete">ELIMINAR</button>
                 </form>
           </div>

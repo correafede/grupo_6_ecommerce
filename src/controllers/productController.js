@@ -3,11 +3,125 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
-const Beer = db.Cervezas;
+const Beer = db.Beer;
+const Color = db.Color;
+const Category = db.Category;
+const Size = db.Size;
 
 let productController = {
     list: (req, res) => { 
-        res.render("./products/products", { products });
-    }
+        Beer.findAll({
+            include: ['size', 'category', 'color']
+        })
+            .then(products => {
+                res.render("./products/products", { products });
+            })
+    },
+    detalle: (req, res)=> {
+        Beer.findByPk(req.params.id,
+            {
+                include: ['size', 'category', 'color']
+            })
+            .then(birra => {
+                res.render('./products/productDetail', {birra});
+            });
+    },
+    carrito: (req, res) => { 
+        res.render("./products/productCart");
+    },
+    create: (req, res) => { 
+        let promSizes = Size.findAll();
+        let promCategories = Category.findAll();
+        let promColors = Color.findAll();
 
+        Promise
+        .all([promSizes, promCategories, promColors])
+        .then(([allSizes, allCategories, allColors]) => {
+
+        return res.render("./products/productCreate", { allSizes, allCategories, allColors})});
+    
+    },
+    store: (req, res) => {
+        Beer
+        .create(
+            {
+            Nombre: req.body.name,
+            id_Size: req.body.idSize,
+            id_Category: req.body.idCategory,
+            id_Color: req.body.idColor,
+            abv: req.body.abv,
+            ibu: req.body.ibu,
+            descrip: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+            quantity: req.body.quantity,
+            }
+        )
+        .then(() => {
+            return res.redirect("./products");
+        })
+    },
+    edit: (req, res) => {
+        let promFindBeer = db.Beer.findByPk(req.params.id,
+            {
+                include: ['size', 'category', 'color']
+            });
+        let promSizes = Size.findAll();
+        let promCategories = Category.findAll();
+        let promColors = Color.findAll();
+
+        Promise
+        .all([promFindBeer, promSizes, promCategories, promColors])
+        .then(([birra, allSizes, allCategories, allColors]) => {
+
+        return res.render("./products/productEdit", { birra, allSizes, allCategories, allColors})});
+    },
+    update: (req, res) => {
+        let BeerId = req.params.id;
+        Beer
+        .update(
+            {
+            Nombre: req.body.name,
+            id_Size: req.body.idSize,
+            id_Category: req.body.idCategory,
+            id_Color: req.body.idColor,
+            abv: req.body.abv,
+            ibu: req.body.ibu,
+            descrip: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+            quantity: req.body.quantity,
+            },
+            {
+                where: {idCerveza: BeerId}
+            }
+        )
+        .then(() => {
+            return res.redirect("../");
+        })
+    },
+    destroy: (req, res) => {
+        let BirraId = req.params.id;
+        Beer
+        .destroy({where: {idCerveza: BirraId}, force: true})
+        .then(()=>{
+            return res.redirect("../")})
+    },
+    search: (req, res) => { 
+    let promKey = req.query.keywords;
+    let promSearch = db.Beer.findAll({
+        where: {
+            Nombre: { [Op.like]: '%' + req.query.keywords + '%' }
+        }
+            });
+    Promise
+    .all([promKey, promSearch])
+    .then(([search, birraSearch]) => {
+            return res.render('results', { 
+                birraSearch, 
+                search
+            })})
+        }
 }
+
+module.exports = productController;

@@ -21,13 +21,13 @@
                     birraSearch.forEach(beer => {  %>
                 <article class="article">
                     <div class="product-img">
-                        <a href="/products/detail/<%=beer.id%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
+                        <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
                     </div>
                     <div class="description">
                         <p class="discount"></p>
                         <p class="price">$ <%= beer.price %></p>
-                        <p class="class"><%= beer.name %>  <%= beer.size %></p>   
-                        <p class="info"><%= beer.category %> / <%= beer.abv %>% ALC</p>
+                        <p class="class"><%= beer.Nombre %>  <%= beer.id_Size %></p>   
+                        <p class="info"><%= beer.id_Category %> / <%= beer.abv %>% ALC</p>
                     </div>
                 </article>
                 <% })} else { %>

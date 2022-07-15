@@ -11,7 +11,7 @@
   "id": 2,
   "firstName": "Usuario",
   "lastName": "N",
-  "email": "test@correo.com",
+  "email": "test3@correo.com",
   "password": "$2a$10$l17X2F2v5l8hmxd3O8sHS.xTgdVA2hinlIGRKeFDHTT.Hy16KEOZK",
   "img": "default-image.png"
  },
@@ -38,5 +38,13 @@
   "email": "test2@correo.com",
   "password": "$2a$10$2SxpXM7v/PNV.ZTS5D8tBu3FXoIBXwmoyuhMBlFXNabC6LsN2AJlS",
   "img": "newuser-1655861942977.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Usuario",
+  "lastName": "N",
+  "email": "test@correo.com",
+  "password": "$2a$10$iAhfxzH8HKlMwkT3WFs1X.LJUhsO4dgAIOp9dVV7Vh6KZ4JnXyN/q",
+  "img": "newuser-1657836697874.png"
  }
 ]

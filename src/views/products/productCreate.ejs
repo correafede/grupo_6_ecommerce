@@ -13,36 +13,32 @@
                 <div><input type="text" placeholder="Nombre" name="name" ></div>
                 <div class="size-product">
                     <label for="size" class="form-label">Tamaño:</label>
-                        <select name="size" id="size" class="form-input">
-                            <option value="">Elegí</option>
-                            <option value="Lata 330ml">Lata 330ml</option>
-                            <option value="Botella 355ml">Botella 355ml</option>
-                            <option value="Lata 473ml">Lata 473ml</option>
-                            <option value="Botella 500ml">Botella 500ml</option>
+                        <select name="idSize" id="id_Size" class="form-input">
+                            <option value="" disabled selected>Elegí</option>
+                            <% allSizes.forEach(size => { %>
+                            <option value="<%= size.idSize %>"><%= size.Nombre %></option>
+                            <% }); %>
                         </select>
                 </div>
                 <div class="size-product">
                     <label for="category" class="form-label">Categoria:</label>
-                        <select name="category" id="category" class="form-input">
-                            <option value="">Elegí</option>
-                            <option value="IPA">IPA</option>
-                            <option value="APA">APA</option>
-                            <option value="AMBER">AMBER</option>
-                            <option value="HONEY">HONEY</option>
+                        <select name="idCategory" id="category" class="form-input">
+                            <option value="">Elegí</option>idColor
+                            <% allCategories.forEach(category => { %>
+                                <option value="<%= category.idCategory %>"><%= category.Nombre %></option>
+                                <% }); %>
                         </select>
                 </div>
                 <div class="size-product">
                     <label for="color" class="form-label">Color:</label>
-                        <select name="color" id="color" class="form-input">
+                        <select name="idColor" id="color" class="form-input">
                             <option value="">Elegí</option>
-                            <option value="Dorada">Dorada</option>
-                            <option value="Roja">Roja</option>
-                            <option value="Oscura">Oscura</option>
+                            <% allColors.forEach(color => { %>
+                                <option value="<%= color.idColor %>"><%= color.Nombre %></option>
+                                <% }); %>
                         </select>
                 </div>
-                <div>
-                    <label><input type="text" placeholder="ABV" name="abv"></label>
-                </div>
+                <div><label><input type="text" placeholder="ABV" name="abv"></label></div>
                 <div><input type="text" placeholder="IBU" name="ibu" ></input></div>
                 <div><textarea type="textarea" rows="10" cols="50" placeholder="Inserte una descripción del producto" name="description"></textarea></div>
                 <div><input type="text" placeholder="Precio x unidad" name="price" ></input></div>

@@ -2,21 +2,20 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Color';
     let cols = {
         idColor: {
-            type: dataTypes.INT(11),
+            type: dataTypes.TINYINT(11),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
         Nombre: {
-            type: dataTypes.VARCHAR(35),
+            type: dataTypes.STRING(35),
             allowNull: false
         }
     };
     
     let config = {
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        tableName: "color",
+        timestamps: false,
         deletedAt: false
     }
     const Color = sequelize.define(alias, cols, config);

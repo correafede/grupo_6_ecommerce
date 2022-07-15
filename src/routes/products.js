@@ -10,18 +10,18 @@ const uploadPFile = require('../middlewares/multerPMiddleware')
 
 router.get('/', productController.list);
 
-// router.get('/detail/:id', productController.detalle);
+router.get('/detail/:id', productController.detalle);
 
-// router.get('/cart', productController.carrito);
+router.get('/cart', productController.carrito);
 
-// router.get('/create', authMiddleware ,productController.create);
-// router.post('/', uploadPFile.single('image'), productController.store); 
+router.get('/create', authMiddleware ,productController.create);
+router.post('/', uploadPFile.single('image'), productController.store); 
 
-// router.get('/edit/:id', authMiddleware ,productController.edit);
-// router.patch('/edit/:id', uploadPFile.any(), productController.update); 
+router.get('/edit/:id', authMiddleware ,productController.edit);
+router.patch('/edit/:id', uploadPFile.any(), productController.update); 
 
-// router.delete('/delete/:id', authMiddleware ,productController.destroy); 
+router.delete('/delete/:id', authMiddleware ,productController.destroy); 
 
-// router.get('/search', productController.search); 
+router.get('/search', productController.search); 
 
 module.exports = router;
