@@ -8,8 +8,8 @@ const Beer = db.Beer;
 let productController = {
     list: (req, res) => { 
         Beer.findAll({
-            include: [ 'size', 'category', 'color']
-           
+            include: [ 'size', 'category', 'color'],
+            order: [['idCerveza', 'ASC']]
         })
             .then(products => {
                 res.render("./products/products", { products});
