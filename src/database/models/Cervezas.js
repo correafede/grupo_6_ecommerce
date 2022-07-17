@@ -41,6 +41,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         image: dataTypes.STRING(255),
+        tags: dataTypes.STRING(255)
     };
 
     let config = {

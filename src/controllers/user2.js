@@ -24,8 +24,11 @@ let userController = {
 				oldData: req.body, 
 			});
 		}
-
-		let userInDB = User.findByField('email', req.body.email)
+		let userInDB = User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
 		 	if (userInDB) {
 				return res.render('./users/register', { 
 					errors: {
@@ -35,27 +38,19 @@ let userController = {
 					},
 					oldData: req.body, 
 				});
-			}
-
-            let image
-            if(req.file != undefined) {
-                image = req.file.filename;
-            } else {
-                image = "default-image.png";
-            };
-    
+			} else { 
             User.create( 
                 {
                     first_name: req.body.firstName,
                     last_name: req.body.lastName,
                     email: req.body.email,
                     password: bcryptjs.hashSync(req.body.password, 10),
-                    image: image
-                });
-        return res.redirect('./login')
+                    id_UserCategory: 1,
+                    image: "default-image.png"
+                }).then(() => { 
+        return res.redirect('./login')})
+        }
     }
-
-
 }
 
 module.exports = userController;

@@ -9,7 +9,7 @@ let productController = {
     list: (req, res) => { 
         Beer.findAll({
             include: [ 'size', 'category', 'color'],
-            order: [['idCerveza', 'ASC']]
+            order: [['Nombre', 'ASC']]
         })
             .then(products => {
                 res.render("./products/products", { products});
@@ -106,23 +106,15 @@ let productController = {
             return res.redirect("../")})
     },
     search: (req, res) => { 
-        let promKey = req.query.keywords;
-        let promSearch = Beer.findAll({
+        let search = req.query.keywords;
+        let birraSearch = Beer.findAll({
             include: [ 'size', 'category', 'color'],
             where: {
-                [Op.or]: 
-                    [
-                {Nombre: { [Op.like]: '%' + req.query.keywords + '%' }},
-                {ibu: { [Op.like]: '%' + req.query.keywords + '%' }},
-                {abv: { [Op.like]: '%' + req.query.keywords + '%' }},
-                {image: { [Op.like]: '%' + req.query.keywords + '%' }}
-                    ]
-                   } 
+                tags: { [Op.like]: '%' + req.query.keywords + '%' },
+                   }
                 }
-            );
-        Promise
-        .all([promKey, promSearch])
-        .then(([search, birraSearch]) => {
+            )
+        .then((birraSearch) => {
                 return res.render('results', { 
                     birraSearch, 
                     search

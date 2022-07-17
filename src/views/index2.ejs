@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Inicio'}) %>
+<body>
+    <%- include('./partials/header') %>
+    <%- include('./partials/button') %>
+    <%- include('./partials/toggle') %>
+        <div class="nuevo-banner"></div>
+    <main>
+        <div class="barra-navegacion">
+            <ol class="lista-producto">
+                <li class="barra-van">
+                    <a class="item-class">Cervezas ></a>
+                </li>
+                <li class="item-home">
+                    <a class="item-detail"> IPA</a>
+                </li>
+            </ol>
+        </div>
+        <section class="section">
+            <div class="aside"></div>
+            <div class="articles">
+                <% ipa.forEach(beer => { %>
+                <article class="article">
+                    <div class="product-img">
+                        <a href="/products/detail/<%=beer.id%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
+                    </div>
+                    <div class="description">
+                        <p class="discount"></p>
+                        <p class="price">$ <%= beer.price %></p>
+                        <p class="class"><%= beer.name %>  <%= beer.size %></p>   
+                        <p class="info"><%= beer.category %> / <%= beer.color %> / <%= beer.abv %>%</p>
+                    </div>
+                </article>
+                <%   }) %>
+            </div>
+        </section>
+        <div class="barra-navegacion">
+            <ol class="lista-producto">
+                <li class="barra-van">
+                    <a class="item-class">Cervezas ></a>
+                </li>
+                <li class="item-home">
+                    <a class="item-detail"> AMBER</a>
+                </li>
+            </ol>
+        </div>
+        <section class="section">
+            <div class="aside"></div>
+            <div class="articles">
+                <% amber.forEach(beer => { %>
+                <article class="article">
+                    <div class="product-img">
+                        <a href="/products/detail/<%=beer.id%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
+                    </div>
+                    <div class="description">
+                        <p class="discount"></p>
+                        <p class="price">$ <%= beer.price %></p>
+                        <p class="class"><%= beer.name %>  <%= beer.size %></p>   
+                        <p class="info"><%= beer.category %> / <%= beer.color %>  / <%= beer.abv %>% ALC</p>
+                    </div>
+                </article>
+                <%   }) %>
+            </div>
+        </section>
+        <div class="animacion">
+            <div alt="Variedad" >
+                <div class="imagencita">
+                    <img src="//cdn.shopify.com/s/files/1/1103/5152/files/info_box_one_130x.gif?v=1619211535">
+                </div>
+                <div class="titulito">
+                    <h3 class="titulito2">Variedad</h3>
+                    <div class="descripciocita" >
+                        <p class="descripciocita2">Más de 150 bebidas y accesorios por descubrir.</p>
+                    </div>
+                </div>
+            </div>
+            <div alt="Rápido y Fácil">
+                <div class="imagencita">
+                    <img src="//cdn.shopify.com/s/files/1/1103/5152/files/info_box_two_130x.gif?v=1619211614" >
+                </div>
+                <div class="titulito">
+                    <h3 class="titulito2">Rápido y Fácil</h3>
+                    <div class="descripciocita" >
+                        <p class="descripciocita2">Un servicio que sorprende de principio a fin.</p>
+                    </div>
+                </div>
+            </div>
+            <div alt="A todo el país">
+                <div class="imagencita">
+                    <img src="//cdn.shopify.com/s/files/1/1103/5152/files/info_transparent_130x.gif?v=1619631085">
+                </div>
+                <div class="titulito">
+                    <h3 class="titulito2">A todo el país</h3>
+                    <div class="descripciocita" >
+                        <p class="descripciocita2">Te lo llevamos a tu casa con el máximo cuidado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <%- include('./partials/footer') %>
+    <!-- MARCOS BARRA SCROLL 220522 -->
+    <%- include('./partials/scrollbar') %>
+</body>
+</html>
