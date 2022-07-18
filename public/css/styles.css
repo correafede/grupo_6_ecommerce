@@ -982,7 +982,7 @@ body{
                     .container1{
                         max-width: 90%;
                         margin: 0 auto;
-                        padding-top: 10px;
+                        padding-top: 40px;
                     }
                     .container1 > h1{
                         padding: 20px 0;
@@ -1024,6 +1024,7 @@ body{
                         position: relative;
                         text-align: left;
                         line-height: 0;
+                        padding-top: 35px;
                     }
                     .product-name, .product-price, .product-offer{
                         margin-bottom: 20px;
@@ -1046,7 +1047,7 @@ body{
                         width: auto;
                         font-size: 1rem;
                         text-align: center;
-                        font-weight: lighter;
+                        font-weight: normal;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -1061,6 +1062,7 @@ body{
                         width: 40px;
                         padding: 5px;
                         text-align: center;
+                        border-radius: 5px;
                     }
                     .cart-total{
                         flex: 0.25;                       
