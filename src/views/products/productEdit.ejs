@@ -7,10 +7,12 @@
         <%- include('../partials/toggle') %>
         <main>
         <div class="modify">
-            <h1>Modificando: <%=birra.Nombre%> <%=birra.size.Nombre %></h1>
-        <div class="modify-2"> 
+            <h1>Modificando: [<%=birra.idCerveza%>] <%=birra.Nombre%></h1>
+        <div class="modify-2">
+            
             <form action="/products/edit/<%=birra.idCerveza%>?_method=PATCH" method="POST" enctype="multipart/form-data">
-                <input type="text" placeholder="<%=birra.Nombre%>" name="name" class="form-input">
+                <label>Nombre</label><input type="text" value="<%=birra.Nombre%>" name="name" class="form-input">
+            
         <div class="size-product">
             <label for="size" class="form-label">Tamaño:</label>
                 <select name="idSize" id="size" class="form-input">
@@ -38,12 +40,13 @@
                         <% }); %>
                 </select>
         </div>
-        <div><label><input type="text" placeholder="<%=birra.abv%>" name="abv" class="form-input"></label></div>
-        <div><input type="text" placeholder="<%=birra.ibu%>" name="ibu" class="form-input"></input></div>
-        <textarea type="textarea" rows="10" cols="50" name="description" class="form-input"><%=birra.descrip%></textarea>
-        <div><input type="text" placeholder="<%=birra.price%>" name="price" class="form-input"></input></div>
-        <div><input type="text" placeholder="<%=birra.discount%>" name="discount" class="form-input"></input></div>
-        <div><input type="text" placeholder="<%=birra.quantity%>" name="quantity" class="form-input"></input></div>
+        <div><label>ABV<input type="text" value="<%=birra.abv%>" name="abv" class="form-input"></label></div>
+        <div><label>IBU<input type="text" value="<%=birra.ibu%>" name="ibu" class="form-input"></input></label></div>
+        <label>Descripcion<textarea type="textarea" rows="10" cols="50" name="description" class="form-input"><%=birra.descrip%></textarea>
+        <div><label>Precio<input type="text" value='<%=birra.price%>' name="price" class="form-input"></input></div>
+        <div><label>Descuento<input type="text" value="<%=birra.discount%>" name="discount" class="form-input"></input></div>
+        <div><label>Cantidad<input type="text" value="<%=birra.quantity%>" name="quantity" class="form-input"></input></div>
+        <div><label>Tags<input type="text" value="<%=birra.tags%>" name="tags" class="form-input"></input></div>
         <div><input type="file" name="image" class="form-input" accept=".jpg, .webp"></div>
         <div class="button-modify"><a href="#"><input type="submit" value="Modificar producto"></input></a></div>
             </form>

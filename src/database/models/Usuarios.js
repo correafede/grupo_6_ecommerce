@@ -26,7 +26,8 @@ module.exports = (sequelize, dataTypes) => {
         id_UserCategory: {
             type: dataTypes.TINYINT(11),
             allowNull: false
-        }
+        },
+        image: dataTypes.STRING(255)
     };
 
     let config = {

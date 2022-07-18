@@ -1,20 +1,37 @@
-const User = require('../models/User')
+const db = require('../database/models');
 
-function userLoggedMiddleware(req, res, next) {
+const User = db.User;
+
+async function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
+    let userLogged = false;
 
-    let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = User.findByField('email', emailInCookie )
-
-    if (userFromCookie) {
-        req.session.userLogged = userFromCookie;
+    if(req.cookies.userEmail){
+        userLogged = req.cookies.userEmail;
     }
-
-    if(req.session.userLogged) {
-        res.locals.isLogged = true;
-        res.locals.userLogged = req.session.userLogged;
+    else if(req.session.userLogged){
+        userLogged = req.session.userLogged.email
     }
-
+    
+    try{
+        if(userLogged){
+            let user = await User.findOne({
+                where:{
+                    email: userLogged
+                }
+            });
+             
+            req.session.userLogged = user;
+                
+            if ( req.session.userLogged) {
+                res.locals.isLogged = true;
+                res.locals.userLogged = req.session.userLogged;
+            }
+        }
+    }    
+    catch(err){
+        res.redirect('/users/login');
+    }
     next();
 };
 
