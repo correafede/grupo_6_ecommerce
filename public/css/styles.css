@@ -112,10 +112,8 @@ body{
     {
       display: block;
       position: relative;
-      width: 100%;
-      
+      width: 30%;
       z-index: 0;
-      
       -webkit-user-select: none;
       user-select: none;
     }
@@ -328,6 +326,8 @@ body{
             margin-bottom: 2px;
             text-decoration: none;
             color: black;
+            width: 40%
+
         }
         .logo-titulo a:visited{
             color: inherit;
@@ -428,7 +428,10 @@ body{
                 margin: 5px;
                 margin-right: 0px;
                 align-items: center;
-                width: 55%;
+                width: 30%;
+                justify-content: right;
+
+
             }  
                 .search{
                 display: none;                
@@ -483,7 +486,6 @@ body{
                             display: none;
                         }
                 .user{
-                    padding: 5px;
                     flex: none;
                     margin: 0%;
                 }     
@@ -1662,8 +1664,7 @@ body{
     }
     .animacion{
         display: flex;
-        flex-direction: row;
-        flex-direction: row nowrap;
+       justify-content: center;
     }
      /* product cart */
     .imagen-producto{
