@@ -27,6 +27,7 @@ let usersRouter = require('./routes/users');
 app.use(cookies());
 app.use(userLoggedMiddleware);
 
+
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/user', usersRouter);

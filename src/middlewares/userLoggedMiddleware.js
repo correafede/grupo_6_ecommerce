@@ -20,12 +20,15 @@ async function userLoggedMiddleware(req, res, next) {
                     email: userLogged
                 }
             });
-             
+
             req.session.userLogged = user;
-                
+            
             if ( req.session.userLogged) {
                 res.locals.isLogged = true;
                 res.locals.userLogged = req.session.userLogged;
+            }
+            if(req.cookies.userCategory == 1){
+                res.locals.isAdmin = true;
             }
         }
     }    

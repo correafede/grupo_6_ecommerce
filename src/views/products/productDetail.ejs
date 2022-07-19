@@ -60,12 +60,14 @@
             </div>
           </div>
         </div>
+        <% if (locals.isAdmin) { %>
         <div class="botones-changes">
           <a href="/products/edit/<%=birra.idCerveza%>" class="action-button edit">EDITAR</a>
           <form action="/products/delete/<%=birra.idCerveza%>?_method=DELETE" method="POST">
                   <button type="submit" class="action-button delete">ELIMINAR</button>
                 </form>
           </div>
+          <% } %>
       </div>
     </main>
     <%- include('../partials/footer') %>

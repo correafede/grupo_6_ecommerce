@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Editando usuario'}) %>
+    <body>
+        <%- include('../partials/header') %>
+        <%- include('../partials/button') %>
+        <%- include('../partials/toggle') %>
+        <main>
+        <div class="modify">
+            <h1>Modificando: [<%=user.idUsuarios%>] <%=user.first_name%> <%=user.last_name%></h1>
+        <div class="modify-2">
+            
+            <form action="/panel/users/edit/<%=user.idUsuarios%>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                <label>Nombre</label><input type="text" value="<%=user.first_name%>" name="name" class="form-input">
+            
+        <div class="size-product">
+            <label for="category" class="form-label">Categoria:</label>
+                <select name="idCategory" id="category" class="form-input">
+                    <option value="">Elegí</option>
+                    <% allCategories.forEach(category => { %>
+                        <option value="<%= category.idCategory %>" <% if (birra.category.idCategory == category.idCategory) { %><%= 'selected' %><% }; %>><%= category.Nombre %></option>
+                        <% }); %>
+                </select>
+        </div>
+        <div><label>ABV<input type="text" value="<%=birra.abv%>" name="abv" class="form-input"></label></div>
+        <div><label>IBU<input type="text" value="<%=birra.ibu%>" name="ibu" class="form-input"></input></label></div>
+        <label>Descripcion<textarea type="textarea" rows="10" cols="50" name="description" class="form-input"><%=birra.descrip%></textarea>
+        <div><label>Precio<input type="text" value='<%=birra.price%>' name="price" class="form-input"></input></div>
+        <div><label>Descuento<input type="text" value="<%=birra.discount%>" name="discount" class="form-input"></input></div>
+        <div><label>Cantidad<input type="text" value="<%=birra.quantity%>" name="quantity" class="form-input"></input></div>
+        <div><label>Tags<input type="text" value="<%=birra.tags%>" name="tags" class="form-input"></input></div>
+        <div><input type="file" name="image" class="form-input" accept=".jpg, .webp"></div>
+        <div class="button-modify"><a href="#"><input type="submit" value="Modificar producto"></input></a></div>
+            </form>
+        </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <!-- MARCOS BARRA SCROLL 220522 -->
+    <%- include('../partials/scrollbar') %>
+</body>
+</html>

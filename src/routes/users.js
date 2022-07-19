@@ -16,6 +16,8 @@ router.post('/register', uploadUFile.single('image'), registerCheck, userControl
 
 router.get('/profile', authMiddleware, userController.profile);
 
+router.get('/panel/users', authMiddleware, userController.profile);
+
 router.get('/logout', userController.logout);
 
 module.exports = router;

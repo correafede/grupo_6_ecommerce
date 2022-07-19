@@ -66,8 +66,9 @@ let userController = {
                     req.session.userLogged = userToLogin; 
     
                     if (req.body.remember_user) {
-                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 }) // 5 minutos
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 })// 5 minutos
                     }
+                    res.cookie('userCategory', userToLogin.id_UserCategory, { maxAge: (1000 * 60) * 5 })
                     return res.redirect('/user/profile')
                     
                 }
