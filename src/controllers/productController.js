@@ -4,6 +4,9 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 const Beer = db.Beer;
+const Size = db.Size;
+const Color = db.Color;
+const Category = db.Category;
 
 let productController = {
     list: (req, res) => { 
@@ -18,7 +21,7 @@ let productController = {
     detalle: (req, res)=> {
         Beer.findByPk(req.params.id,
             {
-                include: ['size', 'category', 'color']
+                include: ['size', 'category', 'color',]
             })
             .then(birra => {
                 res.render('./products/productDetail', {birra});

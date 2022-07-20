@@ -7,6 +7,7 @@ const productController = require('../controllers/productController');
 
 const authMiddleware = require('../middlewares/authMiddleware')
 const uploadPFile = require('../middlewares/multerPMiddleware')
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 router.get('/', productController.list);
 
@@ -14,7 +15,7 @@ router.get('/detail/:id', productController.detalle);
 
 router.get('/cart', productController.carrito);
 
-router.get('/create', authMiddleware ,productController.create);
+router.get('/create', adminMiddleware,productController.create);
 router.post('/', uploadPFile.single('image'), productController.store); 
 
 router.get('/edit/:id', authMiddleware ,productController.edit);

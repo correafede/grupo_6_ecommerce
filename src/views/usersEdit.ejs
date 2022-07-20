@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head', {title: 'Editando productos'}) %>
+    <%- include('../partials/head', {title: 'Editando usuario'}) %>
     <body>
         <%- include('../partials/header') %>
         <%- include('../partials/button') %>
         <%- include('../partials/toggle') %>
         <main>
         <div class="modify">
-            <h1>Modificando: [<%=birra.idCerveza%>] <%=birra.Nombre%></h1>
+            <h1>Modificando: [<%=user.idUsuarios%>] <%=user.first_name%> <%=user.last_name%></h1>
         <div class="modify-2">
             
-            <form action="/products/edit/<%=birra.idCerveza%>?_method=PATCH" method="POST" enctype="multipart/form-data">
-                <label>Nombre</label><input type="text" value="<%=birra.Nombre%>" name="name" class="form-input">
+            <form action="/panel/users/edit/<%=user.idUsuarios%>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                <label>Nombre</label><input type="text" value="<%=user.first_name%>" name="name" class="form-input">
             
-        <div class="size-product">
-            <label for="size" class="form-label">Tamaño:</label>
-                <select name="idSize" id="size" class="form-input">
-                    <option value="">Elegí</option>
-                    <% allSizes.forEach(size => { %>
-                        <option value="<%= size.idSize %>" <% if (birra.size.idSize == size.idSize)  { %><%= 'selected' %><% }; %>><%= size.Nombre %></option>
-                        <% }); %>
-                </select>
-        </div>
         <div class="size-product">
             <label for="category" class="form-label">Categoria:</label>
                 <select name="idCategory" id="category" class="form-input">
                     <option value="">Elegí</option>
                     <% allCategories.forEach(category => { %>
                         <option value="<%= category.idCategory %>" <% if (birra.category.idCategory == category.idCategory) { %><%= 'selected' %><% }; %>><%= category.Nombre %></option>
-                        <% }); %>
-                </select>
-        </div>
-        <div class="size-product">
-            <label for="color" class="form-label">Color:</label>
-                <select name="idColor" id="color" class="form-input">
-                    <option value="">Elegí</option>
-                    <% allColors.forEach(color => { %>
-                        <option value="<%= color.idColor %>" <% if (birra.color.idColor == color.idColor) { %><%= 'selected' %><% }; %>><%= color.Nombre %></option>
                         <% }); %>
                 </select>
         </div>

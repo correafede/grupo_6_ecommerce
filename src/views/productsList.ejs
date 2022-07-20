@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Lista de Productos'}) %>
+<body>
+    <%- include('./partials/header') %>
+    <%- include('./partials/toggle') %>
+    <main style="margin-top: 200px">
+        <div class="panel">
+            <div class="opciones">
+                <hr>
+                <% products.forEach(product => { %>
+                <ul>
+                    <li style="list-style-type: none; text-align: left;">[<%= product.idCerveza %>] | <%= product.Nombre %> | <%= product.quantity %>  <a href="/products/edit/<%= product.idCerveza %>" >Edit</a> | 
+                        <a  href="/products/detail/<%=product.idCerveza%>">Eliminar</a></li>
+                </ul>
+                <%   }) %>
+                <hr>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
