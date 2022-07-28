@@ -8,6 +8,8 @@
         <div class="panel">
             <div class="opciones">
                 <hr>
+                <a href="/products/create">AGREGAR</a>
+                <hr>
                 <% products.forEach(product => { %>
                 <ul>
                     <li style="list-style-type: none; text-align: left;">[<%= product.idCerveza %>] | <%= product.Nombre %> | <%= product.quantity %>  <a href="/products/edit/<%= product.idCerveza %>" >Edit</a> | 
