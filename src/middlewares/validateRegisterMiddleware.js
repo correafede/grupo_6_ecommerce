@@ -20,7 +20,7 @@ module.exports = [
         minNumbers: 1,
         minSymbols: 1,
         returnScore: false})
-    .withMessage('Una contraseña correcta dene tener letras mayúsculas, minúsculas, un número y un carácter especial.'),
+    .withMessage('Una contraseña correcta debe tener letras mayúsculas, minúsculas, un número y un carácter especial.'),
     body('confirmPassword')
     .notEmpty().withMessage('Debes completar el campo con la misma contraseña.').bail()
     .custom((value,{req}) =>{
