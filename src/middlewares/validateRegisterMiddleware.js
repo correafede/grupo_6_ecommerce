@@ -13,8 +13,8 @@ module.exports = [
     .isEmail().withMessage('Debes completar el campo con un email valido.'),
     body('password')
     .notEmpty().withMessage('Debes completar el campo con una contraseña.').bail()
+    .isLength({min: 8}).withMessage('La contraseña no tiene un minimo de 8 caracteres.').bail()
     .isStrongPassword({
-        minLength: 8,
         minLowercase: 1,
         minUppercase: 1,
         minNumbers: 1,
