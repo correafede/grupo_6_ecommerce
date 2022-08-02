@@ -2,6 +2,7 @@ const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { validationResult } = require('express-validator');
 
 const Beer = db.Beer;
 const Size = db.Size;
@@ -28,7 +29,7 @@ let productController = {
             });
     },
     carrito: (req, res) => { 
-        res.render("./products/productCart");
+        res.render("/products/productCart");
     },
     create: (req, res) => { 
         let promSizes = Size.findAll();
@@ -43,6 +44,12 @@ let productController = {
     
     },
     store: (req, res) => {
+        // const errors = validationResult(req);
+		// if (!errors.isEmpty()) {
+		// 	return res.redirect('/products/create', { 
+		// 		errors: errors.mapped(),
+		// 	});
+		// }
         Beer
         .create(
             {

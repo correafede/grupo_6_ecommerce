@@ -10,7 +10,11 @@
             <h1>Agregar un producto</h1>
         <div class="modify-2">
             <form action="/products" method="POST" enctype="multipart/form-data">
-                <div><input type="text" placeholder="Nombre" name="name" ></div>
+                <div><input type="text" placeholder="Nombre" name="name" >
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger" style="color: red; font-size: 18px; margin-top: -25px; margin-bottom: 15px;"><%= errors.name.msg %></div>
+                        <% } %>
+                </div>
                 <div class="size-product">
                     <label for="size" class="form-label">Tamaño:</label>
                         <select name="idSize" id="size" class="form-input">

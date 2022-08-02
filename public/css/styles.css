@@ -943,7 +943,21 @@ body{
                             margin-top: 155px;
                             margin-bottom: 30px;
                         }
-                       
+                        .is-valid {
+                            color: #198754;
+                        }
+                        
+                        .is-invalid {
+                            color: #842029;
+                        }
+                    
+                        .alert-warning{
+                            color:#842029;
+                            background-color: #F8D7DA;
+                            text-align: center;
+                            border-radius: 10px;
+                            list-style: none;
+                        }
                         .button-register input{
                             background-color: rgb(100, 211, 100);
                             color: #FFF;
