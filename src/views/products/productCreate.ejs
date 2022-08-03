@@ -8,9 +8,12 @@
         <main>
         <div class="modify">
             <h1>Agregar un producto</h1>
+                <div class="errors">
+                    <ul class="errores"></ul>
+                </div>
         <div class="modify-2">
-            <form action="/products" method="POST" enctype="multipart/form-data">
-                <div><input type="text" placeholder="Nombre" name="name" >
+            <form action="/products" method="POST" enctype="multipart/form-data" id="registerForm">
+                <div><input type="text" placeholder="Nombre" name="name"  id="registerName" >
                     <% if (locals.errors && errors.name) { %>
                         <div class="text-danger" style="color: red; font-size: 18px; margin-top: -25px; margin-bottom: 15px;"><%= errors.name.msg %></div>
                         <% } %>
@@ -44,12 +47,12 @@
                 </div>
                 <div><input type="text" placeholder="ABV" name="abv"></div>
                 <div><input type="text" placeholder="IBU" name="ibu" ></input></div>
-                <div><textarea type="textarea" rows="10" cols="50" placeholder="Inserte una descripción del producto" name="description"></textarea></div>
+                <div><textarea type="textarea" rows="10" cols="50" placeholder="Inserte una descripción del producto" name="description" id="registerDescription"></textarea></div>
                 <div><input type="text" placeholder="Precio x unidad" name="price" ></input></div>
                 <div><input type="text" placeholder="Descuento" name="discount" ></input></div>
                 <div><input type="text" placeholder="Unidades" name="quantity"></input></div>
                 <div><input type="text" placeholder="Tags" name="tags" class="form-input"></input></div>
-                <div><input type="file" name="image" accept=".jpg, .webp"></div>
+                <div><input type="file" name="image" accept=".jpg, .webp" id="registerImage"></div>
                 <div class="button-modify"><a href="#"><input type="submit" value="Crear producto"></input></a></div>
             </form>
         </div>
@@ -58,5 +61,66 @@
     <%- include('../partials/footer') %>
     <!-- MARCOS BARRA SCROLL 220522 -->
     <%- include('../partials/scrollbar') %>
+    <script>
+        window.onload = function () {
+          let form = document.querySelector("#registerForm");
+          let name = document.querySelector("#registerName");
+          let description = document.querySelector("#registerDescription");
+          let file = document.querySelector("#registerImage");
+
+          name.focus();
+          form.addEventListener("submit", function (e) {
+          
+            let errors = [];
+            if (name.value == "") {
+              errors.push("El nombre es obligatorio");
+              name.classList.add("is-invalid");
+            }
+            if (name.value.length < 5 && name.value.length > 0) {
+              errors.push("El nombre debe tener al menos 5 caracteres");
+              name.classList.add("is-invalid");
+            } else {
+              name.classList.remove("is-invalid");
+              name.classList.add("is-valid");   
+              description.focus();
+            }
+            if (description.value == "") {
+              errors.push("La descripcion es obligatoria");
+              description.classList.add("is-invalid");
+            }
+            if (description.value.length < 20 && description.value.length > 0) {
+              errors.push("la descripcion tiene que tener minino 20 caracteres");
+              description.classList.add("is-invalid");
+            } else {
+              description.classList.remove("is-invalid");
+              description.classList.add("is-valid");
+            }
+            let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+            let filePath = file.value;
+            if (filePath && !allowedExtensions.exec(filePath)) {
+              errors.push("Por favor usar una extension valida(.jpg, .jpeg, .png, gif)");
+              file.classList.add("is-invalid");
+            } else {
+              file.classList.remove("is-invalid");
+              file.classList.add("is-valid");
+            }
+
+
+            if (errors.length > 0) {
+              e.preventDefault();
+              let errores = document.querySelector(".errores");
+              errores.classList.add("alert-warning");
+              errores.innerHTML = "";
+              for (let i = 0; i < errors.length; i++) {
+                let li = document.createElement("li");
+                li.innerHTML = errors[i];
+                errores.appendChild(li);
+              }
+            } else {
+              alert("Producto registrado");
+            }
+          });
+        };
+    </script>   
 </body>
 </html>
