@@ -2,8 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
-const { validationResult } = require('express-validator')
-;
+const { validationResult } = require('express-validator');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
 const Beer = db.Beer;
 const User = db.User;
 const UserCategory = db.UserCategory;
@@ -56,22 +58,15 @@ let mainController = {
         })
     },
     usersCreate: (req, res) => {
-       let allUserCategories = UserCategory.findAll()
+       UserCategory.findAll()
 
-        .then(([allUserCategories]) => {
+        .then((allUserCategories) => {
 
-        return res.render("usersRegister", {allUserCategories });
+        return res.render("usersRegister", { allUserCategories });
         
         })
     },
     usersStore: (req, res) => {
-        const errors = validationResult(req);
-		if (!errors.isEmpty()) {
-			return res.render('./panel/users/create', { 
-				errors: errors.mapped(),
-				oldData: req.body, 
-			});
-		}
         let userInDB = req.body.email;
         
 		User.findOne({ 
@@ -86,9 +81,9 @@ let mainController = {
                         email: req.body.email,
                         password: bcryptjs.hashSync(req.body.password, 10),
                         id_UserCategory: req.body.idUserCategory,
-                        image: req.body.file
+                        image: "default-image.png"
                     })
-                return res.redirect("../../users")
+                return res.redirect('./')
             } else {
                 return res.render('./panel/users/create', { 
                     			errors: {
@@ -99,8 +94,8 @@ let mainController = {
                     			oldData: req.body, 
             })}
         })	
-    },
-    userEdit: (req, res) => {
+        },
+    usersEdit: (req, res) => {
 
         let promFindUser = User.findByPk(req.params.id,
             {
@@ -116,7 +111,7 @@ let mainController = {
         
         })
     },
-    userUpdate: (req, res) => {
+    usersUpdate: (req, res) => {
         let UserId = req.params.id;
         User
         .update(
@@ -126,7 +121,7 @@ let mainController = {
             email: req.body.email,
             password: req.body.password,
             id_UserCategory: req.body.idUserCategory,
-            file: req.body.file
+            image: req.body.image
             },
             {
                 where: {idUsuarios: UserId}
@@ -136,7 +131,7 @@ let mainController = {
             return res.redirect("../users");
         })
     },
-    userDestroy: (req, res) => {
+    usersDestroy: (req, res) => {
         let UserId = req.params.id;
         User
         .destroy({where: {idUsuarios: UserId}, force: true})

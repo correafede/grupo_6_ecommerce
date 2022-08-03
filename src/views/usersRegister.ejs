@@ -9,11 +9,22 @@
         <div class="modify">
             <h1>Agregar un usuario</h1>
         <div class="modify-2">
-            <form action="/panel" method="POST" enctype="multipart/form-data">
+            <form action="/panel/users/create" method="POST" enctype="multipart/form-data">
                 <div><input type="text" placeholder="Nombre" name="firstName" >
-                <div><input type="text" placeholder="Nombre" name="lastName" >
-             
-                <div><input type="email" placeholder="Email" name="email"></div>
+                <div><input type="text" placeholder="Apellido" name="lastName" >
+                <div class="size-product">
+                    <label for="size" class="form-label">Categoria:</label>
+                        <select name="idUserCategory" id="size" class="form-input">
+                            <option value="" disabled selected>Elegí</option>
+                            <% allUserCategories.forEach(category => { %>
+                            <option value="<%= category.idUserCategory %>"><%= category.Nombre %></option>
+                            <% }); %>
+                        </select>
+                </div>
+                <div><input type="email" placeholder="Email" name="email">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.email.msg %></div>
+                    <% } %></div>
                 <div><input type="text" placeholder="Password" name="password" ></div>
                 <div><input type="file" name="image" accept=".jpg, .webp"></div>
                 <div class="button-modify"><a href="#"><input type="submit" value="Crear usuario"></a></div>
@@ -24,4 +35,4 @@
     <%- include('./partials/footer') %>
     <!-- MARCOS BARRA SCROLL 220522 -->
 </body>
-</html>
+</html>eeee
