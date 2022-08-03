@@ -35,3 +35,24 @@ app.use('/user', usersRouter);
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server start");
 })
+
+//PRUEBA LOGIN GOOGLE
+// function App(){
+
+// const responseGoogle = (response) => {
+//     console.log(response);
+//   }
+// return (
+//             <div className="App">
+//                 <GoogleLogin
+//                     clientId=""
+//                     buttonText="Login"
+//                     onSuccess={responseGoogle}
+//                     onFailure={responseGoogle}
+//                     cookiePolicy={'single_host_origin'}
+//                 />
+//             </div>
+//         );
+//     }
+
+
