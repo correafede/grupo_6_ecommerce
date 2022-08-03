@@ -11,7 +11,11 @@
                     <div class="col-md-3">
                         <h2>Hi <%= user.first_name %>!</h2>
                         <!-- <img src="/images/avatars/<%= user.image %> "> -->
+<<<<<<< Updated upstream
                         <img src="/img/users/<%= user.image %>" style="width:260px; ">
+=======
+                        <img src="/img/users/<%= locals.userLogged.img %>" style="width:260px; border-radius: 100%; ">
+>>>>>>> Stashed changes
                         <br>
                         <br>
                         <div class="alert alert-success"><%= user.email %> </div>

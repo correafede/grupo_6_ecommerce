@@ -1,0 +1,18 @@
+[
+    {
+     "id": 1,
+     "firstName": "Federico",
+     "lastName": "Correa",
+     "email": "correafedde@gmail.com",
+     "password": "$2a$10$J6hogqIYsL7voMehYsspqOknt3dbQpdxsNb6ZdHugpnnLvgdwo7De",
+     "img": "default-image.png"
+    },
+    {
+     "id": 2,
+     "firstName": "Usuario",
+     "lastName": "N",
+     "email": "test@correo.com",
+     "password": "$2a$10$l17X2F2v5l8hmxd3O8sHS.xTgdVA2hinlIGRKeFDHTT.Hy16KEOZK",
+     "img": "default-image2.png"
+    }
+   ]

@@ -27,6 +27,7 @@
                     <% if (locals.errors && errors.firstName) { %>
                     <div class="text-danger" style="color: red; font-size: 18px; margin-top: -25px; margin-bottom: 15px;"><%= errors.firstName.msg %></div>
                     <% } %>
+<<<<<<< Updated upstream
             </div>
             <div class="user-box">
               <input type="text" name="lastName"  value="<%= locals.oldData ? oldData.lastName : null %>" id="registerLastName">
@@ -40,6 +41,13 @@
                   <label>Email</label>
                   <% if (locals.errors && errors.email) { %>
                     <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.email.msg %></div>
+=======
+              </div>
+              <div>
+                  <input type="password" placeholder="Confirmar contraseña" name="confirmPassword">
+                  <% if (locals.errors && errors.confirmPassword) { %>
+                    <div class="text-danger" style="color: red; font-size: 18px; margin: -5px 0px;" ><%= errors.confirmPassword.msg %></div>
+>>>>>>> Stashed changes
                     <% } %>
               </div>
               <div class="user-box">
