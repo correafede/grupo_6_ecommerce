@@ -732,12 +732,18 @@ body{
 
                         .col{
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                             margin: 6px auto 0 auto;
                             text-align: center;
                             width: 225px;
                         }
                         .col .google{
                             margin-bottom: 28px;
+=======
+                            padding: auto;
+                            margin: 6px auto 0 auto;
+                            text-align: center;
+>>>>>>> Stashed changes
 =======
                             padding: auto;
                             margin: 6px auto 0 auto;
@@ -764,7 +770,12 @@ body{
                         }
                         .fb{
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                             width: 100%;
+=======
+                            width: auto;
+                            min-width: 250px;
+>>>>>>> Stashed changes
 =======
                             width: auto;
                             min-width: 250px;
@@ -776,7 +787,12 @@ body{
                         }
                         .google {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                             width: 100%;
+=======
+                            width: auto;
+                            min-width: 250px;
+>>>>>>> Stashed changes
 =======
                             width: auto;
                             min-width: 250px;
