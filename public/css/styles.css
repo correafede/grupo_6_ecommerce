@@ -12,7 +12,7 @@ body{
     background-color: #f0f0f0;
 }
 /*CARROUSEL 020822*/
-@import url('https://fonts.googleapis.com/css?family=Lobster');
+/* @import url('https://fonts.googleapis.com/css?family=Lobster');
 
 body {
     background-color: #89FAD0;
@@ -57,8 +57,8 @@ body {
     position: absolute;
     transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
 }
-
-/* $level2-height: 150px;
+/* 
+$level2-height: 150px;
 $level2-width: 110px;
 $level1-height: 180px;
 $level1-width: 130px;
@@ -71,7 +71,7 @@ $level0-left: 330px;
 $level1-left: 180px;
 $level2-left: 50px; */
 
-
+/* 
 .level-2 {
     height: 150px;
     width: 110px;
@@ -81,7 +81,7 @@ $level2-left: 50px; */
     margin-top: 25px;
 }
 
-/* .level-1 {
+.level-1 {
     height: $level1-height;
     width: $level1-width;
     line-height: $level1-height;
@@ -190,7 +190,7 @@ $level2-left: 50px; */
     line-height: $level2-height - 30;
     margin-top: 40px;
     transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-} */
+}
 
 .noselect {
     -webkit-user-select: none; 
@@ -198,7 +198,7 @@ $level2-left: 50px; */
        -moz-user-select: none; 
         -ms-user-select: none;  
             user-select: none;
-}
+} */ 
 /*FIN CARROUSSEL 020822*/
     /* scrollbar */
     ::-webkit-scrollbar{

@@ -69,7 +69,7 @@ CREATE TABLE `cervezas` (
   CONSTRAINT `cervezas_ibfk_1` FOREIGN KEY (`id_Size`) REFERENCES `size` (`idSize`),
   CONSTRAINT `cervezas_ibfk_2` FOREIGN KEY (`id_Category`) REFERENCES `category` (`idCategory`),
   CONSTRAINT `cervezas_ibfk_3` FOREIGN KEY (`id_Color`) REFERENCES `color` (`idColor`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -172,7 +172,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`idUsuarios`),
   KEY `id_UserCategory` (`id_UserCategory`),
   CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_UserCategory`) REFERENCES `usercategory` (`idUserCategory`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Federico','Correa','correafedde@gmail.com','$2a$10$wzputqPphL6B9RuAKYfyaey8MV3jEhg0hjk2luaPTbn86WKVpydwi',1,'default-image.png'),(2,'Marcos','Chapire','marcoschapire@gmail.com','$2a$10$CC71jhqnIMkky4JZ7J.rfudN6oo.DsVuY0VFzfqrIKUpeu8MUPuKS',1,'default-image.png'),(3,'Mauricio','Martin','mauriciomanuelmartin@gmail.com','$2a$10$CC71jhqnIMkky4JZ7J.rfudN6oo.DsVuY0VFzfqrIKUpeu8MUPuKS',1,'default-image.png'),(4,'Usuario','N','test@correo.com','$2a$10$l17X2F2v5l8hmxd3O8sHS.xTgdVA2hinlIGRKeFDHTT.Hy16KEOZK',2,'default-image.png');
+INSERT INTO `usuarios` VALUES (1,'Federico','Correa','correafedde@gmail.com','$2a$10$wzputqPphL6B9RuAKYfyaey8MV3jEhg0hjk2luaPTbn86WKVpydwi',1,'default-image.png'),(2,'Marcos','Chapire','marcoschapire@gmail.com','$2a$10$CC71jhqnIMkky4JZ7J.rfudN6oo.DsVuY0VFzfqrIKUpeu8MUPuKS',1,'default-image.png'),(3,'Mauricio','Martin','mauriciomanuelmartin@gmail.com','$2a$10$CC71jhqnIMkky4JZ7J.rfudN6oo.DsVuY0VFzfqrIKUpeu8MUPuKS',1,'default-image.png'),(4,'Usuario','N','test@correo.com','$2a$10$l17X2F2v5l8hmxd3O8sHS.xTgdVA2hinlIGRKeFDHTT.Hy16KEOZK',2,'default-image.png'),(15,'sdfsdfs','sdfsdf','test23232323@correo.com','$2a$10$QAUcb5ffDbG8P3QQdgeHyOn8dV/nfLZPvPkqgmjh7k7CSnDfSpjee',1,'default-image.png'),(16,'asdfasdf','asdfasdf','testffff@correo.com','$2a$10$kwfSrTwmBOpWpU2z05ZfCOvciD6NqWgAPwrb53HQsfZ8KSg8XUYP6',1,'default-image.png');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-25 22:23:58
+-- Dump completed on 2022-08-02 22:45:36

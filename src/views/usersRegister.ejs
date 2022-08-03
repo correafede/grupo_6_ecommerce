@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Crear usuario'}) %>
+    <body>
+        <%- include('./partials/button') %>
+        <%- include('./partials/header') %>
+        <%- include('./partials/toggle') %>
+        <main>
+        <div class="modify">
+            <h1>Agregar un usuario</h1>
+        <div class="modify-2">
+            <form action="/panel" method="POST" enctype="multipart/form-data">
+                <div><input type="text" placeholder="Nombre" name="firstName" >
+                <div><input type="text" placeholder="Nombre" name="lastName" >
+             
+                <div><input type="email" placeholder="Email" name="email"></div>
+                <div><input type="text" placeholder="Password" name="password" ></div>
+                <div><input type="file" name="image" accept=".jpg, .webp"></div>
+                <div class="button-modify"><a href="#"><input type="submit" value="Crear usuario"></a></div>
+            </form>
+        </div>
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+    <!-- MARCOS BARRA SCROLL 220522 -->
+</body>
+</html>
