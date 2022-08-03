@@ -6,201 +6,7 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    margin: 0px;
-    padding: 0px;
-    background-color: #f0f0f0;
-}
-/*CARROUSEL 020822*/
-/* @import url('https://fonts.googleapis.com/css?family=Lobster');
-
-body {
-    background-color: #89FAD0;
-    font-family: 'Lobster';
-}
-
-#carousel {
-    position: absolute;
-    height: 200px;
-    width: 810px;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
-.arrow {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    text-align: center;
-    font-size: 25px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    color: #228291;
-    line-height: 30px;
-    margin-top: 85px;
-    z-index: 1000;
-}
-
-.arrow-right {
-    left: 780px;
-}
-
-.item {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    position: absolute;
-    transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
-}
-/* 
-$level2-height: 150px;
-$level2-width: 110px;
-$level1-height: 180px;
-$level1-width: 130px;
-$level0-height: 200px;
-$level0-width: 150px;
-
-$level-2-left: 650px;
-$level-1-left: 500px;
-$level0-left: 330px;
-$level1-left: 180px;
-$level2-left: 50px; */
-
-/* 
-.level-2 {
-    height: 150px;
-    width: 110px;
-    line-height: 150px;
-    background-color: #228291;
-    left: 650px;
-    margin-top: 25px;
-}
-
-.level-1 {
-    height: $level1-height;
-    width: $level1-width;
-    line-height: $level1-height;
-    background-color: #6796E5;
-    left: $level-1-left;
-    margin-top: 10px;
-}
-
-.level0 {
-    height: $level0-height;
-    width: $level0-width;
-    line-height: $level0-height;
-    background-color: #4EC9E1;
-    left: $level0-left;
-}
-
-.level1 {
-    height: $level1-height;
-    width: $level1-width;
-    line-height: $level1-height;
-    background-color: #6796E5;
-    margin-top: 10px;
-    left: $level1-left;
-}
-
-.level2 {
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    background-color: #228291;
-    margin-top: 25px;
-    left: $level2-left;
-}
-
-.left-enter {
-    opacity: 0;
-    left: $level2-left - $level2-width;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-}
-
-.left-enter.left-enter-active {
-    opacity: 1;
-    left: $level2-left;
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    margin-top: 25px;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-}
-
-.left-leave {
-    opacity: 1;
-    left: $level-2-left;
-    height: $level2-height;
-    width: $level2-width;
-    line-height: $level2-height;
-    margin-top: 25px;
-}
-
-.left-leave.left-leave-active {
-    left: $level-2-left + $level2-width + 20;
-    opacity: 0;
-    height: $level2-height - 30;
-    line-height: 120px;
-    margin-top: 40px;
-    width: $level2-width - 20;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-}
-
-.right-enter {
-    opacity: 0;
-    left: $level-2-left + $level2-width;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-}
-
-.right-enter.right-enter-active {
-    left: $level-2-left;
-    opacity: 1;
-    height: $level2-height;
-    margin-top: 25px;
-    line-height: $level2-height;
-    width: $level2-width;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-}
-
-.right-leave {
-    left: $level2-left;
-    height: $level2-height;
-    opacity: 1;
-    margin-top: 25px;
-    line-height: $level2-height;
-    width: $level2-width;
-}
-
-.right-leave.right-leave-active {
-    left: $level2-left - $level2-width;
-    opacity: 0;
-    height: $level2-height - 30;
-    width: $level2-width - 20;
-    line-height: $level2-height - 30;
-    margin-top: 40px;
-    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
-}
-
-.noselect {
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none;  
-            user-select: none;
-} */ 
-/*FIN CARROUSSEL 020822*/
-/*carrusel 030822*/
+/**/
 .product1 {
     position: relative;
     overflow: hidden;
@@ -383,7 +189,201 @@ $level2-left: 50px; */
     grid-column: span 2;
     margin-bottom: 10px;
   }
-  /*carrusel 030822*/
+/**/
+/* body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f0f0f0;
+}
+CARROUSEL 020822*/
+/* @import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body {
+    background-color: #89FAD0;
+    font-family: 'Lobster';
+}
+
+#carousel {
+    position: absolute;
+    height: 200px;
+    width: 810px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.arrow {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #228291;
+    line-height: 30px;
+    margin-top: 85px;
+    z-index: 1000;
+}
+
+.arrow-right {
+    left: 780px;
+}
+
+.item {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
+}
+
+/* $level2-height: 150px;
+$level2-width: 110px;
+$level1-height: 180px;
+$level1-width: 130px;
+$level0-height: 200px;
+$level0-width: 150px;
+
+$level-2-left: 650px;
+$level-1-left: 500px;
+$level0-left: 330px;
+$level1-left: 180px;
+$level2-left: 50px; */
+
+
+/*.level-2 {
+    height: 150px;
+    width: 110px;
+    line-height: 150px;
+    background-color: #228291;
+    left: 650px;
+    margin-top: 25px;
+}
+
+.level-1 {
+    height: $level1-height;
+    width: $level1-width;
+    line-height: $level1-height;
+    background-color: #6796E5;
+    left: $level-1-left;
+    margin-top: 10px;
+}
+
+.level0 {
+    height: $level0-height;
+    width: $level0-width;
+    line-height: $level0-height;
+    background-color: #4EC9E1;
+    left: $level0-left;
+}
+
+.level1 {
+    height: $level1-height;
+    width: $level1-width;
+    line-height: $level1-height;
+    background-color: #6796E5;
+    margin-top: 10px;
+    left: $level1-left;
+}
+
+.level2 {
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    background-color: #228291;
+    margin-top: 25px;
+    left: $level2-left;
+}
+
+.left-enter {
+    opacity: 0;
+    left: $level2-left - $level2-width;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+}
+
+.left-enter.left-enter-active {
+    opacity: 1;
+    left: $level2-left;
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    margin-top: 25px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.left-leave {
+    opacity: 1;
+    left: $level-2-left;
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    margin-top: 25px;
+}
+
+.left-leave.left-leave-active {
+    left: $level-2-left + $level2-width + 20;
+    opacity: 0;
+    height: $level2-height - 30;
+    line-height: 120px;
+    margin-top: 40px;
+    width: $level2-width - 20;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.right-enter {
+    opacity: 0;
+    left: $level-2-left + $level2-width;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+}
+
+.right-enter.right-enter-active {
+    left: $level-2-left;
+    opacity: 1;
+    height: $level2-height;
+    margin-top: 25px;
+    line-height: $level2-height;
+    width: $level2-width;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.right-leave {
+    left: $level2-left;
+    height: $level2-height;
+    opacity: 1;
+    margin-top: 25px;
+    line-height: $level2-height;
+    width: $level2-width;
+}
+
+.right-leave.right-leave-active {
+    left: $level2-left - $level2-width;
+    opacity: 0;
+    height: $level2-height - 30;
+    width: $level2-width - 20;
+    line-height: $level2-height - 30;
+    margin-top: 40px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+}
+
+.noselect {
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none;  
+            user-select: none;
+}
+FIN CARROUSSEL 020822 */
     /* scrollbar */
     ::-webkit-scrollbar{
         width: 20px;
@@ -404,7 +404,6 @@ $level2-left: 50px; */
         justify-content: space-between;
         align-items: center;
         height: auto;
-        /* MARCOS 200522 */
         position: fixed;
         z-index: 100;
         top: 0;
@@ -429,19 +428,37 @@ $level2-left: 50px; */
         top: 5px;
         font-size: 1.4em;
     }
-    /* MARCOS HEADER SCROLL 220522*/
+    /* HEADER SCROLL*/
     header.abajo{
         width: 100%;
         flex-wrap: nowrap;
     }
     header.abajo .logo{
         order: 2;
+        display: none;
     }
-    header.abajo .logo a img{
+    header.abajo .div-logo a img{
         max-height: 80px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
+    header.abajo .logo-titulo{
+        display: block;
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    @keyframes tracking-in-expand {
+        0% {
+          letter-spacing: -0.5em;
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     header.abajo .user-menu div form{
         display: none;
         width: 0%;
@@ -464,7 +481,7 @@ $level2-left: 50px; */
         width: 100%;
     }
     header.abajo .menu-usuario{
-        font-size: 1.5em;
+        font-size: 2em;
     }
     header.abajo .menu-usuario .faq{
         font-size: 1em;
@@ -477,11 +494,11 @@ $level2-left: 50px; */
     }
 
     header.abajo .logo-titulo{
-        font-size: 1.7rem
+        font-size: 2rem
     }
-    /*scrollbar marcos 220522*/
-
-    
+    header.abajo .div-logo{
+        order: 2;
+    }    
     
     #menuToggle
     {
@@ -691,7 +708,7 @@ $level2-left: 50px; */
                                 transform: none;
                                 }
 
-        .logo{
+        .div-logo .logo{
             display: none;
         }
         .logo-titulo{
@@ -707,7 +724,7 @@ $level2-left: 50px; */
         .logo-titulo a:visited{
             color: inherit;
         }
-            .logo a img{
+            .div-logo a img{
                 width: auto;
                 max-height: 60px;
                 height: auto;
@@ -720,11 +737,6 @@ $level2-left: 50px; */
             text-align: center;
             display: none;
             width: 100%;
-
-            /* MARCOS 200522
-            position: absolute; 
-            bottom: -10;*/
-
         }
             .dropdown{
                 display: none;
@@ -824,9 +836,6 @@ $level2-left: 50px; */
                         font-size: 1rem;
                         padding-left: 10px;
                     }
-                    /* .search form input{
-                        height: 30px;
-                    } */
                     .fa-search{
                         border: 1px solid black;
                         border-radius: 5px;
@@ -865,12 +874,8 @@ $level2-left: 50px; */
                     margin: 0%;
                 }     
                 .cart{
-                    /* padding: 5px; */
                     flex: none;
                     margin: 0%;
-                    display: none;
-                }
-                .magnifying{
                     display: none;
                 }
                 .off{
@@ -1104,22 +1109,12 @@ $level2-left: 50px; */
                         }
 
                         .col{
-
-
                             margin: 6px auto 0 auto;
                             text-align: center;
                             width: 225px;
                         }
                         .col .google{
                             margin-bottom: 28px;
-
-                            padding: auto;
-                            margin: 6px auto 0 auto;
-                            text-align: center;
-
-                            padding: auto;
-                            margin: 6px auto 0 auto;
-                            text-align: center;
                         }
 
                         col input,
@@ -1140,30 +1135,12 @@ $level2-left: 50px; */
                             opacity: 1;
                         }
                         .fb{
-
-
                             width: 100%;
-
-                            width: auto;
-                            min-width: 250px;
-
-                            width: auto;
-                            min-width: 250px;
                             background-color: #3B5998;
                             color: white;
-                            margin: auto;
-                            padding: auto;
                         }
                         .google {
-
-
                             width: 100%;
-
-                            width: auto;
-                            min-width: 250px;
-
-                            width: auto;
-                            min-width: 250px;
                             background-color: #dd4b39;
                             color: white;
                         }
@@ -1887,7 +1864,7 @@ $level2-left: 50px; */
     .user-menu{
         align-items: center;
         order: 4;
-        width: 75%;
+        width: 50%;
     }
     .dropdown{
         display: flex;
@@ -1899,24 +1876,8 @@ $level2-left: 50px; */
     .menu-y-dropdown{
         order: 3;
         display: block;
-        width: 60%;
-        /* MARCOS 200522  */
-        /* position: relative;
-        bottom: 0;
-        background-color: #ebebeb;*/
+        width: 50%;
     }
-    /*BARRA FIJA MARCOS 190522*/
-    /* .nav-menu-y-drop {
-        background-color: #000;
-            padding: 1px;
-            color: whitesmoke;
-            position: relative;
-
-            width: 100%;
-            top: 0;
-            z-index: 10000;
-            transition: 0.7s;
-        } */
     .user{
         padding: 0%;
         margin: 0%;
@@ -1927,13 +1888,16 @@ $level2-left: 50px; */
         padding: 0%;
         flex: none;
     }
-    .logo{
-        width: 15%;
+    .div-logo .logo{
+        display: block;
+    }
+    .div-logo{
+        width: 10%;
         max-height: 160px;
         display:flex;
         justify-content: center;
     }
-        .logo a img{
+        .div-logo a img{
             width: auto;
             max-height: 60px;
             height: auto;
@@ -2101,11 +2065,14 @@ $level2-left: 50px; */
     .search{
         display: block;
     }
+    .menu-usuario .magnif-icon {
+        display: none;
+    }
 }
 @media all and (min-width: 1279px){
     /* header */
     .user-menu{
-        width: 100%;
+        width: 50%;
     }
     .nuevo-banner{
         height: 300px;
