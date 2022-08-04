@@ -1,4 +1,4 @@
-<header>
+<header onload="listener()">
     <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
@@ -27,11 +27,11 @@
             </ul>
             <% } %>
       </div>
-    <div class="logo">
+    <div class="div-logo">
         <a href="/"><img src="/img/logo.webp" href="/index" alt="Logo de MercadoLiebre" class="logo"></img></a>
+        <div class="logo2">
+            <a href="/"><h1 class="logo-titulo">BIRRASHOP</h1></a>
     </div>
-    <div class="logo2">
-        <a href="/"><h1 class="logo-titulo">BIRRASHOP</h1></a>
     </div>
     <div class="menu-y-dropdown">
         <div class="dropdown">
@@ -62,22 +62,30 @@
         </div>
     </div>
     <div class="user-menu">
-        <div class="search">
+        <div class="search" id="search">
             <form action="/products/search" method="GET">
                 <input type="search" placeholder="  Buscar productos" name="keywords">
-                    <button type="submit" class="cursor-boton" ><ion-icon name="search-outline"></ion-icon></button>                 
+                    <button type="submit" class="cursor-boton" id="botonBuscar" ><ion-icon name="search-outline"></ion-icon></button>                 
             </form>
         </div>
         <div class="menu-usuario">
-            <div class="faq">
-                <a href="#"><ion-icon name="help-circle-outline"></ion-icon><span class="off">FAQ</span></a>
-            </div>
             <div class="magnifying">
-                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+                <a href="#" class="magnif-icon" id="magnif-button"><ion-icon name="search-outline"></ion-icon></a>
+            <!-- <script>
+                function listener(){
+                    let magnif;
+                    magnif=document.getElementById("mangnif-button");
+                    magnif.addEventListener("click", btnMagnify)
+                }
+                function btnMagnify(){
+                    let search = document.getElementById("search");
+                    search.style.display= "block"
+                }
+            </script> -->
             </div>
             <div class="cart">
                 <a href="/products/cart"><ion-icon name="cart-outline"></ion-icon><span class="off">Carrito</span></a>
-            <!--  íconos --><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<!--  íconos --><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             </div>
             <% if (locals.isLogged) { %>
@@ -104,4 +112,5 @@
             <% } %>
         </div>
     </div>
+    <script type="module" src="../partials/searchHide.ejs"></script>
 </header>
