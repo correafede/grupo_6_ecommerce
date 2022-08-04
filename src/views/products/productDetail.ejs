@@ -8,6 +8,8 @@
     <%- include('../partials/toggle') %>
     <div class="nuevo-banner"></div>    
     <main class="main">
+      
+     
       <div class="barra-navegacion">
         <ol class="flex flex-wrap gap-xxs">
         <li class="barra-van">
@@ -27,10 +29,13 @@
           <div class="texto-descripcion">
             <div class="titulo-del-producto"><%= birra.Nombre %> <%= birra.size.Nombre %></div>
             <br />
-            <div class="precio-anterior"><%= birra.priceAnterior %></div>
+            <div class="precio-anterior"><%= birra.price %></div>
             <br />
+
             <div class="precio-actual">
-              $<%= birra.price %>
+              
+              $<%= birra.price - (birra.price*(birra.discount/100)) %>
+              
               <div class="descuento"><%= birra.discount %>%</div>
             </div>
             <!-- <div>

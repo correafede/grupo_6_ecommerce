@@ -33,7 +33,9 @@
             <button class="nxt-btn" id="nxt-btn"><img src="/arrow.png" alt=""></button>
             
             <div class="product1-container" id="products"  >
-                <% ofertas.forEach(oferta => { %>
+                <% ofertas.forEach(oferta => { 
+                    let precioP = oferta.price*(oferta.discount/100) 
+                    let precio = oferta.price - precioP %>
                 <div class="product1-card" >
                     <div class="product1-image" id="slide">
                         <span class="discount-tag"><%= oferta.discount %>% off</span>
@@ -43,7 +45,7 @@
                     <div class="product1-info">
                         <h2 class="product1-brand"><%= oferta.Nombre %></h2>
                         <p class="product1-short-description"><%= oferta.category.Nombre %> / <%= oferta.color.Nombre %> / <%= oferta.abv %>%</p>
-                        <span class="price">$<%= oferta.price %></span><span class="actual-price">$<%= oferta.price %></span>
+                        <span class="price">$<%= precio %></span><span class="actual-price">$<%= oferta.price %></span>
                     </div>
                 </div>
                 <%   }) %>
@@ -61,20 +63,19 @@
                 </li>
             </ol>
         </div>
-            <!-- <div id="app">
-                ACÁ HAY UN DIV QUE SE LLAMA APP
-            </div> -->
         <section class="section">
             <div class="aside"></div>
             <div class="articles">
-                <% products1.forEach(beer => { %>
+                <% products1.forEach(beer => { 
+                    let precioP = beer.price*(beer.discount/100) 
+                    let precio = beer.price - precioP %>
                 <article class="article">
                     <div class="product-img">
                         <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
                     </div>
                     <div class="description">
                         <p class="discount"></p>
-                        <p class="price">$ <%= beer.price %></p>
+                        <p class="price">$ <%= precio %></p>
                         <p class="class"><%= beer.Nombre %>  <%= beer.size.Nombre %></p>
                         <p class="info"><%= beer.category.Nombre %> / <%= beer.color.Nombre %> / <%= beer.abv %>%</p>
                     </div>
@@ -178,6 +179,5 @@
     <%- include('./partials/footer') %>
     <!-- MARCOS BARRA SCROLL 220522 -->
     <%- include('./partials/scrollbar') %>
-    <script src="/src/carroussel.js"></script>
 </body>
 </html>
