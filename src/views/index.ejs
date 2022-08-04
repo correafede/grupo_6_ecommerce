@@ -15,126 +15,20 @@
             <button class="nxt-btn"><img src="/arrow.png" alt=""></button>
             
             <div class="product1-container">
+                <% ofertas.forEach(oferta => { %>
                 <div class="product1-card">
                     <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        <button class="card-btn">add to wishlist</button>
+                        <span class="discount-tag"><%= oferta.discount %>% off</span>
+                        <img src="/img/products/<%=oferta.image%>" class="product1-thumb" alt="">
+                        <button class="card-btn">Comprar</button>
                     </div>
                     <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
+                        <h2 class="product1-brand"><%= oferta.Nombre %></h2>
+                        <p class="product1-short-description"><%= oferta.category.Nombre %> / <%= oferta.color.Nombre %> / <%= oferta.abv %>%</p>
+                        <span class="price">$<%= oferta.price %></span><span class="actual-price">$<%= oferta.price %></span>
                     </div>
                 </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        <button class="card-btn">add to wishlist</button>
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        <button class="card-btn">add to wishlist</button>
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        <button class="card-btn">add to wishlist</button>
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        <button class="card-btn">add to wishlist</button>
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/products/almirante-donn-nother.webp" class="product1-thumb" alt="">
-                        
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product1-card">
-                    <div class="product1-image">
-                        <span class="discount-tag">50% off</span>
-                        <img src="/img/ocaso-wiesse..webp" class="product1-thumb" alt="">
-                        
-                    </div>
-                    <div class="product1-info">
-                        <h2 class="product1-brand">brand</h2>
-                        <p class="product1-short-description">a short line about the cloth..</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
+                <%   }) %>
             </div>
         </section> 
    <!-- 020822 -->

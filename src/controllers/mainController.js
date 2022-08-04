@@ -30,11 +30,15 @@ let mainController = {
             order: [['Nombre', 'ASC']],
             limit: 8
         });
+        let promOfertas = Beer.findAll({
+            include: [ 'size', 'category', 'color'],
+            where: { discount: { [Op.between]: [ 1 , 99]}},
+        });
         // cambiar a nuevas, ofertas(con descuento mayor a x, recomandaciones, importadas etc),
         Promise
-        .all([promIPA, promAPA, promAMBER])
-        .then(([products1, products2, products3]) => {
-                res.render("index", { products1, products2, products3});
+        .all([promIPA, promAPA, promAMBER, promOfertas])
+        .then(([products1, products2, products3, ofertas]) => {
+                res.render("index", { products1, products2, products3, ofertas});
             })
     },
     error: (req, res) => { 
