@@ -6,7 +6,7 @@
 html{
     scroll-behavior: smooth;
 }
-/**/
+/*INICIOCarrusel*/
 .product1 {
     position: relative;
     overflow: hidden;
@@ -189,12 +189,12 @@ html{
     grid-column: span 2;
     margin-bottom: 10px;
   }
-/**/
-/* body{
+/*FINcarrusel*/
+ body{
     margin: 0px;
     padding: 0px;
     background-color: #f0f0f0;
-}
+}/*
 CARROUSEL 020822*/
 /* @import url('https://fonts.googleapis.com/css?family=Lobster');
 
