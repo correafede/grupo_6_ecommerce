@@ -14,6 +14,7 @@ const userAPIController = {
             include: ['usercategory']
         })
         .then(users => {
+            console.log(users)
             let response = {
                 count: users.length,
                 users

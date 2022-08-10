@@ -1,12 +1,11 @@
 import React from 'react';
-import {Link, Route, Switch} from 'react';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastMovieInDb';
 import ContentRowMovies from './ContentRowMovies';
 import NotFound from './NotFound';
-import SearchMovies from './SearchMovies'
-
+import {Link, Route, Switch} from 'react-router-dom';
+import SearchMovies from './SearchMovies';
 
 function SideBar(){
     return(

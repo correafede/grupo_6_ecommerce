@@ -72,13 +72,14 @@
                     let precio = beer.price - precioP %>
                 <article class="article">
                     <div class="product-img">
-                        <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
+                        <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a> 
                     </div>
                     <div class="description">
                         <p class="discount"></p>
                         <p class="price">$ <%= precio %></p>
                         <p class="class"><%= beer.Nombre %>  <%= beer.size.Nombre %></p>
                         <p class="info"><%= beer.category.Nombre %> / <%= beer.color.Nombre %> / <%= beer.abv %>%</p>
+                        
                     </div>
                 </article>
                 <%   }) %>

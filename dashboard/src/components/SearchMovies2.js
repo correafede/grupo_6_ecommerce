@@ -10,12 +10,12 @@ function SearchMovies(){
 	const apiKey = '2f5c2209'; 
 
 	useEffect(() => {
-		// const endpoint = `http://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}`
-		fetch('/api/products')
+		const endpoint = `http://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}`
+		fetch(endpoint)
 		.then(response => response.json())
 		.then(data => {
 			if(!data.Error){
-				setMovies(data.products)
+				setMovies(data.Search)
 			}else{
 				setMovies([]);
 			}
@@ -45,7 +45,7 @@ function SearchMovies(){
 							{/* Buscador */}
 							<form method="GET" onSubmit={searchMovie}>
 								<div className="form-group">
-									<label htmlFor="">Buscar por nombre:</label>
+									<label htmlFor="">Buscar por título:</label>
 									<input ref={inputTag} type="text" className="form-control" />
 								</div>
 								<button 
@@ -56,7 +56,7 @@ function SearchMovies(){
 					</div>
 					<div className="row">
 						<div className="col-12">
-							<h2>Cervezas para la palabra: {keyword}</h2>
+							<h2>Películas para la palabra: {keyword}</h2>
 						</div>
 						{/* Listado de películas */}
 						{
@@ -65,19 +65,18 @@ function SearchMovies(){
 									<div className="col-sm-6 col-md-3 my-4" key={i}>
 										<div className="card shadow mb-4">
 											<div className="card-header py-3">
-												<h5 className="m-0 font-weight-bold text-gray-800">{movie.Nombre}</h5>
+												<h5 className="m-0 font-weight-bold text-gray-800">{movie.Title}</h5>
 											</div>
 											<div className="card-body">
 												<div className="text-center">
-												<p>{movie.size.Nombre} / {movie.category.Nombre} / {movie.color.Nombre} </p>
-												<img 
+													<img 
 														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
-														src={movie.image}
-														alt=''
+														src={movie.Poster}
+														alt={movie.Title} 
 														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
 													/>
 												</div>
-												<p>{movie.price}</p>
+												<p>{movie.Year}</p>
 											</div>
 										</div>
 									</div>
