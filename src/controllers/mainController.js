@@ -34,7 +34,6 @@ let mainController = {
             include: [ 'size', 'category', 'color'],
             where: { discount: { [Op.between]: [ 1 , 99]}},
         });
-        let precio = [Beer.price]*[1/Beer.discount]
         // cambiar a nuevas, ofertas(con descuento mayor a x, recomandaciones, importadas etc),
         Promise
         .all([promIPA, promAPA, promAMBER, promOfertas])
@@ -42,7 +41,7 @@ let mainController = {
                 res.render("index", { products1, products2, products3, ofertas});
             })
     },
-    error: (req, res) => { 
+    error: (req, res) => {
         res.render("404");
     },
     panel: (req, res) => {
