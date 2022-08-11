@@ -46,7 +46,7 @@ function SearchMovies(){
 							<form method="GET" onSubmit={searchMovie}>
 								<div className="form-group">
 									<label htmlFor="">Buscar por nombre:</label>
-									<input ref={inputTag} type="text" className="form-control" />
+									<input ref={inputTag} type="text" className="form-control"/>
 								</div>
 								<button 
 
@@ -60,7 +60,7 @@ function SearchMovies(){
 						</div>
 						{/* Listado de películas */}
 						{
-							movies.length > 0 && movies.map((movie, i) => {
+							keyword.length > 0 && movies.map((movie, i) => {
 								return (
 									<div className="col-sm-6 col-md-3 my-4" key={i}>
 										<div className="card shadow mb-4">
@@ -69,15 +69,16 @@ function SearchMovies(){
 											</div>
 											<div className="card-body">
 												<div className="text-center">
-												<p>{movie.size.Nombre} / {movie.category.Nombre} / {movie.color.Nombre} </p>
+												
 												<img 
 														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
-														src={movie.image}
+														src={`/img/products/${movie.image}`}
 														alt=''
-														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
+														style={{ width: '90%', height: '600px' }} 
 													/>
-												</div>
-												<p>{movie.price}</p>
+												</div >
+												<p  style={{ paddingLeft: '22%' }}>{movie.size.Nombre} / {movie.category.Nombre} / {movie.color.Nombre} </p>
+												<p  style={{ paddingLeft: '42%' }}>{movie.price}</p>
 											</div>
 										</div>
 									</div>
@@ -85,10 +86,10 @@ function SearchMovies(){
 							})
 						}
 					</div>
-					{ movies.length === 0 && <div className="alert alert-warning text-center">No se encontraron películas</div>}
+					{ movies.length === 0 && <div className="alert alert-warning text-center">No se encontraron productos</div>}
 				</>
 				:
-				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div>
+				<div></div>
 			}
 		</div>
 	)

@@ -1,8 +1,8 @@
 import React from 'react';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
-import ContentRowMovies from './ContentRowMovies';
+import CategoriesInDb from './CategoriesInDb';
+import LastProductInDb from './LastProductInDb';
+import Chart from './Chart';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 import SearchMovies from './SearchMovies';
@@ -38,27 +38,27 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/CategoriesInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Categories</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
+                    <Link className="nav-link" to="/lastproduct">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Last added</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                <Link className="nav-link" to="/ContentRowMovies">
+                <Link className="nav-link" to="/products">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Products</span></Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to="/SearchMovies">
+                <Link className="nav-link" to="/search">
                         <i className="fas fa-fw fa-search"></i>
                         <span>Search products</span></Link>
                 </li>
@@ -72,16 +72,16 @@ function SideBar(){
                 <Route exact path="/">
                     <ContentWrapper />
                 </Route>
-                <Route path="/GenresInDb">
-                    <GenresInDb />
+                <Route path="/CategoriesInDb">
+                    <CategoriesInDb />
                 </Route>
-                <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
+                <Route path="/lastproduct">
+                    <LastProductInDb />
                 </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies />
+                <Route path="/products">
+                    <Chart />
                 </Route>
-                <Route path="/SearchMovies">
+                <Route path="/search">
                     <SearchMovies />
                 </Route>
                 <Route component={NotFound} />

@@ -1,27 +1,27 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ChartRow from './ChartRow';
 
-let tableRowsData = [
-    {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
-        Categories: ['Drama','Comedia'],
-        Awards: 2
-    },
-    {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
-    },
-    
-]
+class Chart extends Component{
+  constructor(){
+      super()
+      this.state= {
+        tableRowsData: []
+      }
+  }
 
+  componentDidMount(){
 
-function Chart (){
-    return (
+      fetch('/api/products')
+      .then(response =>{
+      return response.json()
+      })
+      .then(products =>{
+      this.setState({tableRowsData: products.products})
+      })
+      .catch(error => console.log(error))
+      }
+  render(){
+      return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
             <div className="card-body">
@@ -29,29 +29,30 @@ function Chart (){
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Size</th>
+                                <th>Category</th>
+                                <th>Color</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Size</th>
+                                <th>Category</th>
+                                <th>Color</th>
                             </tr>
                         </tfoot>
                         <tbody>
                             {
-                            tableRowsData.map( ( row , i) => {
+                            this.state.tableRowsData.map( ( row , i) => {
                                 return <ChartRow { ...row} key={i}/>
                             })
                             }
-
                         </tbody>
                     </table>
                 </div>
@@ -59,6 +60,8 @@ function Chart (){
         </div>
 
     )
-}
+  }
+  
 
+}
 export default Chart;
