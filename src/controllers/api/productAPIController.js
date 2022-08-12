@@ -21,13 +21,20 @@ const productAPIController = {
         Promise
         .all([promBirras, promLast])
         .then(([birras, last]) => {
+
+            birras.forEach((birra) => {
+                birra.dataValues.detail = `http://localhost:3000/api/products/detail/${birra.idCerveza}`;
+              });
+
+            
             let response = {
                 count: birras.length,
                 products: birras,
                 last: last
             }
-                res.json(response);
-            })
+            return (
+                res.json(response))
+            });
     },
     
     detail: (req, res) => {

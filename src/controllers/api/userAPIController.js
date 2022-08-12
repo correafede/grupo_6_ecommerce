@@ -14,7 +14,12 @@ const userAPIController = {
             include: ['usercategory']
         })
         .then(users => {
-            console.log(users)
+
+            users.forEach((user) => {
+                user.dataValues.password = '***************';
+                user.dataValues.detail = `http://localhost:3000/api/users/detail/${user.idUsuarios}`;
+              });
+
             let response = {
                 count: users.length,
                 users
