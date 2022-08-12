@@ -7,11 +7,11 @@
         <%- include('../partials/toggle') %>
         <main>
         <div class="modify">
-            <h1>Agregar un producto</h1>
-                <div class="errors">
-                    <ul class="errores"></ul>
-                </div>
+            <h1>Agregar un producto</h1> 
         <div class="modify-2">
+          <div class="errors">
+            <ul class="errores"></ul>
+          </div>
             <form action="/products" method="POST" enctype="multipart/form-data" id="registerForm">
                 <div><input type="text" placeholder="Nombre" name="name"  id="registerName" >
                     <% if (locals.errors && errors.name) { %>
