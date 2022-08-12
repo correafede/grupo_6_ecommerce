@@ -7,6 +7,7 @@ function ChartRow(props){
                 <tr>
                     <td>{props.Nombre}</td>
                     <td>{props.price}</td>
+                    <td>{props.discount}</td>
                     <td>{props.quantity}</td>
                     <td>{props.size.Nombre}</td>
                     <td>{props.category.Nombre}</td>

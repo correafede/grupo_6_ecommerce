@@ -32,30 +32,25 @@ function SideBar(){
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
-
-                {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Products</div>
-
-                {/*<!-- Nav Item - Pages -->*/}
+                <div className="sidebar-heading">Categorias</div>
                 <li className="nav-item">
                 <Link className="nav-link" to="/categories">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Categories</span>
                     </Link>
                 </li>
-
-                {/*<!-- Nav Item - Charts -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/lastproduct">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Last added</span></Link>
-                </li>
-
-                {/*<!-- Nav Item - Tables -->*/}
+                {/*<!-- Heading -->*/}
+                <div className="sidebar-heading">Products</div>
                 <li className="nav-item">
                 <Link className="nav-link" to="/products">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Products</span></Link>
+                </li>
+                
+                <li className="nav-item">
+                    <Link className="nav-link" to="/lastproduct">
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span>Last added</span></Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link" to="/search">
@@ -75,11 +70,12 @@ function SideBar(){
                 <Route path="/categories">
                     <CategoriesInDb />
                 </Route>
-                <Route path="/lastproduct">
-                    <LastProductInDb />
-                </Route>
+                
                 <Route path="/products">
                     <Chart />
+                </Route>
+                <Route path="/lastproduct">
+                    <LastProductInDb />
                 </Route>
                 <Route path="/search">
                     <SearchProducts />

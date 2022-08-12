@@ -1,4 +1,18 @@
 <header onload="listener()">
+    <script>
+        window.addEventListener("load", function() {
+
+               const magnif = document.getElementById("magnif-button");
+               const search = document.getElementById("search")
+
+
+                magnif.addEventListener("click", () => {
+                        magnif.style.display= "none"
+                        search.style.display= "flex"
+                   })
+               });
+           </script>
+
     <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
@@ -69,19 +83,8 @@
             </form>
         </div>
         <div class="menu-usuario">
-            <div class="magnifying">
-                <a href="#" class="magnif-icon" id="magnif-button"><ion-icon name="search-outline"></ion-icon></a>
-            <!-- <script>
-                function listener(){
-                    let magnif;
-                    magnif=document.getElementById("mangnif-button");
-                    magnif.addEventListener("click", btnMagnify)
-                }
-                function btnMagnify(){
-                    let search = document.getElementById("search");
-                    search.style.display= "block"
-                }
-            </script> -->
+            <div class="magnifying" id="magnif-button">
+                <a href="#" class="magnif-icon" ><ion-icon name="search-outline"></ion-icon></a>
             </div>
             <div class="cart">
                 <a href="/products/cart"><ion-icon name="cart-outline"></ion-icon><span class="off">Carrito</span></a>

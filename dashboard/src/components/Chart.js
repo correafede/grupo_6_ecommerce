@@ -31,6 +31,7 @@ class Chart extends Component{
                             <tr>
                                 <th>Name</th>
                                 <th>Price</th>
+                                <th>Discount</th>
                                 <th>Stock</th>
                                 <th>Size</th>
                                 <th>Category</th>
@@ -41,6 +42,7 @@ class Chart extends Component{
                             <tr>
                                 <th>Name</th>
                                 <th>Price</th>
+                                <th>Discount</th>
                                 <th>Stock</th>
                                 <th>Size</th>
                                 <th>Category</th>

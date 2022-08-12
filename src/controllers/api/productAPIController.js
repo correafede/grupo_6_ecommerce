@@ -113,7 +113,7 @@ const productAPIController = {
                 count: sizes.length + categories.length + colors.length,
                 sizes: {sizes,
                         cantidad: sizes.length},
-                categories: {categories,
+                categories: {categories: categories,
                              cantidad: categories.length},
                 colors: {colors,
                         cantidad: colors.length},
