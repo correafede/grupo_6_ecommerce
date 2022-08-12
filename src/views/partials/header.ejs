@@ -97,15 +97,22 @@
                     <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;" class="img-user">
                     <button onclick="myFunction()" class="dropbtnB">Hola <%= locals.userLogged.first_name %>  <i class="fa-solid fa-angle-down"></i></button>
                     <div id="myDropdown" class="dropdown-contentB">
+                        <% if (locals.isAdmin) { %>
+                        <a href="/panel">Panel</a>
+                        <% } %>
                         <a href="/user/profile">My Profile</a>
                         <a href="/user/logout">Logout</a>
+                       
                     </div>
                 </div>
                 <div id="user" >
                     <input type="checkbox" />
                     <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;" class="img-user"> 
-                        <ul id="user-lista">
-                            <a href="/user/profile"><li>Mi perfil</li></a>
+                        <ul id="user-lista" style="list-style: none;">
+                            <% if (locals.isAdmin) { %>
+                            <a href="/panel"><li>Panel</li></a>
+                             <% } %>
+                            <a href="/user/profile"><li>My profile</li></a>
                             <a href="/user/logout"><li>Logout</li></a>
                         </ul>
                 </div>

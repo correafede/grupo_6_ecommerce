@@ -23,7 +23,6 @@ const productAPIController = {
         .then(([birras, last]) => {
             let response = {
                 count: birras.length,
-                countByCategory: 3,
                 products: birras,
                 last: last
             }
@@ -113,11 +112,11 @@ const productAPIController = {
                 count: sizes.length + categories.length + colors.length,
                 sizes: {sizes,
                         cantidad: sizes.length},
-                categories: {categories: categories,
-                             cantidad: categories.length},
+                categories: {categories: categories, 
+                            cantidad: categories.length},
                 colors: {colors,
                         cantidad: colors.length},
-                cantidad: {
+                countByCategory: {
                     ipa: cantidad.length,
                     apa: cantidad2.length,
                     amber: cantidad3.length,

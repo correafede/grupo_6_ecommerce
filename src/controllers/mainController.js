@@ -45,20 +45,20 @@ let mainController = {
         res.render("404");
     },
     panel: (req, res) => {
-        return res.render("panel")
+        return res.render("./panel/panel")
     },
     products: (req, res) => {
         Beer.findAll({
             include: [ 'size', 'category', 'color']
         }).then((products) => {
-            return res.render("productsList", { products})
+            return res.render("./panel/productsList", { products})
         })
     },
     users: (req, res) => {
         User.findAll({
             include:  ['usercategory']
         }).then((users) => {
-            return res.render("usersList", { users})
+            return res.render("./panel/usersList", { users})
         })
     },
     usersCreate: (req, res) => {
@@ -66,7 +66,7 @@ let mainController = {
 
         .then((allUserCategories) => {
 
-        return res.render("usersRegister", { allUserCategories });
+        return res.render("./panel/usersRegister", { allUserCategories });
         
         })
     },
@@ -89,7 +89,7 @@ let mainController = {
                     })
                 return res.redirect('./')
             } else {
-                return res.render('./panel/users/create', { 
+                return res.render('./panel/usersRegister', { 
                     			errors: {
                     				email: {
                     					msg: 'Este email ya esta registrado'
@@ -111,7 +111,7 @@ let mainController = {
         .all([promFindUser, promCategories])
         .then(([user, allUserCategories]) => {
 
-        return res.render("usersEdit", { user, allUserCategories });
+        return res.render("./panel/usersEdit", { user, allUserCategories });
         
         })
     },

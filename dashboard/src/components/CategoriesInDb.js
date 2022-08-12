@@ -14,8 +14,8 @@ class Categories extends Component{
       .then(response =>{
       return response.json()
       })
-      .then(categories =>{
-      this.setState({categoryList:  categories.categories.categories
+      .then((categories) =>{ 
+      this.setState({categoryList: categories.categories.categories
     })
       })
       .catch(error => console.log(error))
@@ -38,7 +38,7 @@ class Categories extends Component{
                                         return  <Category {...category}  key={index} />
                                     })
                                   }
-
+                                
                               </div>
                           </div>
                       </div>
