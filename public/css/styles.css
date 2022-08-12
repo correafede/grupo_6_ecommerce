@@ -92,7 +92,17 @@ html{
   .product1-card:hover .card-btn {
     opacity: 1;
   }
-  
+  .article:hover .card-btn {
+    opacity: 1;
+  }
+.article .card-btn{
+    bottom: 130px;
+    box-shadow: 4px 4px 4px 0px rgba(160, 153, 153, 0.277);
+    position: absolute;
+}
+.articles article{
+   position: relative;
+}
   .card-btn:hover {
     background: #ff7d7d;
     color: #fff;

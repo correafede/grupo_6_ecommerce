@@ -40,7 +40,6 @@
                     <div class="product1-image" id="slide">
                         <span class="discount-tag"><%= oferta.discount %>% off</span>
                         <img src="/img/products/<%=oferta.image%>" class="product1-thumb" alt="">
-                        <!-- <button class="card-btn">Comprar</button> -->
                         <a href="/products/cart" class="card-btn">Comprar</a>
                     </div>
                     <div class="product1-info">
@@ -70,9 +69,11 @@
                 <% products1.forEach(beer => { 
                     let precioP = beer.price*(beer.discount/100) 
                     let precio = beer.price - precioP %>
-                <article class="article">
+                    <article class="article">
+                        <a href="/products/cart" class="card-btn">Comprar</a>
                     <div class="product-img">
                         <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
+                        
                     </div>
                     <div class="description">
                         <p class="discount"></p>
@@ -99,6 +100,7 @@
             <div class="articles">
                 <% products2.forEach(beer => { %>
                 <article class="article">
+                    <a href="/products/cart" class="card-btn">Comprar</a>
                     <div class="product-img">
                         <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
                     </div>
@@ -123,10 +125,12 @@
             </ol>
         </div>
         <section class="section">
+            <a href="/products/cart" class="card-btn">Comprar</a>
             <div class="aside"></div>
             <div class="articles">
                 <% products3.forEach(beer => { %>
-                <article class="article">
+                    <article class="article">
+                        <a href="/products/cart" class="card-btn">Comprar</a>
                     <div class="product-img">
                         <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
                     </div>
