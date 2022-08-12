@@ -747,7 +747,6 @@ FIN CARROUSSEL 020822 */
                 width: auto;
                 max-height: 60px;
                 height: auto;
-                margin: 15px 0px 5px -15px;
                 filter: contrast(1.5);
             }
         .menu-y-dropdown{
@@ -831,7 +830,6 @@ FIN CARROUSSEL 020822 */
                 align-self: center;
                 display: flex;
                 flex-flow: row wrap;
-                margin: 5px;
                 margin-right: 0px;
                 align-items: center;
                 width: 100%;
@@ -1920,7 +1918,6 @@ FIN CARROUSSEL 020822 */
             width: auto;
             max-height: 60px;
             height: auto;
-            margin: 15px 0px 5px -15px;
             filter: contrast(1.5);
         }
 
@@ -1941,7 +1938,7 @@ FIN CARROUSSEL 020822 */
         background-size: 100% 100%;
         display: flex;
         position: relative;
-        bottom: -100px;
+        bottom: -80px;
     }
     .dropdownB{
         position: relative;

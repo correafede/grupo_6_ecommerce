@@ -4,11 +4,12 @@
 
                const magnif = document.getElementById("magnif-button");
                const search = document.getElementById("search")
-
+               const logo2 = document.getElementById("logo2")
 
                 magnif.addEventListener("click", () => {
-                        magnif.style.display= "none"
-                        search.style.display= "flex"
+                        magnif.style.display= "none";
+                        search.style.display= "flex";
+                        logo2.style.display="none";
                    })
                });
            </script>
@@ -43,7 +44,7 @@
       </div>
     <div class="div-logo">
         <a href="/"><img src="/img/logo.webp" href="/index" alt="Logo de MercadoLiebre" class="logo"></img></a>
-        <div class="logo2">
+        <div class="logo2" id="logo2">
             <a href="/"><h1 class="logo-titulo">BIRRASHOP</h1></a>
     </div>
     </div>
