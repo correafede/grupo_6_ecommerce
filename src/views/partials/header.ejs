@@ -4,12 +4,14 @@
 
                const magnif = document.getElementById("magnif-button");
                const search = document.getElementById("search")
-               const logo2 = document.getElementById("logo2")
+               const logo = document.getElementById("div-logo")
+               const menu = document.getElementById("user-menu")
 
                 magnif.addEventListener("click", () => {
-                        magnif.style.display= "none";
-                        search.style.display= "flex";
-                        logo2.style.display="none";
+                        // search.style.display= "flex";
+                        logo.classList.toggle("view");
+                        search.classList.toggle("view");
+                        menu.classList.toggle("view")
                    })
                });
            </script>
@@ -42,11 +44,9 @@
             </ul>
             <% } %>
       </div>
-    <div class="div-logo">
+    <div class="div-logo" id="div-logo">
         <a href="/"><img src="/img/logo.webp" href="/index" alt="Logo de MercadoLiebre" class="logo"></img></a>
-        <div class="logo2" id="logo2">
             <a href="/"><h1 class="logo-titulo">BIRRASHOP</h1></a>
-    </div>
     </div>
     <div class="menu-y-dropdown">
         <div class="dropdown">
@@ -76,7 +76,7 @@
             <% } %>
         </div>
     </div>
-    <div class="user-menu">
+    <div class="user-menu" id="user-menu">
         <div class="search" id="search">
             <form action="/products/search" method="GET">
                 <input type="search" placeholder="  Buscar productos" name="keywords">
@@ -85,7 +85,7 @@
         </div>
         <div class="menu-usuario">
             <div class="magnifying" id="magnif-button">
-                <a href="#" class="magnif-icon" ><ion-icon name="search-outline"></ion-icon></a>
+                <a class="magnif-icon" ><ion-icon name="search-outline"></ion-icon></a>
             </div>
             <div class="cart">
                 <a href="/products/cart"><ion-icon name="cart-outline"></ion-icon><span class="off">Carrito</span></a>
