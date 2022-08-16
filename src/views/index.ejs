@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head', {title: 'Inicio'}) %>
+    <!-- INICIO CONTROL DE EDAD -->
     <div id="container">
-    <div class="emergente">
+        <div class="emergente">
         <p>Debes ser mayor de edad para poder visitar este sitio web</p>
         <div class="boton menor">Tengo menos de 18 años</div>
         <div class="boton mayor">Soy mayor de edad</div>
@@ -23,6 +24,8 @@
         document.querySelector("#container").style.opacity="1";
     }
     </script>
+    <!-- https://francescricart.com/ejercicio-js-ventana-emergente-control-de-edad/-->
+    <!-- FIN CONTROL DE EDAD -->
     <script>
         
         window.addEventListener("load", function() {
