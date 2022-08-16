@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head', {title: 'Inicio'}) %>
+    <div id="container">
+    <div class="emergente">
+        <p>Debes ser mayor de edad para poder visitar este sitio web</p>
+        <div class="boton menor">Tengo menos de 18 años</div>
+        <div class="boton mayor">Soy mayor de edad</div>
+    </div>
+</div>
 <body>
+    <script> window.onload = init;
+    function init(){
+        document.querySelector(".emergente .menor").addEventListener("click",adios);
+        document.querySelector(".emergente .mayor").addEventListener("click",hola);
+    }
+        
+    function adios(){
+        location.href="https://francescricart.com";
+    }    
+    function hola(){
+        document.querySelector(".emergente").style.display="none";
+        document.querySelector("#container").style.opacity="1";
+    }
+    </script>
     <script>
         
         window.addEventListener("load", function() {
