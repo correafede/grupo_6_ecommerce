@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'ejs');
 
+
 app.use(session({
     secret: "Secreto!",
     resave: false,
@@ -35,6 +36,9 @@ app.use('/products', productsRouter);
 app.use('/user', usersRouter);
 app.use('/api/users',usersAPIController);
 app.use('/api/products',productsAPIController);
+app.use((req, res, next) =>{
+    res.status(404).render("404")
+})
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server start");

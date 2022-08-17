@@ -23,6 +23,7 @@ html{
     width: 400px;
     height: 200px;
     position: fixed;
+    display: none;
     background-color: #FFFAFA;
     top: 50%;
     left: 50%;

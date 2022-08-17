@@ -11,10 +11,13 @@
             const emergente = document.getElementById("emergente");
             
             containerEdad.style.display="block";
+            emergente.style.display="block"
             if (sessionStorage.getItem("displaySession") == null){
                 containerEdad.style.display="block";
+                emergente.style.display="block"
             }else{
                 containerEdad.style.display="none";
+                emergente.style.display="none"
             }
 
         botonMenor.addEventListener("click", function(){
