@@ -13,13 +13,20 @@
                         search.classList.toggle("view");
                         menu.classList.toggle("view")
                    })
-                body.addEventListener("click", () => {
-                    logo.classList.toggle("");
-                    search.classList.toggle("");
-                    menu.classList.toggle("")
-               });
             })
-           </script>
+    </script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            const search = document.getElementById("search");
+            const logo = document.getElementById("div-logo");
+            const menu = document.getElementById("user-menu");
+        if(window.scrollY<=0){        
+            logo.classList.toggle("view");
+            search.classList.toggle("view");
+            menu.classList.toggle("view");
+            }
+        })
+    </script>
 
     <div id="menuToggle">
         <input type="checkbox" />
@@ -90,7 +97,7 @@
         </div>
         <div class="menu-usuario">
             <div class="magnifying" id="magnif-button">
-                <a class="magnif-icon" ><ion-icon name="search-outline"></ion-icon></a>
+                <a class="magnif-icon"><ion-icon name="search-outline"></ion-icon></a>
             </div>
             <div class="cart">
                 <a href="/products/cart"><ion-icon name="cart-outline"></ion-icon><span class="off">Carrito</span></a>
