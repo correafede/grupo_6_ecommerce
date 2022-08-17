@@ -9,15 +9,19 @@
             const botonMayor = document.getElementById("boton-mayor");
             const containerEdad = document.getElementById("container-edad");
             const emergente = document.getElementById("emergente");
+            const body = document.getElementById("body")
             
             containerEdad.style.display="block";
             emergente.style.display="block"
+
+
             if (sessionStorage.getItem("displaySession") == null){
                 containerEdad.style.display="block";
                 emergente.style.display="block"
             }else{
                 containerEdad.style.display="none";
                 emergente.style.display="none"
+                body.style.overflow = "visible"
             }
 
         botonMenor.addEventListener("click", function(){
@@ -27,6 +31,7 @@
         botonMayor.addEventListener("click", function(){
                 emergente.style.display="none";
                 containerEdad.style.display="none";
+                body.style.overflow = "visible"
                 sessionStorage.setItem("displaySession", containerEdad.style.display);
             })
             
@@ -41,7 +46,7 @@
             
     <!-- https://francescricart.com/ejercicio-js-ventana-emergente-control-de-edad/-->
     <!-- FIN CONTROL DE EDAD -->
-    <body>
+    <body id="body">
         <%- include('./partials/header') %>
         <%- include('./partials/button') %>
         <%- include('./partials/toggle') %>
