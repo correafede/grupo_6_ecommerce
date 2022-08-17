@@ -8,44 +8,51 @@ html{
 }
 /**/
 /*CONTROL EDAD*/
-#container{
-    opacity:.3;
+.containerEdad{
+    opacity:1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    background-size: cover;
+    display: none;
     }
 
-    .emergente{
-        width:400px;
-        height:200px;
-        position:fixed;
-        background-color:#FFFAFA;
-        top:50%;
-        left:50%;
-        margin-left:-200px;
-        margin-top:-100px;
-        border:1px solid #000;
-        border-radius:10px;
-        padding:20px;
-        text-align:center;
-        box-shadow: 10px 10px 10px #ccc;
-    }
+.emergente{
+    width:400px;
+    height:200px;
+    position: fixed;
+    background-color:#FFFAFA;
+    top:50%;
+    left:50%;
+    margin-left:-200px;
+    margin-top:-100px;
+    border:none;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+    box-shadow: 10px 10px 10px #ccc;
+}
 
-    .emergente p{
-        font-size:24px;
-    }
+.emergente p{
+    font-size:24px;
+}
 
-    .emergente .boton{
-        font-size:18px;
-        padding:10px;
-        border:1px solid #000;
-        border-radius:5px;
-        display:inline-block;
-        width:150px;
-        margin-top:32px;
-        box-shadow:5px 5px 5px #ccc;
-    }
-    .menor{background-color:#FAF0E6;}
-    .mayor{background-color:#F5F5DC;}
-    .menor:hover{background-color:#ff0000;}
-    .mayor:hover{background-color:#00ff00;}
+.emergente .boton.mayor,
+            .boton.menor{
+    font-size:18px;
+    padding:10px;
+    border:1px solid #000;
+    border-radius:5px;
+    display:inline-block;
+    width:150px;
+    margin-top:32px;
+    box-shadow:5px 5px 5px #ccc;
+}
+.boton.menor{background-color:#FAF0E6;}
+.boton.mayor{background-color:#F5F5DC;}
+.boton.menor:hover{background-color:#c46464f8;}
+.boton.mayor:hover{background-color:#86e086;}
 
     /*  FIN CONTROL EDAD */
 
@@ -962,7 +969,7 @@ display: none;
 
             /* BANNER */
 .nuevo-banner{  
-    display: none;
+    display: block;
 }
 
 /* RUTAS > PRODUCTOS */

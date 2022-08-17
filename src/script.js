@@ -1,5 +1,4 @@
-
-    window.addEventListener("load", function() {
+window.addEventListener("load", function() {
 
     const slidesContainer = document.getElementById('products');
     const slide = document.getElementById("slide");

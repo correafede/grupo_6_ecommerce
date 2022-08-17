@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head', {title: 'Inicio'}) %>
+    <body>
+        <%- include('./partials/header') %>
+        <%- include('./partials/button') %>
+        <%- include('./partials/toggle') %>
     <!-- INICIO CONTROL DE EDAD -->
-    <div id="container">
-        <div class="emergente">
-        <p>Debes ser mayor de edad para poder visitar este sitio web</p>
-        <div class="boton menor">Tengo menos de 18 años</div>
-        <div class="boton mayor">Soy mayor de edad</div>
-    </div>
-</div>
-<body>
-    <script> window.onload = init;
-    function init(){
-        document.querySelector(".emergente .menor").addEventListener("click",adios);
-        document.querySelector(".emergente .mayor").addEventListener("click",hola);
-    }
-        
-    function adios(){
-        location.href="https://francescricart.com";
-    }    
-    function hola(){
-        document.querySelector(".emergente").style.display="none";
-        document.querySelector("#container").style.opacity="1";
-    }
-    </script>
+    <script>
+        window.addEventListener("load", function(){
+            const botonMenor = document.getElementById("boton-menor");
+            const botonMayor = document.getElementById("boton-mayor");
+            const containerEdad = document.getElementById("container-edad");
+            const emergente = document.getElementById("emergente");
+            
+            containerEdad.style.display="block";
+            if (sessionStorage.getItem("displaySession") == null){
+                containerEdad.style.display="block";
+            }else{
+                containerEdad.style.display="none";
+            }
+
+        botonMenor.addEventListener("click", function(){
+            location.href="https://www.cartoonnetwork.com.ar/juegos";
+        });
+
+        botonMayor.addEventListener("click", function(){
+                emergente.style.display="none";
+                containerEdad.style.display="none";
+                sessionStorage.setItem("displaySession", containerEdad.style.display);
+            })
+            
+        })
+        </script>
+
+            <div id="container-edad" class="containerEdad">
+                <div class="emergente" id="emergente">
+                    <p>Debes ser mayor de edad para poder visitar este sitio web</p>
+                    <div class="boton menor" id="boton-menor">Tengo menos de 18 años</div>
+                    <div class="boton mayor" id="boton-mayor">Soy mayor de edad</div>
+                </div>
+            </div>
     <!-- https://francescricart.com/ejercicio-js-ventana-emergente-control-de-edad/-->
     <!-- FIN CONTROL DE EDAD -->
     <script>
-        
         window.addEventListener("load", function() {
 
         const slidesContainer = document.getElementById('products');
@@ -46,19 +61,16 @@
         });
         });
     </script>
-    <%- include('./partials/header') %>
-    <%- include('./partials/button') %>
-    <%- include('./partials/toggle') %>
-        <div class="nuevo-banner"></div>
+    <div class="nuevo-banner"></div>
         <!--  020822 -->
-        <section class="product1"  > 
+        <section class="product1"  >
             <h3 class="product1-category">Ofertas</h3>
             <button class="pre-btn" id="pre-btn"><img src="/arrow.png" alt=""></button>
             <button class="nxt-btn" id="nxt-btn"><img src="/arrow.png" alt=""></button>
-            
+
             <div class="product1-container" id="products"  >
-                <% ofertas.forEach(oferta => { 
-                    let precioP = oferta.price*(oferta.discount/100) 
+                <% ofertas.forEach(oferta => {
+                    let precioP = oferta.price*(oferta.discount/100)
                     let precio = oferta.price - precioP %>
                 <div class="product1-card" >
                     <div class="product1-image" id="slide">
@@ -74,7 +86,7 @@
                 </div>
                 <%   }) %>
             </div>
-        </section> 
+        </section>
    <!-- 020822 -->
     <main>
         <div class="barra-navegacion">
@@ -90,8 +102,8 @@
         <section class="section">
             <div class="aside"></div>
             <div class="articles">
-                <% products1.forEach(beer => { 
-                    let precioP = beer.price*(beer.discount/100) 
+                <% products1.forEach(beer => {
+                    let precioP = beer.price*(beer.discount/100)
                     let precio = beer.price - precioP %>
                     <article class="article">
                         <a href="/products/cart" class="card-btn">Comprar</a>
@@ -105,7 +117,7 @@
                         <p class="price">$ <%= precio %></p>
                         <p class="class"><%= beer.Nombre %>  <%= beer.size.Nombre %></p>
                         <p class="info"><%= beer.category.Nombre %> / <%= beer.color.Nombre %> / <%= beer.abv %>%</p>
-                        
+
                     </div>
                 </article>
                 <%   }) %>
@@ -205,7 +217,7 @@
                 </div>
             </div>
         </div>
-        
+
     </main>
     <%- include('./partials/footer') %>
     <!-- MARCOS BARRA SCROLL 220522 -->
