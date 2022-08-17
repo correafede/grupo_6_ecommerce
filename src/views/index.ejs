@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head', {title: 'Inicio'}) %>
-    <body>
-        <%- include('./partials/header') %>
-        <%- include('./partials/button') %>
-        <%- include('./partials/toggle') %>
+    
     <!-- INICIO CONTROL DE EDAD -->
     <script>
         window.addEventListener("load", function(){
@@ -32,16 +29,19 @@
             
         })
         </script>
-
-            <div id="container-edad" class="containerEdad">
+            <div id="container-edad" class="containerEdad"></div>
                 <div class="emergente" id="emergente">
                     <p>Debes ser mayor de edad para poder visitar este sitio web</p>
                     <div class="boton menor" id="boton-menor">Tengo menos de 18 años</div>
                     <div class="boton mayor" id="boton-mayor">Soy mayor de edad</div>
                 </div>
-            </div>
+            
     <!-- https://francescricart.com/ejercicio-js-ventana-emergente-control-de-edad/-->
     <!-- FIN CONTROL DE EDAD -->
+    <body>
+        <%- include('./partials/header') %>
+        <%- include('./partials/button') %>
+        <%- include('./partials/toggle') %>
     <script>
         window.addEventListener("load", function() {
 

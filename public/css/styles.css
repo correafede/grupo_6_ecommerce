@@ -8,30 +8,32 @@ html{
 }
 /**/
 /*CONTROL EDAD*/
-.containerEdad{
-    opacity:1;
-    position: absolute;
+.containerEdad {
+    opacity: 0.6;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 2000;
+    z-index: 200;
     background-size: cover;
     display: none;
-    }
+    background-color: white;
+}
 
-.emergente{
-    width:400px;
-    height:200px;
+.emergente {
+    width: 400px;
+    height: 200px;
     position: fixed;
-    background-color:#FFFAFA;
-    top:50%;
-    left:50%;
-    margin-left:-200px;
-    margin-top:-100px;
-    border:none;
-    border-radius:10px;
-    padding:20px;
-    text-align:center;
+    background-color: #FFFAFA;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -100px;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
     box-shadow: 10px 10px 10px #ccc;
+    z-index: 300;
 }
 
 .emergente p{
