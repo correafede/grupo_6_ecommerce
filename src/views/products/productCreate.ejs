@@ -13,7 +13,7 @@
             <ul class="errores"></ul>
           </div>
             <form action="/products" method="POST" enctype="multipart/form-data" id="registerForm">
-                <div><input type="text" placeholder="Nombre" name="name"  id="registerName" >
+                <div><label>Nombre</label><input type="text" placeholder="Nombre" name="name"  id="registerName" >
                     <% if (locals.errors && errors.name) { %>
                         <div class="text-danger" style="color: red; font-size: 18px; margin-top: -25px; margin-bottom: 15px;"><%= errors.name.msg %></div>
                         <% } %>
@@ -45,13 +45,13 @@
                                 <% }); %>
                         </select>
                 </div>
-                <div><input type="text" placeholder="ABV" name="abv"></div>
-                <div><input type="text" placeholder="IBU" name="ibu" ></input></div>
-                <div><textarea type="textarea" rows="10" cols="50" placeholder="Inserte una descripción del producto" name="description" id="registerDescription"></textarea></div>
-                <div><input type="text" placeholder="Precio x unidad" name="price" ></input></div>
-                <div><input type="text" placeholder="Descuento" name="discount" ></input></div>
-                <div><input type="text" placeholder="Unidades" name="quantity"></input></div>
-                <div><input type="text" placeholder="Tags" name="tags" class="form-input"></input></div>
+                <div><label>ABV<input type="text" placeholder="ABV" name="abv"></label></div>
+                <div><label>IBU<input type="text" placeholder="IBU" name="ibu" ></input></label></div>
+                <div><label>Descripcion<textarea type="textarea" rows="10" cols="50" placeholder="Inserte una descripción del producto" name="description" id="registerDescription"></textarea></div>
+                <div><label>Precio<input type="text" placeholder="Precio x unidad" name="price" ></input></div>
+                <div><label>Descuento<input type="text" placeholder="Descuento" name="discount" ></input></div>
+                <div><label>Cantidad<input type="text" placeholder="Unidades" name="quantity"></input></div>
+                <div><label>Tags<input type="text" placeholder="Tags" name="tags" class="form-input"></input></div>
                 <div><input type="file" name="image" accept=".jpg, .webp" id="registerImage"></div>
                 <div class="button-modify"><a href="#"><input type="submit" value="Crear producto"></input></a></div>
             </form>
