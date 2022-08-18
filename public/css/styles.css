@@ -115,7 +115,7 @@ html{
   
   .discount-tag {
     position: absolute;
-    background: #fff;
+    /* background: #fff; */
     padding: 5px;
     border-radius: 5px;
     color: #11d111;
@@ -169,18 +169,21 @@ html{
   
   .product1-brand {
     text-transform: uppercase;
-    font-size: medium;
+    font-size: small;
+    font-style: normal;
   }
   
   .product1-short-description {
+    font-size: normal;
     width: 100%;
     height: 15px;
     line-height: 15px;
     overflow: hidden;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     text-transform: capitalize;
     margin: 4px 0;
     font-size: small;
+    color: #221e20cc;
   }
   
   .price {
