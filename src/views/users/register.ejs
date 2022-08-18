@@ -7,7 +7,7 @@
     <%- include('../partials/toggle') %>
     <main style="margin-top: 0px">
       <div class="conjunto-login">
-        <form action="/user/register" method="POST" enctype="multipart/form-data" class="reservation" id="registerForm">
+        <form action="/user/register" method="POST" enctype="multipart/form-data" id="registerForm">
           <div class="login-box">
             <h2>Register</h2>
             <div class="col">
@@ -29,28 +29,28 @@
                     <% } %>
             </div>
             <div class="user-box">
-              <input type="text" name="lastName"  value="<%= locals.oldData ? oldData.lastName : null %>" id="registerLastName">
+              <input type="text" name="lastName" required="" value="<%= locals.oldData ? oldData.lastName : null %>" id="registerLastName">
                     <label>Apellido</label>
                     <% if (locals.errors && errors.lastName) { %>
                       <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.lastName.msg %></div>
                       <% } %>
                 </div>
                 <div class="user-box">
-                  <input type="email" name="email"  value="<%= locals.oldData ? oldData.email : null %>" id="registerEmail">
+                  <input type="email" name="email" required="" value="<%= locals.oldData ? oldData.email : null %>" id="registerEmail">
                   <label>Email</label>
                   <% if (locals.errors && errors.email) { %>
                     <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.email.msg %></div>
                     <% } %>
               </div>
               <div class="user-box">
-                <input type="password" name="password"  id="registerPassword">
+                <input type="password" name="password" required="" id="registerPassword">
                 <label>Contraseña</label>
                 <% if (locals.errors && errors.password) { %>
                   <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.password.msg %></div>
                   <% } %>
             </div>
             <div class="user-box">
-              <input type="password" name="confirmPassword"  id="registerPassword">
+              <input type="password" name="confirmPassword" required="" id="registerPassword">
               <label>Confirmar contraseña</label>
               <% if (locals.errors && errors.confirmPassword) { %>
                 <div class="text-danger" style="color: red; font-size: 16px; margin-top: -25px; margin-bottom: 15px;" ><%= errors.confirmPassword.msg %></div>
@@ -86,8 +86,6 @@
     </div>
   </main>
     <%- include('../partials/footer') %>
-    <!-- MARCOS BARRA SCROLL 220522 -->
-    <%- include('../partials/scrollbar') %>
     <script>
         window.onload = function () {
           let form = document.querySelector("#registerForm");
@@ -169,8 +167,6 @@
                 li.innerHTML = errors[i];
                 errores.appendChild(li);
               }
-            } else {
-              alert("Usuario registrado");
             }
           });
         };

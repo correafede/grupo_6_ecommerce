@@ -2,9 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 const Beer = db.Beer;
 const User = db.User;
+const UserCategory = db.UserCategory;
 
 let mainController = {
     index: (req, res) => { 
@@ -26,37 +30,92 @@ let mainController = {
             order: [['Nombre', 'ASC']],
             limit: 8
         });
+        let promOfertas = Beer.findAll({
+            include: [ 'size', 'category', 'color'],
+            where: { discount: { [Op.between]: [ 1 , 99]}},
+        });
         // cambiar a nuevas, ofertas(con descuento mayor a x, recomandaciones, importadas etc),
         Promise
-        .all([promIPA, promAPA, promAMBER])
-        .then(([products1, products2, products3]) => {
-                res.render("index", { products1, products2, products3});
+        .all([promIPA, promAPA, promAMBER, promOfertas])
+        .then(([products1, products2, products3, ofertas]) => {
+                res.render("index", { products1, products2, products3, ofertas});
             })
     },
-    error: (req, res) => { 
+    error: (req, res) => {
         res.render("404");
     },
     panel: (req, res) => {
-        return res.render("panel")
+        return res.render("./panel/panel")
     },
     products: (req, res) => {
         Beer.findAll({
             include: [ 'size', 'category', 'color']
         }).then((products) => {
-            return res.render("productsList", { products})
+            return res.render("./panel/productsList", { products})
         })
     },
     users: (req, res) => {
         User.findAll({
             include:  ['usercategory']
         }).then((users) => {
-            return res.render("usersList", { users})
+            return res.render("./panel/usersList", { users})
         })
     },
-    userEdit: (req, res) => {
+    usersCreate: (req, res) => {
+       UserCategory.findAll()
 
+        .then((allUserCategories) => {
+
+        return res.render("./panel/usersRegister", { allUserCategories });
+        
+        })
     },
-    userUpdate: (req, res) => {
+    usersStore: (req, res) => {
+        let userInDB = req.body.email;
+        
+		User.findOne({ 
+                where: {
+                         email: userInDB,
+                       }
+            }).then((user) => { 
+                if (user == null ) {
+                    User.create({
+                        first_name: req.body.firstName,
+                        last_name: req.body.lastName,
+                        email: req.body.email,
+                        password: bcryptjs.hashSync(req.body.password, 10),
+                        id_UserCategory: req.body.idUserCategory,
+                        image: "default-image.png"
+                    })
+                return res.redirect('./')
+            } else {
+                return res.render('./panel/usersRegister', { 
+                    			errors: {
+                    				email: {
+                    					msg: 'Este email ya esta registrado'
+                    				}
+                    			},
+                    			oldData: req.body, 
+            })}
+        })	
+        },
+    usersEdit: (req, res) => {
+
+        let promFindUser = User.findByPk(req.params.id,
+            {
+                include: ['usercategory']
+            });
+        let promCategories = UserCategory.findAll();
+
+        Promise
+        .all([promFindUser, promCategories])
+        .then(([user, allUserCategories]) => {
+
+        return res.render("./panel/usersEdit", { user, allUserCategories });
+        
+        })
+    },
+    usersUpdate: (req, res) => {
         let UserId = req.params.id;
         User
         .update(
@@ -64,24 +123,24 @@ let mainController = {
             first_name: req.body.firstName,
             last_name: req.body.lastName,
             email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            id_UserCategory: req.body.category,
-            image: req.body.file
+            password: req.body.password,
+            id_UserCategory: req.body.idUserCategory,
+            image: req.body.image
             },
             {
                 where: {idUsuarios: UserId}
             }
         )
         .then(() => {
-            return res.redirect("./panel/users");
+            return res.redirect("../users");
         })
     },
-    userDestroy: (req, res) => {
+    usersDestroy: (req, res) => {
         let UserId = req.params.id;
         User
         .destroy({where: {idUsuarios: UserId}, force: true})
         .then(()=>{
-            return res.redirect("./panel/users")})
+            return res.redirect("../../users");})
     },
 }
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Editando usuarios'}) %>
+    <body>
+        <%- include('../partials/header') %>
+        <%- include('../partials/button') %>
+        <%- include('../partials/toggle') %>
+        <main>
+        <div class="modify">
+            <h1>Modificando: [<%=user.idUsuarios%>] <%=user.first_name%> <%=user.last_name%></h1>
+        <div class="modify-2">
+            
+            <form action="/panel/users/<%=user.idUsuarios%>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                <label>Nombre</label><input type="text" value="<%=user.first_name%>" name="firstName" class="form-input">
+                <label>Apellido</label><input type="text" value="<%=user.last_name%>" name="lastName" class="form-input">
+        <div class="size-product">
+            <label for="category" class="form-label">Categoria:</label>
+                <select name="idUserCategory" id="usercategory" class="form-input">
+                    <option value="">Elegí</option>
+                    <% allUserCategories.forEach(category => { %>
+                        <option value="<%= category.idUserCategory %>" <% if (user.usercategory.idUserCategory == category.idUserCategory) { %><%= 'selected' %><% }; %>><%= category.Nombre %></option>
+                        <% }); %>
+                </select>
+        </div>
+        <div><label>Email<input type="text" value="<%=user.email%>" name="email" class="form-input"></label></div>
+        <div><label>Password<input type="text" value="<%=user.password%>" name="password" class="form-input"></input></label></div>
+        <div><input type="file" name="image" value="<%=user.image%>" class="form-input" accept=".jpg, .webp"></div>
+        <div class="button-modify"><a href="#"><input type="submit" value="Modificar producto"></input></a></div>
+            </form>
+            <form action="/panel/users/delete/<%=user.idUsuarios%>?_method=DELETE" method="POST">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+              </form>
+        </div>
+        </div>
+    </main>
+</body>
+</html>

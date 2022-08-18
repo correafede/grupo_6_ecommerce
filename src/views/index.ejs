@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head', {title: 'Inicio'}) %>
-<body>
-    <%- include('./partials/header') %>
-    <%- include('./partials/button') %>
-    <%- include('./partials/toggle') %>
-        <div class="nuevo-banner"></div>
+    
+    <!-- INICIO CONTROL DE EDAD -->
+    <script>
+        window.addEventListener("load", function(){
+            const botonMenor = document.getElementById("boton-menor");
+            const botonMayor = document.getElementById("boton-mayor");
+            const containerEdad = document.getElementById("container-edad");
+            const emergente = document.getElementById("emergente");
+            const body = document.getElementById("body")
+            
+            containerEdad.style.display="block";
+            emergente.style.display="block"
+
+
+            if (sessionStorage.getItem("displaySession") == null){
+                containerEdad.style.display="block";
+                emergente.style.display="block"
+            }else{
+                containerEdad.style.display="none";
+                emergente.style.display="none"
+                body.style.overflow = "visible"
+            }
+
+        botonMenor.addEventListener("click", function(){
+            location.href="https://www.cartoonnetwork.com.ar/juegos";
+        });
+
+        botonMayor.addEventListener("click", function(){
+                emergente.style.display="none";
+                containerEdad.style.display="none";
+                body.style.overflow = "visible"
+                sessionStorage.setItem("displaySession", containerEdad.style.display);
+            })
+            
+        })
+        </script>
+            <div id="container-edad" class="containerEdad"></div>
+                <div class="emergente" id="emergente">
+                    <p>Debes ser mayor de edad para poder visitar este sitio web</p>
+                    <div class="boton menor" id="boton-menor">Tengo menos de 18 años</div>
+                    <div class="boton mayor" id="boton-mayor">Soy mayor de edad</div>
+                </div>
+            
+    <!-- https://francescricart.com/ejercicio-js-ventana-emergente-control-de-edad/-->
+    <!-- FIN CONTROL DE EDAD -->
+    <body id="body">
+        <%- include('./partials/header') %>
+        <%- include('./partials/button') %>
+        <%- include('./partials/toggle') %>
+    <script>
+        window.addEventListener("load", function() {
+
+        const slidesContainer = document.getElementById('products');
+        const slide = document.getElementById("slide");
+        const nextButton = document.getElementById('nxt-btn');
+        const prevButton = document.getElementById('pre-btn');
+
+        nextButton.addEventListener("click", () => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft += slideWidth;
+        });
+
+        prevButton.addEventListener("click", () => {
+            const slideWidth = slide.clientWidth;
+            slidesContainer.scrollLeft -= slideWidth;
+        });
+        });
+    </script>
+    <div class="nuevo-banner"></div>
+        <!--  020822 -->
+        <section class="product1"  >
+            <h3 class="product1-category">Ofertas</h3>
+            <button class="pre-btn" id="pre-btn"><img src="/arrow.png" alt=""></button>
+            <button class="nxt-btn" id="nxt-btn"><img src="/arrow.png" alt=""></button>
+
+            <div class="product1-container" id="products"  >
+                <% ofertas.forEach(oferta => {
+                    let precioP = oferta.price*(oferta.discount/100)
+                    let precio = oferta.price - precioP %>
+                <div class="product1-card" >
+                    <div class="product1-image" id="slide">
+                        <span class="discount-tag"><%= oferta.discount %>% off</span>
+                        <img src="/img/products/<%=oferta.image%>" class="product1-thumb" alt="">
+                        <a href="/products/cart" class="card-btn">Comprar</a>
+                    </div>
+                    <div class="product1-info">
+                        <h2 class="product1-brand"><%= oferta.Nombre %></h2>
+                        <p class="product1-short-description"><%= oferta.category.Nombre %> / <%= oferta.color.Nombre %> / <%= oferta.abv %>%</p>
+                        <span class="price">$<%= precio %></span><span class="actual-price">$<%= oferta.price %></span>
+                    </div>
+                </div>
+                <%   }) %>
+            </div>
+        </section>
+   <!-- 020822 -->
     <main>
         <div class="barra-navegacion">
             <ol class="lista-producto">
@@ -20,16 +110,22 @@
         <section class="section">
             <div class="aside"></div>
             <div class="articles">
-                <% products1.forEach(beer => { %>
-                <article class="article">
+                <% products1.forEach(beer => {
+                    let precioP = beer.price*(beer.discount/100)
+                    let precio = beer.price - precioP %>
+                    <article class="article">
+                        <a href="/products/cart" class="card-btn">Comprar</a>
                     <div class="product-img">
+
                         <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
+
                     </div>
                     <div class="description">
                         <p class="discount"></p>
-                        <p class="price">$ <%= beer.price %></p>
+                        <p class="price">$ <%= precio %></p>
                         <p class="class"><%= beer.Nombre %>  <%= beer.size.Nombre %></p>
                         <p class="info"><%= beer.category.Nombre %> / <%= beer.color.Nombre %> / <%= beer.abv %>%</p>
+
                     </div>
                 </article>
                 <%   }) %>
@@ -50,6 +146,7 @@
             <div class="articles">
                 <% products2.forEach(beer => { %>
                 <article class="article">
+                    <a href="/products/cart" class="card-btn">Comprar</a>
                     <div class="product-img">
                         <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
                     </div>
@@ -74,10 +171,12 @@
             </ol>
         </div>
         <section class="section">
+            <a href="/products/cart" class="card-btn">Comprar</a>
             <div class="aside"></div>
             <div class="articles">
                 <% products3.forEach(beer => { %>
-                <article class="article">
+                    <article class="article">
+                        <a href="/products/cart" class="card-btn">Comprar</a>
                     <div class="product-img">
                         <a href="/products/detail/<%=beer.idCerveza%>"><img src="/img/products/<%=beer.image%>" alt="foto birra" ></a>
                     </div>
@@ -126,7 +225,7 @@
                 </div>
             </div>
         </div>
-        
+
     </main>
     <%- include('./partials/footer') %>
     <!-- MARCOS BARRA SCROLL 220522 -->

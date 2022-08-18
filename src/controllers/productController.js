@@ -29,7 +29,7 @@ let productController = {
             });
     },
     carrito: (req, res) => { 
-        res.render("/products/productCart");
+        res.render("./products/productCart");
     },
     create: (req, res) => { 
         let promSizes = Size.findAll();

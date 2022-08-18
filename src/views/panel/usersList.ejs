@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head', {title: 'Lista de Usuarios'}) %>
+<body>
+    <%- include('../partials/header') %>
+    <%- include('../partials/toggle') %>
+    <main style="margin-top: 200px">
+        <div class="panel">
+            <div class="opciones">
+                <hr>
+                <a href="/panel/users/create">AGREGAR</a>
+                <hr>
+                <% users.forEach(user => { %>
+                <ul>
+                    <li style="list-style-type: none; text-align: left;">[<%= user.idUsuarios %>] | <%= user.first_name %> <%= user.last_name %> | <%= user.email %> | <%= user.usercategory.Nombre %> <a href="/panel/users/<%= user.idUsuarios %>" >Edit</a></li>
+                </ul>
+                <%   }) %>
+                <hr>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

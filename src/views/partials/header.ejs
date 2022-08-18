@@ -1,4 +1,33 @@
-<header>
+<header onload="listener()">
+    <script>
+        window.addEventListener("load", function() {
+
+               const magnif = document.getElementById("magnif-button");
+               const search = document.getElementById("search");
+               const logo = document.getElementById("div-logo");
+               const menu = document.getElementById("user-menu");
+               const body = document.getElementById("body");
+
+                magnif.addEventListener("click", () => {
+                        logo.classList.toggle("view");
+                        search.classList.toggle("view");
+                        menu.classList.toggle("view")
+                   })
+            })
+    </script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            const search = document.getElementById("search");
+            const logo = document.getElementById("div-logo");
+            const menu = document.getElementById("user-menu");
+        if(window.scrollY<=0){        
+            logo.classList.toggle("view");
+            search.classList.toggle("view");
+            menu.classList.toggle("view");
+            }
+        })
+    </script>
+
     <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
@@ -27,11 +56,9 @@
             </ul>
             <% } %>
       </div>
-    <div class="logo">
+    <div class="div-logo" id="div-logo">
         <a href="/"><img src="/img/logo.webp" href="/index" alt="Logo de MercadoLiebre" class="logo"></img></a>
-    </div>
-    <div class="logo2">
-        <a href="/"><h1 class="logo-titulo">BIRRASHOP</h1></a>
+            <a href="/"><h1 class="logo-titulo">BIRRASHOP</h1></a>
     </div>
     <div class="menu-y-dropdown">
         <div class="dropdown">
@@ -61,23 +88,20 @@
             <% } %>
         </div>
     </div>
-    <div class="user-menu">
-        <div class="search">
+    <div class="user-menu" id="user-menu">
+        <div class="search" id="search">
             <form action="/products/search" method="GET">
                 <input type="search" placeholder="  Buscar productos" name="keywords">
-                    <button type="submit" class="cursor-boton" ><ion-icon name="search-outline"></ion-icon></button>                 
+                    <button type="submit" class="cursor-boton" id="botonBuscar" ><ion-icon name="search-outline"></ion-icon></button>                 
             </form>
         </div>
         <div class="menu-usuario">
-            <div class="faq">
-                <a href="#"><ion-icon name="help-circle-outline"></ion-icon><span class="off">FAQ</span></a>
-            </div>
-            <div class="magnifying">
-                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+            <div class="magnifying" id="magnif-button">
+                <a class="magnif-icon"><ion-icon name="search-outline"></ion-icon></a>
             </div>
             <div class="cart">
                 <a href="/products/cart"><ion-icon name="cart-outline"></ion-icon><span class="off">Carrito</span></a>
-            <!--  íconos --><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<!--  íconos --><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             </div>
             <% if (locals.isLogged) { %>
@@ -85,15 +109,22 @@
                     <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;" class="img-user">
                     <button onclick="myFunction()" class="dropbtnB">Hola <%= locals.userLogged.first_name %>  <i class="fa-solid fa-angle-down"></i></button>
                     <div id="myDropdown" class="dropdown-contentB">
+                        <% if (locals.isAdmin) { %>
+                        <a href="/panel">Panel</a>
+                        <% } %>
                         <a href="/user/profile">My Profile</a>
                         <a href="/user/logout">Logout</a>
+                       
                     </div>
                 </div>
                 <div id="user" >
                     <input type="checkbox" />
                     <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;" class="img-user"> 
-                        <ul id="user-lista">
-                            <a href="/user/profile"><li>Mi perfil</li></a>
+                        <ul id="user-lista" style="list-style: none;">
+                            <% if (locals.isAdmin) { %>
+                            <a href="/panel"><li>Panel</li></a>
+                             <% } %>
+                            <a href="/user/profile"><li>My profile</li></a>
                             <a href="/user/logout"><li>Logout</li></a>
                         </ul>
                 </div>

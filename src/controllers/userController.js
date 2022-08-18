@@ -37,7 +37,7 @@ let userController = {
                         last_name: req.body.lastName,
                         email: req.body.email,
                         password: bcryptjs.hashSync(req.body.password, 10),
-                        id_UserCategory: 1,
+                        id_UserCategory: 2,
                         image: "default-image.png"
                     })
                 return res.redirect('./login')
