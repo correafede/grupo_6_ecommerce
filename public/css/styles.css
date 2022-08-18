@@ -394,7 +394,7 @@ html{
     {
       display: block;
       position: relative;
-      width: 100%;
+      width: auto;
       z-index: 0;
       -webkit-user-select: none;
       user-select: none;
@@ -417,17 +417,13 @@ html{
     #menuToggle input
     {
       display: block;
-      width: 40px;
-      height: 32px;
+      width: 33px;
+      height: 24px;
+      margin: 0px;
       position: absolute;
-      top: -14px;
-      left: -12px;
-      
       cursor: pointer;
-      
-      opacity: 0; /* hide this */
-      z-index: 2; /* and place it over the hamburger */
-      
+      opacity: 0;
+      z-index: 2;
       -webkit-touch-callout: none;
     }
     
@@ -542,9 +538,9 @@ html{
                                 text-decoration: none;
                                 color: #232323;
                                 transition: color 0.3s ease;
-                                position: absolute;
-                                top: 13px;
-                                right: 11px;
+                                position: relative;
+                                top: 0px;
+                                right: 0px;
                                 }
 
                                 #user input
@@ -572,6 +568,7 @@ html{
                                 {
                                 position: absolute;
                                 width: 128px;
+                                right: 3px;
                                 margin: 12px 0 0 -14px;
                                 padding-inline-start: 0px;
                                 padding-top: 6px;
@@ -703,16 +700,13 @@ border: none;
     flex-flow: row wrap;
     margin-right: 0px;
     align-items: center;
-    width: 100%;
+    width: auto;
     justify-content: right;
 
 
 }  
     .search{
     display: none;
-    flex: 7 1 auto;
-    width: 80px;
-    margin: 10px;
     }
     
 .search input{
